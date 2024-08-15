@@ -236,6 +236,21 @@ SEARCH["18"]["Name"] = [[ChannelBtnTitle]];
 SEARCH["18"]["BackgroundTransparency"] = 1;
 SEARCH["18"]["Position"] = UDim2.new(0.17374709248542786, 0, -0.1666666716337204, 0);
 
+--# TF is this shit
+-- SearchableThing.ServerFrame.ServerTitleFrame.Close
+SEARCH["CLOSE"] = Instance.new("TextButton", SEARCH["3"]);
+SEARCH["CLOSE"]["BorderSizePixel"] = 0;
+SEARCH["CLOSE"]["TextSize"] = 19;
+SEARCH["CLOSE"]["TextColor3"] = Color3.fromRGB(236, 236, 236);
+SEARCH["CLOSE"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+SEARCH["CLOSE"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+SEARCH["CLOSE"]["Size"] = UDim2.new(0, 39, 0, 39);
+SEARCH["CLOSE"]["BackgroundTransparency"] = 1;
+SEARCH["CLOSE"]["Name"] = [[Close]];
+SEARCH["CLOSE"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SEARCH["CLOSE"]["Text"] = [[X]];
+SEARCH["CLOSE"]["Position"] = UDim2.new(0.81776, 0, 0, 0);
+
 -- SearchableThing.ModuleScript
 SEARCH["19"] = Instance.new("ModuleScript", SEARCH["1"]);
 
@@ -318,7 +333,11 @@ SEARCH_MODULES[SEARCH["19"]] = {
 		end
 
 		MakeDraggable(script.Parent.ServerFrame.ServerTitleFrame, script.Parent.ServerFrame)
-
+		
+		script.Parent.ServerFrame.ServerTitleFrame.Close.MouseButton1Click:Connect(function()
+			module:Toggle()
+		end)
+		
 		script.Parent.ServerFrame.SearchBar.TextboxFrame.TextBox.Changed:Connect(function()
 
 			for i,v in pairs(script.Parent.ServerFrame.Tab.SearchingTab.ScrollingFrame:GetChildren()) do
