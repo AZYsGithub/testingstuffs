@@ -155,7 +155,7 @@ SEARCH["10"]["Position"] = UDim2.new(0.5, 0, 0.5021459460258484, 0);
 SEARCH["11"] = Instance.new("UIListLayout", SEARCH["10"]);
 SEARCH["11"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
 SEARCH["11"]["Padding"] = UDim.new(0, 5);
-SEARCH["11"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+SEARCH["11"]["SortOrder"] = Enum.SortOrder.Name;
 
 -- SearchableThing.ServerFrame.Tab.SearchingTab
 SEARCH["12"] = Instance.new("Frame", SEARCH["e"]);
@@ -275,6 +275,7 @@ SEARCH_MODULES[SEARCH["19"]] = {
 		local script = SEARCH["19"];
 		local module = {}
 		local ButtonFunc = {}
+		local Buttons = {}
 
 		local function MakeDraggable(topbarobject, object)
 			local Dragging = nil
@@ -392,10 +393,11 @@ SEARCH_MODULES[SEARCH["19"]] = {
 			newbtn.Parent = script.Parent.ServerFrame.Tab.Main.ScrollingFrame
 			newbtn.Name = name
 			newbtn.ChannelBtnTitle.Text = name
-			newbtn.Visible =  true
+			newbtn.Visible = true
 
 			ButtonFunc[name] = func
-
+			table.insert(Buttons, newbtn)
+			
 			newbtn.MouseButton1Click:Connect(func)
 			newbtn.MouseButton1Down:Connect(function()
 				newbtn.BackgroundColor3 = Color3.fromRGB(57, 60, 67)
@@ -410,9 +412,8 @@ SEARCH_MODULES[SEARCH["19"]] = {
 				newbtn.BackgroundColor3 = Color3.fromRGB(47, 49, 54)
 			end)
 		end
-
+		
 		return module
-
 	end;
 };
 
