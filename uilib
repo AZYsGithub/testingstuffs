@@ -83,7 +83,7 @@ end
 
 local Discord = Instance.new("ScreenGui")
 Discord.Name = "Discord"
-Discord.Parent = game.CoreGui --#game.Players.LocalPlayer.PlayerGui
+Discord.Parent = game.Players.LocalPlayer.PlayerGui
 Discord.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 function DiscordLib:Window(text)
@@ -2172,6 +2172,8 @@ function DiscordLib:Window(text)
 					):Play()
 				end)
 				ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
+				
+				table.insert(_G.DISCORDLIBBUTTONS, {text, callback})
 			end
 			function ChannelContent:Toggle(text,default,callback)
 				local toggled = false
