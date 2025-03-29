@@ -2954,14 +2954,113 @@ ThanHub_MODULES[ThanHub["27"]] = {
 									self.Values = selected
 								end
 							end
+							
+							local function SetValues(newValues)
+								Values = newValues
+								for _,v in pairs(newDropdown.DropdownButton.ScrollingFrame:GetChildren()) do
+									if v:IsA("TextButton") then
+										v:Destroy()
+									end
+								end
+								for _,v in pairs(newDropdown.DropdownButton.ScrollingFrameSearch:GetChildren()) do
+									if v:IsA("TextButton") then
+										v:Destroy()
+									end
+								end
+								
+								for _,Items in pairs(Values) do
+									local newDropdownButton = Template.DropdownButton:Clone()
+									newDropdownButton.Name = Items
+									newDropdownButton.Text = Items
+									newDropdownButton.Parent = newDropdown.DropdownButton.ScrollingFrame
+									newDropdownButton.Visible = true
 
-							self.SetValues = function(_, item)
-								SetValue(item)
+									if selected == Items then
+										newDropdownButton.UIGradient.Enabled = true
+									end
+
+									newDropdownButton.MouseButton1Click:Connect(function()
+										selected = Items
+										selectedIndex = table.find(Values, Items)
+
+										newDropdownButton.UIGradient.Enabled = true
+										newDropdown.DropdownButton.ScrollingFrameSearch[newDropdownButton.Name].UIGradient.Enabled = true
+										for i,v in pairs(newDropdown.DropdownButton.ScrollingFrameSearch:GetChildren()) do
+											if v:IsA("TextButton") and v.Name ~= selected then
+												v.UIGradient.Enabled = false
+											end
+										end
+
+										for i,v in pairs(newDropdown.DropdownButton.ScrollingFrame:GetChildren()) do
+											if v:IsA("TextButton") and v.Name ~= selected then
+												v.UIGradient.Enabled = false
+											end
+										end
+
+										newDropdown.DropdownButton.Button.TextLabel.Text = Items
+										LIB.Options[OptionName].Values = selected
+										newDropdown.OnChanged:Fire(selected)
+										Callback(selected)
+										self.Values = selected
+										-- Hide SearchScroll
+										newDropdown.DropdownButton.ScrollingFrameSearch.Visible = false
+										newDropdown.DropdownButton.ScrollingFrame.Visible = true
+										newDropdown.DropdownButton.SeacrhBox.TextBox.Text = ""
+									end)
+
+									local newDropdownButtonOnSearch = newDropdownButton:Clone()
+									newDropdownButtonOnSearch.Parent = newDropdown.DropdownButton.ScrollingFrameSearch
+
+									newDropdownButtonOnSearch.MouseButton1Click:Connect(function()
+										selected = Items
+										selectedIndex = table.find(Values, Items)
+
+										newDropdownButtonOnSearch.UIGradient.Enabled = true
+										newDropdown.DropdownButton.ScrollingFrame[newDropdownButton.Name].UIGradient.Enabled = true
+										for i,v in pairs(newDropdown.DropdownButton.ScrollingFrameSearch:GetChildren()) do
+											if v:IsA("TextButton") and v.Name ~= selected then
+												v.UIGradient.Enabled = false
+											end
+										end
+
+										for i,v in pairs(newDropdown.DropdownButton.ScrollingFrame:GetChildren()) do
+											if v:IsA("TextButton") and v.Name ~= selected then
+												v.UIGradient.Enabled = false
+											end
+										end
+
+										newDropdown.DropdownButton.Button.TextLabel.Text = Items
+										LIB.Options[OptionName].Values = selected
+										newDropdown.OnChanged:Fire(selected)
+										Callback(selected)
+										self.Values = selected
+
+										-- Hide SearchScroll
+										newDropdown.DropdownButton.ScrollingFrameSearch.Visible = false
+										newDropdown.DropdownButton.ScrollingFrame.Visible = true
+										newDropdown.DropdownButton.SeacrhBox.TextBox.Text = ""
+									end)
+
+								end
 							end
 
-							LIB.Options[OptionName].SetValues = function(_, item)
+							self.SetValue = function(_, item)
 								SetValue(item)
 							end
+							
+							self.SetValues = function(_, newValues)
+								SetValues(newValues)
+							end
+
+							LIB.Options[OptionName].SetValue = function(_, item)
+								SetValue(item)
+							end
+							
+							LIB.Options[OptionName].SetValues = function(_, newValues)
+								SetValues(newValues)
+							end
+
+							
 							LIB.Options[OptionName].Values = selected
 
 							-- TODO: KERJAIN Search abistu Multi dropdown
@@ -3170,7 +3269,7 @@ ThanHub_MODULES[ThanHub["27"]] = {
 								end)
 							end
 
-							local function SetValues(NewValue)
+							local function SetValue(NewValue)
 
 								selected = {}
 
@@ -3213,14 +3312,183 @@ ThanHub_MODULES[ThanHub["27"]] = {
 								end
 
 							end
+							
+							local function SetValues(newValues)
+								Values = newValues
+								
+								for i,v in pairs(newDropdown.DropdownButton.ScrollingFrame:GetChildren()) do
+									if v:IsA("TextButton") then
+										v:Destroy()
+										end
+								end
+								for i,v in pairs(newDropdown.DropdownButton.ScrollingFrameSearch:GetChildren()) do
+									if v:IsA("TextButton") then
+										v:Destroy()
+									end
+								end
+								
+								for _,Items in pairs(Values) do
+									local newDropdownButton = Template.DropdownButton:Clone()
+									newDropdownButton.Name = Items
+									newDropdownButton.Text = Items
+									newDropdownButton.Parent = newDropdown.DropdownButton.ScrollingFrame
+									newDropdownButton.Visible = true
 
+									local selectednames = {}
+									for k,v in pairs(selected) do
+										table.insert(selectednames, k)
+									end
+
+									if table.find(selectednames, Items) then
+										newDropdownButton.UIGradient.Enabled = true
+									end
+
+
+
+									newDropdownButton.MouseButton1Click:Connect(function()
+										if not selected[Items] then
+											-- Unselected > Selected
+
+											selected[Items] = true
+
+											newDropdownButton.UIGradient.Enabled = true
+											newDropdown.DropdownButton.ScrollingFrameSearch[newDropdownButton.Name].UIGradient.Enabled = true
+
+											-- GANTI TEXT --
+											local selectednames = {}
+											for k,v in pairs(selected) do
+												table.insert(selectednames, k)
+											end
+											if #selectednames > 0 then
+												newDropdown.DropdownButton.Button.TextLabel.Text = table.concat(selectednames,", ")
+											elseif #selectednames == 0 then
+												newDropdown.DropdownButton.Button.TextLabel.Text = "--"
+											end
+											-----------------
+
+											self.Values = selected
+											LIB.Options[OptionName].Values = selected
+											newDropdown.OnChanged:Fire(selected)
+											Callback(selected)
+
+											-- Hide SearchScroll
+											newDropdown.DropdownButton.ScrollingFrameSearch.Visible = false
+											newDropdown.DropdownButton.ScrollingFrame.Visible = true
+											newDropdown.DropdownButton.SeacrhBox.TextBox.Text = ""
+										elseif selected[Items] then
+											-- Selected > Unselected
+
+											selected[Items] = nil
+
+											newDropdownButton.UIGradient.Enabled = false
+											newDropdown.DropdownButton.ScrollingFrameSearch[newDropdownButton.Name].UIGradient.Enabled = false
+
+											-- GANTI TEXT --
+											local selectednames = {}
+											for k,v in pairs(selected) do
+												table.insert(selectednames, k)
+											end
+											if #selectednames > 0 then
+												newDropdown.DropdownButton.Button.TextLabel.Text = table.concat(selectednames,", ")
+											elseif #selectednames == 0 then
+												newDropdown.DropdownButton.Button.TextLabel.Text = "--"
+											end
+											-----------------
+
+											self.Values = selected
+											LIB.Options[OptionName].Values = selected
+											newDropdown.OnChanged:Fire(selected)
+											Callback(selected)
+
+											-- Hide SearchScroll
+											newDropdown.DropdownButton.ScrollingFrameSearch.Visible = false
+											newDropdown.DropdownButton.ScrollingFrame.Visible = true
+											newDropdown.DropdownButton.SeacrhBox.TextBox.Text = ""
+										end
+									end)
+
+									local newDropdownButtonOnSearch = newDropdownButton:Clone()
+									newDropdownButtonOnSearch.Parent = newDropdown.DropdownButton.ScrollingFrameSearch
+
+									newDropdownButtonOnSearch.MouseButton1Click:Connect(function()
+										if not selected[Items] then
+											-- Unselected > Selected
+
+											selected[Items] = true
+
+											newDropdownButtonOnSearch.UIGradient.Enabled = true
+											newDropdown.DropdownButton.ScrollingFrame[newDropdownButton.Name].UIGradient.Enabled = true
+											-- GANTI TEXT --
+											local selectednames = {}
+											for k,v in pairs(selected) do
+												table.insert(selectednames, k)
+											end
+											if #selectednames > 0 then
+												newDropdown.DropdownButton.Button.TextLabel.Text = table.concat(selectednames,", ")
+											elseif #selectednames == 0 then
+												newDropdown.DropdownButton.Button.TextLabel.Text = "--"
+											end
+											-----------------
+
+											self.Values = selected
+											LIB.Options[OptionName].Values = selected
+											newDropdown.OnChanged:Fire(selected)
+											Callback(selected)
+
+											-- Hide SearchScroll
+											newDropdown.DropdownButton.ScrollingFrameSearch.Visible = false
+											newDropdown.DropdownButton.ScrollingFrame.Visible = true
+											newDropdown.DropdownButton.SeacrhBox.TextBox.Text = ""
+										elseif selected[Items] then
+											-- Selected > Unselected
+
+											selected[Items] = nil
+
+											newDropdownButtonOnSearch.UIGradient.Enabled = false
+											newDropdown.DropdownButton.ScrollingFrame[newDropdownButton.Name].UIGradient.Enabled = false
+											-- GANTI TEXT --
+											local selectednames = {}
+											for k,v in pairs(selected) do
+												table.insert(selectednames, k)
+											end
+											if #selectednames > 0 then
+												newDropdown.DropdownButton.Button.TextLabel.Text = table.concat(selectednames,", ")
+											elseif #selectednames == 0 then
+												newDropdown.DropdownButton.Button.TextLabel.Text = "--"
+											end
+											-----------------
+
+											self.Values = selected
+											LIB.Options[OptionName].Values = selected
+											newDropdown.OnChanged:Fire(selected)
+											Callback(selected)
+
+											-- Hide SearchScroll
+											newDropdown.DropdownButton.ScrollingFrameSearch.Visible = false
+											newDropdown.DropdownButton.ScrollingFrame.Visible = true
+											newDropdown.DropdownButton.SeacrhBox.TextBox.Text = ""
+										end
+									end)
+
+								end
+							end
+							
+							self.SetValue = function(_, item)
+								SetValue(item)
+							end
+
+							LIB.Options[OptionName].SetValues = function(_, item)
+								SetValue(item)
+							end
+							
 							self.SetValues = function(_, item)
 								SetValues(item)
 							end
 
 							LIB.Options[OptionName].SetValues = function(_, item)
-								SetValues(item)
+								SetValue(item)
 							end
+							
 							LIB.Options[OptionName].Values = selected
 
 							return self
