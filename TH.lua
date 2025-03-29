@@ -2266,6 +2266,16 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 			local Title = tbl.Title
 			local MinimizeKey = tbl.MinimizeKey -- TODO Later
 
+			if game:GetService("RunService"):IsStudio() then
+				if game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild(Title) then
+					game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild(Title):Destroy()
+				end
+			else
+				if game:GetService("CoreGui"):FindFirstChild(Title) then
+					game:GetService("CoreGui"):FindFirstChild(Title):Destroy()
+				end
+			end
+			
 			local newGui = GUI:Clone()
 			local Template = newGui.Template
 			local Tabs = newGui.BackgroundFrame.Main.Tabs
