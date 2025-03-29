@@ -1,17 +1,23 @@
---[=[
- d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
-88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
-88      88    88    88            odD'      88      88    88 88ooo88 
-88  ooo 88    88    88          .88'        88      88    88 88~~~88 
-88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
- Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
-]=]
+--[[
+	 ______  __                           __  __           __        
+	/\__  _\/\ \                         /\ \/\ \         /\ \       
+	\/_/\ \/\ \ \___      __      ___    \ \ \_\ \  __  __\ \ \____  
+	   \ \ \ \ \  _ `\  /'__`\  /' _ `\   \ \  _  \/\ \/\ \\ \ '__`\ 
+	    \ \ \ \ \ \ \ \/\ \L\.\_/\ \/\ \   \ \ \ \ \ \ \_\ \\ \ \L\ \
+ 	     \ \_\ \ \_\ \_\ \__/.\_\ \_\ \_\   \ \_\ \_\ \____/ \ \_,__/
+ 	      \/_/  \/_/\/_/\/__/\/_/\/_/\/_/    \/_/\/_/\/___/   \/___/ 
+                                                                 
+    Made by Chillz
+    Discord: .chill.z.
+    
+    Thanks to Than Hub for using my service :3
+]]
 
 -- Instances: 219 | Scripts: 0 | Modules: 2 | Tags: 0
 local Than_Hub = {};
 
 -- Than Hub
-Than_Hub["1"] = Instance.new("ScreenGui", game.CoreGui);
+Than_Hub["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 Than_Hub["1"]["IgnoreGuiInset"] = true;
 Than_Hub["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
 Than_Hub["1"]["Name"] = [[Than Hub]];
@@ -1229,7 +1235,7 @@ Than_Hub["8a"]["Rotation"] = -90;
 Than_Hub["8a"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(14, 43, 140))};
 
 
--- Than Hub.Template.Dropdown.TextLabel
+-- Than Hub.Template.Dropdown.Title
 Than_Hub["8b"] = Instance.new("TextLabel", Than_Hub["6f"]);
 Than_Hub["8b"]["TextWrapped"] = true;
 Than_Hub["8b"]["LineHeight"] = 1.1;
@@ -1245,6 +1251,7 @@ Than_Hub["8b"]["Size"] = UDim2.new(0, 131, 0, 13);
 Than_Hub["8b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 Than_Hub["8b"]["Text"] = [[Dropdown]];
 Than_Hub["8b"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+Than_Hub["8b"]["Name"] = [[Title]];
 Than_Hub["8b"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
@@ -1327,10 +1334,10 @@ Than_Hub["93"]["PaddingLeft"] = UDim.new(0, 6);
 
 -- Than Hub.Template.Paragraph.Paragraph.UIPadding
 Than_Hub["94"] = Instance.new("UIPadding", Than_Hub["8e"]);
-Than_Hub["94"]["PaddingTop"] = UDim.new(0, 5);
+Than_Hub["94"]["PaddingTop"] = UDim.new(0, 8);
 Than_Hub["94"]["PaddingRight"] = UDim.new(0, 5);
 Than_Hub["94"]["PaddingLeft"] = UDim.new(0, 5);
-Than_Hub["94"]["PaddingBottom"] = UDim.new(0, 5);
+Than_Hub["94"]["PaddingBottom"] = UDim.new(0, 8);
 
 
 -- Than Hub.Template.Paragraph.Paragraph.UIListLayout
