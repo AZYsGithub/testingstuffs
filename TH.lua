@@ -3306,7 +3306,7 @@ ThanHub_MODULES[ThanHub["27"]] = {
 							end)
 						end
 
-						function self:SetValue(newText)
+						function self:SetValues(newText)
 							if Numeric then
 								newInput.Box.Textbox.Text = newText:gsub("[^%d.]", ""):gsub("(%..*)%.", "%1")
 							else
@@ -3318,7 +3318,7 @@ ThanHub_MODULES[ThanHub["27"]] = {
 							newInput.OnChanged:Fire(newInput.Box.Textbox.Text)
 						end
 
-						LIB.Options[OptionName].SetValue = function(_, newText)
+						LIB.Options[OptionName].SetValues = function(_, newText)
 							if Numeric then
 								newInput.Box.Textbox.Text = newText:gsub("[^%d.]", ""):gsub("(%..*)%.", "%1")
 							else
