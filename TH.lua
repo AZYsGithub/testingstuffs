@@ -2748,7 +2748,7 @@ ThanHub_MODULES[ThanHub["27"]] = {
 							selected = {}
 						end
 
-						self.Values = Default
+						self.Value = Default
 						LIB.Options[OptionName] = {}
 						table.insert(LIB.Options[OptionName], OptionName)
 						LIB.Options[OptionName].Values = Default
@@ -2878,10 +2878,10 @@ ThanHub_MODULES[ThanHub["27"]] = {
 									end
 
 									newDropdown.DropdownButton.Button.TextLabel.Text = Items
-									LIB.Options[OptionName].Values = selected
+									LIB.Options[OptionName].Value = selected
 									newDropdown.OnChanged:Fire(selected)
 									Callback(selected)
-									self.Values = selected
+									self.Value = selected
 									-- Hide SearchScroll
 									newDropdown.DropdownButton.ScrollingFrameSearch.Visible = false
 									newDropdown.DropdownButton.ScrollingFrame.Visible = true
@@ -2910,10 +2910,10 @@ ThanHub_MODULES[ThanHub["27"]] = {
 									end
 
 									newDropdown.DropdownButton.Button.TextLabel.Text = Items
-									LIB.Options[OptionName].Values = selected
+									LIB.Options[OptionName].Value = selected
 									newDropdown.OnChanged:Fire(selected)
 									Callback(selected)
-									self.Values = selected
+									self.Value = selected
 
 									-- Hide SearchScroll
 									newDropdown.DropdownButton.ScrollingFrameSearch.Visible = false
@@ -2955,10 +2955,10 @@ ThanHub_MODULES[ThanHub["27"]] = {
 									end
 
 									newDropdown.DropdownButton.Button.TextLabel.Text = item
-									LIB.Options[OptionName].Values = selected
+									LIB.Options[OptionName].Value = selected
 									newDropdown.OnChanged:Fire(selected)
 									Callback(selected)
-									self.Values = selected
+									self.Value = selected
 								elseif item == nil then
 									selected = nil
 									selectedIndex = nil
@@ -2975,10 +2975,10 @@ ThanHub_MODULES[ThanHub["27"]] = {
 									end
 									
 									newDropdown.DropdownButton.Button.TextLabel.Text = "--"
-									LIB.Options[OptionName].Values = selected
+									LIB.Options[OptionName].Value = selected
 									newDropdown.OnChanged:Fire(selected)
 									Callback(selected)
-									self.Values = selected
+									self.Value = selected
 								else
 									selected = nil
 									selectedIndex = nil
@@ -2995,10 +2995,10 @@ ThanHub_MODULES[ThanHub["27"]] = {
 									end
 
 									newDropdown.DropdownButton.Button.TextLabel.Text = "--"
-									LIB.Options[OptionName].Values = selected
+									LIB.Options[OptionName].Value = selected
 									newDropdown.OnChanged:Fire(selected)
 									Callback(selected)
-									self.Values = selected
+									self.Value = selected
 								end
 							end
 							
@@ -3048,7 +3048,7 @@ ThanHub_MODULES[ThanHub["27"]] = {
 										LIB.Options[OptionName].Values = selected
 										newDropdown.OnChanged:Fire(selected)
 										Callback(selected)
-										self.Values = selected
+										self.Value = selected
 										-- Hide SearchScroll
 										newDropdown.DropdownButton.ScrollingFrameSearch.Visible = false
 										newDropdown.DropdownButton.ScrollingFrame.Visible = true
@@ -3080,7 +3080,7 @@ ThanHub_MODULES[ThanHub["27"]] = {
 										LIB.Options[OptionName].Values = selected
 										newDropdown.OnChanged:Fire(selected)
 										Callback(selected)
-										self.Values = selected
+										self.Value = selected
 
 										-- Hide SearchScroll
 										newDropdown.DropdownButton.ScrollingFrameSearch.Visible = false
@@ -3199,8 +3199,8 @@ ThanHub_MODULES[ThanHub["27"]] = {
 										end
 										-----------------
 
-										self.Values = selected
-										LIB.Options[OptionName].Values = selected
+										self.Value = selected
+										LIB.Options[OptionName].Value = selected
 										newDropdown.OnChanged:Fire(selected)
 										Callback(selected)
 
@@ -3228,8 +3228,8 @@ ThanHub_MODULES[ThanHub["27"]] = {
 										end
 										-----------------
 
-										self.Values = selected
-										LIB.Options[OptionName].Values = selected
+										self.Value = selected
+										LIB.Options[OptionName].Value = selected
 										newDropdown.OnChanged:Fire(selected)
 										Callback(selected)
 
@@ -3263,8 +3263,8 @@ ThanHub_MODULES[ThanHub["27"]] = {
 										end
 										-----------------
 
-										self.Values = selected
-										LIB.Options[OptionName].Values = selected
+										self.Value = selected
+										LIB.Options[OptionName].Value = selected
 										newDropdown.OnChanged:Fire(selected)
 										Callback(selected)
 
@@ -3291,8 +3291,8 @@ ThanHub_MODULES[ThanHub["27"]] = {
 										end
 										-----------------
 
-										self.Values = selected
-										LIB.Options[OptionName].Values = selected
+										self.Value = selected
+										LIB.Options[OptionName].Value = selected
 										newDropdown.OnChanged:Fire(selected)
 										Callback(selected)
 
@@ -3350,8 +3350,8 @@ ThanHub_MODULES[ThanHub["27"]] = {
 											end
 											-----------------
 											
-											self.Values = selected
-											LIB.Options[OptionName].Values = selected
+											self.Value = selected
+											LIB.Options[OptionName].Value = selected
 											newDropdown.OnChanged:Fire(selected)
 											Callback(selected)
 										else
@@ -3375,8 +3375,8 @@ ThanHub_MODULES[ThanHub["27"]] = {
 									end
 									
 									newDropdown.DropdownButton.Button.TextLabel.Text = "--"
-									self.Values = selected
-									LIB.Options[OptionName].Values = selected
+									self.Value = selected
+									LIB.Options[OptionName].Value = selected
 									newDropdown.OnChanged:Fire(selected)
 									Callback(selected)
 								end
@@ -3436,8 +3436,8 @@ ThanHub_MODULES[ThanHub["27"]] = {
 											end
 											-----------------
 
-											self.Values = selected
-											LIB.Options[OptionName].Values = selected
+											self.Value = selected
+											LIB.Options[OptionName].Value = selected
 											newDropdown.OnChanged:Fire(selected)
 											Callback(selected)
 
@@ -3465,8 +3465,8 @@ ThanHub_MODULES[ThanHub["27"]] = {
 											end
 											-----------------
 
-											self.Values = selected
-											LIB.Options[OptionName].Values = selected
+											self.Value = selected
+											LIB.Options[OptionName].Value = selected
 											newDropdown.OnChanged:Fire(selected)
 											Callback(selected)
 
@@ -3500,8 +3500,8 @@ ThanHub_MODULES[ThanHub["27"]] = {
 											end
 											-----------------
 
-											self.Values = selected
-											LIB.Options[OptionName].Values = selected
+											self.Value = selected
+											LIB.Options[OptionName].Value = selected
 											newDropdown.OnChanged:Fire(selected)
 											Callback(selected)
 
@@ -3528,8 +3528,8 @@ ThanHub_MODULES[ThanHub["27"]] = {
 											end
 											-----------------
 
-											self.Values = selected
-											LIB.Options[OptionName].Values = selected
+											self.Value = selected
+											LIB.Options[OptionName].Value = selected
 											newDropdown.OnChanged:Fire(selected)
 											Callback(selected)
 
