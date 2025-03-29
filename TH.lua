@@ -664,7 +664,7 @@ Than_Hub["49"]["CornerRadius"] = UDim.new(0, 10);
 
 -- Than Hub.Template.Notification.LightBlue.UISizeConstraint
 Than_Hub["4a"] = Instance.new("UISizeConstraint", Than_Hub["47"]);
-Than_Hub["4a"]["MaxSize"] = Vector2.new(265, inf);
+Than_Hub["4a"]["MaxSize"] = Vector2.new(265, math.huge);
 
 
 -- Than Hub.Template.Notification.Blue
@@ -693,7 +693,7 @@ Than_Hub["4d"]["CornerRadius"] = UDim.new(0, 10);
 
 -- Than Hub.Template.Notification.Blue.UISizeConstraint
 Than_Hub["4e"] = Instance.new("UISizeConstraint", Than_Hub["4b"]);
-Than_Hub["4e"]["MaxSize"] = Vector2.new(265, inf);
+Than_Hub["4e"]["MaxSize"] = Vector2.new(265, math.huge);
 
 
 -- Than Hub.Template.Notification.Cyan
@@ -723,7 +723,7 @@ Than_Hub["51"]["CornerRadius"] = UDim.new(0, 10);
 
 -- Than Hub.Template.Notification.Cyan.UISizeConstraint
 Than_Hub["52"] = Instance.new("UISizeConstraint", Than_Hub["4f"]);
-Than_Hub["52"]["MaxSize"] = Vector2.new(265, inf);
+Than_Hub["52"]["MaxSize"] = Vector2.new(265, math.huge);
 
 
 -- Than Hub.Template.Notification.Items
@@ -1035,7 +1035,6 @@ Than_Hub["74"] = Instance.new("Frame", Than_Hub["6f"]);
 Than_Hub["74"]["BorderSizePixel"] = 0;
 Than_Hub["74"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
 Than_Hub["74"]["Selectable"] = true;
-Than_Hub["74"]["LayoutOrder"] = 1;
 Than_Hub["74"]["ClipsDescendants"] = true;
 Than_Hub["74"]["Size"] = UDim2.new(0, 130, 0, 18);
 Than_Hub["74"]["Position"] = UDim2.new(-0.00763, 0, 0.14595, 0);
@@ -2265,7 +2264,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 
 			local Title = tbl.Title
 			local MinimizeKey = tbl.MinimizeKey -- TODO Later
-
+			
 			if game:GetService("RunService"):IsStudio() then
 				if game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild(Title) then
 					game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild(Title):Destroy()
