@@ -1035,6 +1035,7 @@ Than_Hub["74"] = Instance.new("Frame", Than_Hub["6f"]);
 Than_Hub["74"]["BorderSizePixel"] = 0;
 Than_Hub["74"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
 Than_Hub["74"]["Selectable"] = true;
+Than_Hub["74"]["LayoutOrder"] = 1;
 Than_Hub["74"]["ClipsDescendants"] = true;
 Than_Hub["74"]["Size"] = UDim2.new(0, 130, 0, 18);
 Than_Hub["74"]["Position"] = UDim2.new(-0.00763, 0, 0.14595, 0);
