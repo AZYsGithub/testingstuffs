@@ -2959,7 +2959,7 @@ ThanHub_MODULES[ThanHub["27"]] = {
 									newDropdown.OnChanged:Fire(selected)
 									Callback(selected)
 									self.Values = selected
-								else
+								elseif item == nil then
 									selected = nil
 									selectedIndex = nil
 
@@ -2974,6 +2974,26 @@ ThanHub_MODULES[ThanHub["27"]] = {
 										end
 									end
 									
+									newDropdown.DropdownButton.Button.TextLabel.Text = "--"
+									LIB.Options[OptionName].Values = selected
+									newDropdown.OnChanged:Fire(selected)
+									Callback(selected)
+									self.Values = selected
+								else
+									selected = nil
+									selectedIndex = nil
+
+									for i,v in pairs(newDropdown.DropdownButton.ScrollingFrame:GetChildren()) do
+										if v:IsA("TextButton")then
+											v.UIGradient.Enabled = false
+										end
+									end
+									for i,v in pairs(newDropdown.DropdownButton.ScrollingFrameSearch:GetChildren()) do
+										if v:IsA("TextButton")then
+											v.UIGradient.Enabled = false
+										end
+									end
+
 									newDropdown.DropdownButton.Button.TextLabel.Text = "--"
 									LIB.Options[OptionName].Values = selected
 									newDropdown.OnChanged:Fire(selected)
@@ -3298,8 +3318,6 @@ ThanHub_MODULES[ThanHub["27"]] = {
 
 							local function SetValue(NewValue)
 								if type(NewValue) == "table" and #NewValue > 0 then
-									selected = {}
-
 									for _, v in pairs(newDropdown.DropdownButton.ScrollingFrame:GetChildren()) do
 										if v:IsA("TextButton") then
 											v.UIGradient.Enabled = false
