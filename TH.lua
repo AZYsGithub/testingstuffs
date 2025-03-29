@@ -2757,7 +2757,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 						local newDropdown = Template.Dropdown:Clone()
 
 						newDropdown.Name = Title
-						newDropdown.Frame.Text =Title
+						newDropdown.Title.Text = Title
 						newDropdown.Parent = newSection.SectionItems
 						newDropdown.Visible = true
 
