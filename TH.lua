@@ -2741,10 +2741,10 @@ ThanHub_MODULES[ThanHub["27"]] = {
 							selected = {}
 						end
 
-						self.Value = Default
+						self.Values = Default
 						LIB.Options[OptionName] = {}
 						table.insert(LIB.Options[OptionName], OptionName)
-						LIB.Options[OptionName].Value = Default
+						LIB.Options[OptionName].Values = Default
 
 						local newDropdown = Template.Dropdown:Clone()
 
@@ -2871,10 +2871,10 @@ ThanHub_MODULES[ThanHub["27"]] = {
 									end
 
 									newDropdown.DropdownButton.Button.TextLabel.Text = Items
-									LIB.Options[OptionName].Value = selected
+									LIB.Options[OptionName].Values = selected
 									newDropdown.OnChanged:Fire(selected)
 									Callback(selected)
-									self.Value = selected
+									self.Values = selected
 									-- Hide SearchScroll
 									newDropdown.DropdownButton.ScrollingFrameSearch.Visible = false
 									newDropdown.DropdownButton.ScrollingFrame.Visible = true
@@ -2903,10 +2903,10 @@ ThanHub_MODULES[ThanHub["27"]] = {
 									end
 
 									newDropdown.DropdownButton.Button.TextLabel.Text = Items
-									LIB.Options[OptionName].Value = selected
+									LIB.Options[OptionName].Values = selected
 									newDropdown.OnChanged:Fire(selected)
 									Callback(selected)
-									self.Value = selected
+									self.Values = selected
 
 									-- Hide SearchScroll
 									newDropdown.DropdownButton.ScrollingFrameSearch.Visible = false
@@ -2948,21 +2948,21 @@ ThanHub_MODULES[ThanHub["27"]] = {
 									end
 
 									newDropdown.DropdownButton.Button.TextLabel.Text = item
-									LIB.Options[OptionName].Value = selected
+									LIB.Options[OptionName].Values = selected
 									newDropdown.OnChanged:Fire(selected)
 									Callback(selected)
-									self.Value = selected
+									self.Values = selected
 								end
 							end
 
-							self.SetValue = function(_, item)
+							self.SetValues = function(_, item)
 								SetValue(item)
 							end
 
-							LIB.Options[OptionName].SetValue = function(_, item)
+							LIB.Options[OptionName].SetValues = function(_, item)
 								SetValue(item)
 							end
-							LIB.Options[OptionName].Value = selected
+							LIB.Options[OptionName].Values = selected
 
 							-- TODO: KERJAIN Search abistu Multi dropdown
 
@@ -3053,8 +3053,8 @@ ThanHub_MODULES[ThanHub["27"]] = {
 										end
 										-----------------
 
-										self.Value = selected
-										LIB.Options[OptionName].Value = selected
+										self.Values = selected
+										LIB.Options[OptionName].Values = selected
 										newDropdown.OnChanged:Fire(selected)
 										Callback(selected)
 
@@ -3082,8 +3082,8 @@ ThanHub_MODULES[ThanHub["27"]] = {
 										end
 										-----------------
 
-										self.Value = selected
-										LIB.Options[OptionName].Value = selected
+										self.Values = selected
+										LIB.Options[OptionName].Values = selected
 										newDropdown.OnChanged:Fire(selected)
 										Callback(selected)
 
@@ -3117,8 +3117,8 @@ ThanHub_MODULES[ThanHub["27"]] = {
 										end
 										-----------------
 
-										self.Value = selected
-										LIB.Options[OptionName].Value = selected
+										self.Values = selected
+										LIB.Options[OptionName].Values = selected
 										newDropdown.OnChanged:Fire(selected)
 										Callback(selected)
 
@@ -3145,8 +3145,8 @@ ThanHub_MODULES[ThanHub["27"]] = {
 										end
 										-----------------
 
-										self.Value = selected
-										LIB.Options[OptionName].Value = selected
+										self.Values = selected
+										LIB.Options[OptionName].Values = selected
 										newDropdown.OnChanged:Fire(selected)
 										Callback(selected)
 
@@ -3170,7 +3170,7 @@ ThanHub_MODULES[ThanHub["27"]] = {
 								end)
 							end
 
-							local function SetValue(NewValue)
+							local function SetValues(NewValue)
 
 								selected = {}
 
@@ -3214,14 +3214,14 @@ ThanHub_MODULES[ThanHub["27"]] = {
 
 							end
 
-							self.SetValue = function(_, item)
-								SetValue(item)
+							self.SetValues = function(_, item)
+								SetValues(item)
 							end
 
-							LIB.Options[OptionName].SetValue = function(_, item)
-								SetValue(item)
+							LIB.Options[OptionName].SetValues = function(_, item)
+								SetValues(item)
 							end
-							LIB.Options[OptionName].Value = selected
+							LIB.Options[OptionName].Values = selected
 
 							return self
 						end 
@@ -3306,7 +3306,7 @@ ThanHub_MODULES[ThanHub["27"]] = {
 							end)
 						end
 
-						function self:SetValues(newText)
+						function self:SetValue(newText)
 							if Numeric then
 								newInput.Box.Textbox.Text = newText:gsub("[^%d.]", ""):gsub("(%..*)%.", "%1")
 							else
@@ -3318,7 +3318,7 @@ ThanHub_MODULES[ThanHub["27"]] = {
 							newInput.OnChanged:Fire(newInput.Box.Textbox.Text)
 						end
 
-						LIB.Options[OptionName].SetValues = function(_, newText)
+						LIB.Options[OptionName].SetValue = function(_, newText)
 							if Numeric then
 								newInput.Box.Textbox.Text = newText:gsub("[^%d.]", ""):gsub("(%..*)%.", "%1")
 							else
