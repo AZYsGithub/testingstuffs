@@ -2003,7 +2003,8 @@ end
 
 ThanHub_MODULES[ThanHub["27"]] = {
 	Closure = function()
-		local script = ThanHub["27"];local LIB = {}
+		local script = ThanHub["27"];
+		local LIB = {}
 		local TABLIST = {}
 
 		LIB.Options = {}
@@ -2412,6 +2413,8 @@ ThanHub_MODULES[ThanHub["27"]] = {
 					end
 
 					function self:AddButton(tbl)
+						local self = {}
+						
 						local Title = tbl.Title
 						local Callback = tbl.Callback
 
@@ -2443,11 +2446,15 @@ ThanHub_MODULES[ThanHub["27"]] = {
 							newButton.Button.UIGradientOn.Enabled = false
 							Tween(newButton.Button, {BackgroundColor3 = Color3.fromRGB(40,40,40)})
 						end)
-
-
+						
 						newButton.Button.MouseButton1Click:Connect(Callback)
 
-						return newButton
+						function self:SetTitle(newTitle)
+							Title = newTitle
+							newButton.Button.TextLabel.Text = Title
+						end
+
+						return self
 					end
 
 					function self:AddToggle(OptionName, tbl)
@@ -2952,6 +2959,26 @@ ThanHub_MODULES[ThanHub["27"]] = {
 									newDropdown.OnChanged:Fire(selected)
 									Callback(selected)
 									self.Values = selected
+								else
+									selected = nil
+									selectedIndex = nil
+
+									for i,v in pairs(newDropdown.DropdownButton.ScrollingFrame:GetChildren()) do
+										if v:IsA("TextButton")then
+											v.UIGradient.Enabled = false
+										end
+									end
+									for i,v in pairs(newDropdown.DropdownButton.ScrollingFrameSearch:GetChildren()) do
+										if v:IsA("TextButton")then
+											v.UIGradient.Enabled = false
+										end
+									end
+									
+									newDropdown.DropdownButton.Button.TextLabel.Text = "--"
+									LIB.Options[OptionName].Values = selected
+									newDropdown.OnChanged:Fire(selected)
+									Callback(selected)
+									self.Values = selected
 								end
 							end
 							
@@ -3270,45 +3297,70 @@ ThanHub_MODULES[ThanHub["27"]] = {
 							end
 
 							local function SetValue(NewValue)
+								if type(NewValue) == "table" and #NewValue > 0 then
+									selected = {}
 
-								selected = {}
-
-								for _, v in pairs(newDropdown.DropdownButton.ScrollingFrame:GetChildren()) do
-									if v:IsA("TextButton") then
-										v.UIGradient.Enabled = false
-									end
-								end
-								for _, v in pairs(newDropdown.DropdownButton.ScrollingFrameSearch:GetChildren()) do
-									if v:IsA("TextButton") then
-										v.UIGradient.Enabled = false
-									end
-								end
-
-								for k,v in pairs(NewValue) do
-									if table.find(Values, k) then
-
-
-
-										selected[k] = v
-
-										newDropdown.DropdownButton.ScrollingFrame[k].UIGradient.Enabled = true
-										newDropdown.DropdownButton.ScrollingFrameSearch[k].UIGradient.Enabled = true
-										-- GANTI TEXT --
-										local selectednames = {}
-										for k,v in pairs(selected) do
-											table.insert(selectednames, k)
+									for _, v in pairs(newDropdown.DropdownButton.ScrollingFrame:GetChildren()) do
+										if v:IsA("TextButton") then
+											v.UIGradient.Enabled = false
 										end
-										if #selectednames > 0 then
-											newDropdown.DropdownButton.Button.TextLabel.Text = table.concat(selectednames,", ")
-										elseif #selectednames == 0 then
-											newDropdown.DropdownButton.Button.TextLabel.Text = "--"
-										end
-										-----------------
-									else
-										task.spawn(function()
-											error("No '"..k.."'".." Found in dropdown table.")
-										end)
 									end
+									for _, v in pairs(newDropdown.DropdownButton.ScrollingFrameSearch:GetChildren()) do
+										if v:IsA("TextButton") then
+											v.UIGradient.Enabled = false
+										end
+									end
+
+									for k,v in pairs(NewValue) do
+										if table.find(Values, k) then
+
+
+
+											selected[k] = v
+
+											newDropdown.DropdownButton.ScrollingFrame[k].UIGradient.Enabled = true
+											newDropdown.DropdownButton.ScrollingFrameSearch[k].UIGradient.Enabled = true
+											-- GANTI TEXT --
+											local selectednames = {}
+											for k,v in pairs(selected) do
+												table.insert(selectednames, k)
+											end
+											if #selectednames > 0 then
+												newDropdown.DropdownButton.Button.TextLabel.Text = table.concat(selectednames,", ")
+											elseif #selectednames == 0 then
+												newDropdown.DropdownButton.Button.TextLabel.Text = "--"
+											end
+											-----------------
+											
+											self.Values = selected
+											LIB.Options[OptionName].Values = selected
+											newDropdown.OnChanged:Fire(selected)
+											Callback(selected)
+										else
+											task.spawn(function()
+												error("No '"..k.."'".." Found in dropdown table.")
+											end)
+										end
+									end
+								else
+									selected = {}
+
+									for _, v in pairs(newDropdown.DropdownButton.ScrollingFrame:GetChildren()) do
+										if v:IsA("TextButton") then
+											v.UIGradient.Enabled = false
+										end
+									end
+									for _, v in pairs(newDropdown.DropdownButton.ScrollingFrameSearch:GetChildren()) do
+										if v:IsA("TextButton") then
+											v.UIGradient.Enabled = false
+										end
+									end
+									
+									newDropdown.DropdownButton.Button.TextLabel.Text = "--"
+									self.Values = selected
+									LIB.Options[OptionName].Values = selected
+									newDropdown.OnChanged:Fire(selected)
+									Callback(selected)
 								end
 
 							end
