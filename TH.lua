@@ -7,1990 +7,1992 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 222 | Scripts: 0 | Modules: 2 | Tags: 0
-local ThanHub = {};
+-- Instances: 219 | Scripts: 0 | Modules: 2 | Tags: 0
+local Than_Hub = {};
 
 -- Than Hub
-ThanHub["1"] = Instance.new("ScreenGui", game.CoreGui);
-ThanHub["1"]["IgnoreGuiInset"] = true;
-ThanHub["1"]["Enabled"] = false;
-ThanHub["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
-ThanHub["1"]["Name"] = [[Than Hub]];
-ThanHub["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+Than_Hub["1"] = Instance.new("ScreenGui", game.CoreGui);
+Than_Hub["1"]["IgnoreGuiInset"] = true;
+Than_Hub["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
+Than_Hub["1"]["Name"] = [[Than Hub]];
+Than_Hub["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 
 
 -- Than Hub.BackgroundFrame
-ThanHub["2"] = Instance.new("Frame", ThanHub["1"]);
-ThanHub["2"]["BorderSizePixel"] = 0;
-ThanHub["2"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
-ThanHub["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-ThanHub["2"]["Size"] = UDim2.new(0, 452, 0, 344);
-ThanHub["2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-ThanHub["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["2"]["Name"] = [[BackgroundFrame]];
+Than_Hub["2"] = Instance.new("Frame", Than_Hub["1"]);
+Than_Hub["2"]["BorderSizePixel"] = 0;
+Than_Hub["2"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
+Than_Hub["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+Than_Hub["2"]["Size"] = UDim2.new(0, 452, 0, 344);
+Than_Hub["2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+Than_Hub["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["2"]["Name"] = [[BackgroundFrame]];
 
 
 -- Than Hub.BackgroundFrame.UICorner
-ThanHub["3"] = Instance.new("UICorner", ThanHub["2"]);
-ThanHub["3"]["CornerRadius"] = UDim.new(0, 10);
+Than_Hub["3"] = Instance.new("UICorner", Than_Hub["2"]);
+Than_Hub["3"]["CornerRadius"] = UDim.new(0, 10);
 
 
 -- Than Hub.BackgroundFrame.UIGradient
-ThanHub["4"] = Instance.new("UIGradient", ThanHub["2"]);
-ThanHub["4"]["Rotation"] = -143;
-ThanHub["4"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(11, 11, 11)),ColorSequenceKeypoint.new(0.484, Color3.fromRGB(6, 244, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(26, 26, 26))};
+Than_Hub["4"] = Instance.new("UIGradient", Than_Hub["2"]);
+Than_Hub["4"]["Rotation"] = -143;
+Than_Hub["4"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(11, 11, 11)),ColorSequenceKeypoint.new(0.484, Color3.fromRGB(6, 244, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(26, 26, 26))};
 
 
 -- Than Hub.BackgroundFrame.LightBlue
-ThanHub["5"] = Instance.new("Frame", ThanHub["2"]);
-ThanHub["5"]["BorderSizePixel"] = 0;
-ThanHub["5"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
-ThanHub["5"]["Size"] = UDim2.new(1, 0, 1, 0);
-ThanHub["5"]["Position"] = UDim2.new(-0.00013, 0, -0.00077, 0);
-ThanHub["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["5"]["Name"] = [[LightBlue]];
-ThanHub["5"]["BackgroundTransparency"] = 0.8;
+Than_Hub["5"] = Instance.new("Frame", Than_Hub["2"]);
+Than_Hub["5"]["BorderSizePixel"] = 0;
+Than_Hub["5"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
+Than_Hub["5"]["Size"] = UDim2.new(1, 0, 1, 0);
+Than_Hub["5"]["Position"] = UDim2.new(-0.00013, 0, -0.00077, 0);
+Than_Hub["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["5"]["Name"] = [[LightBlue]];
+Than_Hub["5"]["BackgroundTransparency"] = 0.8;
 
 
 -- Than Hub.BackgroundFrame.LightBlue.UIGradient
-ThanHub["6"] = Instance.new("UIGradient", ThanHub["5"]);
-ThanHub["6"]["Rotation"] = 50;
-ThanHub["6"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(16, 16, 16)),ColorSequenceKeypoint.new(0.461, Color3.fromRGB(0, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(16, 16, 16))};
+Than_Hub["6"] = Instance.new("UIGradient", Than_Hub["5"]);
+Than_Hub["6"]["Rotation"] = 50;
+Than_Hub["6"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(16, 16, 16)),ColorSequenceKeypoint.new(0.461, Color3.fromRGB(0, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(16, 16, 16))};
 
 
 -- Than Hub.BackgroundFrame.LightBlue.UICorner
-ThanHub["7"] = Instance.new("UICorner", ThanHub["5"]);
-ThanHub["7"]["CornerRadius"] = UDim.new(0, 10);
+Than_Hub["7"] = Instance.new("UICorner", Than_Hub["5"]);
+Than_Hub["7"]["CornerRadius"] = UDim.new(0, 10);
 
 
 -- Than Hub.BackgroundFrame.Blue
-ThanHub["8"] = Instance.new("Frame", ThanHub["2"]);
-ThanHub["8"]["BorderSizePixel"] = 0;
-ThanHub["8"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
-ThanHub["8"]["Size"] = UDim2.new(1, 0, 1, 0);
-ThanHub["8"]["Position"] = UDim2.new(-0.00013, 0, -0.00077, 0);
-ThanHub["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["8"]["Name"] = [[Blue]];
-ThanHub["8"]["BackgroundTransparency"] = 0.6;
+Than_Hub["8"] = Instance.new("Frame", Than_Hub["2"]);
+Than_Hub["8"]["BorderSizePixel"] = 0;
+Than_Hub["8"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
+Than_Hub["8"]["Size"] = UDim2.new(1, 0, 1, 0);
+Than_Hub["8"]["Position"] = UDim2.new(-0.00013, 0, -0.00077, 0);
+Than_Hub["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["8"]["Name"] = [[Blue]];
+Than_Hub["8"]["BackgroundTransparency"] = 0.6;
 
 
 -- Than Hub.BackgroundFrame.Blue.UIGradient
-ThanHub["9"] = Instance.new("UIGradient", ThanHub["8"]);
-ThanHub["9"]["Rotation"] = -70;
-ThanHub["9"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(16, 16, 16)),ColorSequenceKeypoint.new(0.491, Color3.fromRGB(0, 50, 123)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(16, 16, 16))};
+Than_Hub["9"] = Instance.new("UIGradient", Than_Hub["8"]);
+Than_Hub["9"]["Rotation"] = -70;
+Than_Hub["9"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(16, 16, 16)),ColorSequenceKeypoint.new(0.491, Color3.fromRGB(0, 50, 123)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(16, 16, 16))};
 
 
 -- Than Hub.BackgroundFrame.Blue.UICorner
-ThanHub["a"] = Instance.new("UICorner", ThanHub["8"]);
-ThanHub["a"]["CornerRadius"] = UDim.new(0, 10);
+Than_Hub["a"] = Instance.new("UICorner", Than_Hub["8"]);
+Than_Hub["a"]["CornerRadius"] = UDim.new(0, 10);
 
 
 -- Than Hub.BackgroundFrame.Main
-ThanHub["b"] = Instance.new("Frame", ThanHub["2"]);
-ThanHub["b"]["ZIndex"] = 2;
-ThanHub["b"]["BorderSizePixel"] = 0;
-ThanHub["b"]["BackgroundColor3"] = Color3.fromRGB(67, 67, 67);
-ThanHub["b"]["Size"] = UDim2.new(0, 311, 0, 343);
-ThanHub["b"]["Position"] = UDim2.new(0, 140, 0, 0);
-ThanHub["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["b"]["Name"] = [[Main]];
-ThanHub["b"]["BackgroundTransparency"] = 1;
+Than_Hub["b"] = Instance.new("Frame", Than_Hub["2"]);
+Than_Hub["b"]["ZIndex"] = 2;
+Than_Hub["b"]["BorderSizePixel"] = 0;
+Than_Hub["b"]["BackgroundColor3"] = Color3.fromRGB(67, 67, 67);
+Than_Hub["b"]["Size"] = UDim2.new(0, 311, 0, 343);
+Than_Hub["b"]["Position"] = UDim2.new(0, 140, 0, 0);
+Than_Hub["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["b"]["Name"] = [[Main]];
+Than_Hub["b"]["BackgroundTransparency"] = 1;
 
 
 -- Than Hub.BackgroundFrame.Main.Tabs
-ThanHub["c"] = Instance.new("Folder", ThanHub["b"]);
-ThanHub["c"]["Name"] = [[Tabs]];
+Than_Hub["c"] = Instance.new("Folder", Than_Hub["b"]);
+Than_Hub["c"]["Name"] = [[Tabs]];
 
 
 -- Than Hub.BackgroundFrame.Side
-ThanHub["d"] = Instance.new("Frame", ThanHub["2"]);
-ThanHub["d"]["ZIndex"] = 2;
-ThanHub["d"]["BorderSizePixel"] = 0;
-ThanHub["d"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
-ThanHub["d"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-ThanHub["d"]["Size"] = UDim2.new(0, 140, 0, 344);
-ThanHub["d"]["Position"] = UDim2.new(0.15487, 0, 0.5, 0);
-ThanHub["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["d"]["Name"] = [[Side]];
+Than_Hub["d"] = Instance.new("Frame", Than_Hub["2"]);
+Than_Hub["d"]["ZIndex"] = 2;
+Than_Hub["d"]["BorderSizePixel"] = 0;
+Than_Hub["d"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
+Than_Hub["d"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+Than_Hub["d"]["Size"] = UDim2.new(0, 140, 0, 344);
+Than_Hub["d"]["Position"] = UDim2.new(0.15487, 0, 0.5, 0);
+Than_Hub["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["d"]["Name"] = [[Side]];
 
 
 -- Than Hub.BackgroundFrame.Side.UICorner
-ThanHub["e"] = Instance.new("UICorner", ThanHub["d"]);
-ThanHub["e"]["CornerRadius"] = UDim.new(0, 10);
+Than_Hub["e"] = Instance.new("UICorner", Than_Hub["d"]);
+Than_Hub["e"]["CornerRadius"] = UDim.new(0, 10);
 
 
 -- Than Hub.BackgroundFrame.Side.UIGradient
-ThanHub["f"] = Instance.new("UIGradient", ThanHub["d"]);
-ThanHub["f"]["Rotation"] = -51;
-ThanHub["f"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(11, 11, 11)),ColorSequenceKeypoint.new(0.484, Color3.fromRGB(6, 244, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(26, 26, 26))};
+Than_Hub["f"] = Instance.new("UIGradient", Than_Hub["d"]);
+Than_Hub["f"]["Rotation"] = -51;
+Than_Hub["f"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(11, 11, 11)),ColorSequenceKeypoint.new(0.484, Color3.fromRGB(6, 244, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(26, 26, 26))};
 
 
 -- Than Hub.BackgroundFrame.Side.LightBlue
-ThanHub["10"] = Instance.new("Frame", ThanHub["d"]);
-ThanHub["10"]["BorderSizePixel"] = 0;
-ThanHub["10"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
-ThanHub["10"]["Size"] = UDim2.new(1, 0, 1, 0);
-ThanHub["10"]["Position"] = UDim2.new(-0.00013, 0, -0.00077, 0);
-ThanHub["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["10"]["Name"] = [[LightBlue]];
-ThanHub["10"]["BackgroundTransparency"] = 0.8;
+Than_Hub["10"] = Instance.new("Frame", Than_Hub["d"]);
+Than_Hub["10"]["BorderSizePixel"] = 0;
+Than_Hub["10"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
+Than_Hub["10"]["Size"] = UDim2.new(1, 0, 1, 0);
+Than_Hub["10"]["Position"] = UDim2.new(-0.00013, 0, -0.00077, 0);
+Than_Hub["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["10"]["Name"] = [[LightBlue]];
+Than_Hub["10"]["BackgroundTransparency"] = 0.8;
 
 
 -- Than Hub.BackgroundFrame.Side.LightBlue.UIGradient
-ThanHub["11"] = Instance.new("UIGradient", ThanHub["10"]);
-ThanHub["11"]["Rotation"] = 50;
-ThanHub["11"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(16, 16, 16)),ColorSequenceKeypoint.new(0.461, Color3.fromRGB(0, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(16, 16, 16))};
+Than_Hub["11"] = Instance.new("UIGradient", Than_Hub["10"]);
+Than_Hub["11"]["Rotation"] = 50;
+Than_Hub["11"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(16, 16, 16)),ColorSequenceKeypoint.new(0.461, Color3.fromRGB(0, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(16, 16, 16))};
 
 
 -- Than Hub.BackgroundFrame.Side.LightBlue.UICorner
-ThanHub["12"] = Instance.new("UICorner", ThanHub["10"]);
-ThanHub["12"]["CornerRadius"] = UDim.new(0, 10);
+Than_Hub["12"] = Instance.new("UICorner", Than_Hub["10"]);
+Than_Hub["12"]["CornerRadius"] = UDim.new(0, 10);
 
 
 -- Than Hub.BackgroundFrame.Side.Blue
-ThanHub["13"] = Instance.new("Frame", ThanHub["d"]);
-ThanHub["13"]["BorderSizePixel"] = 0;
-ThanHub["13"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
-ThanHub["13"]["Size"] = UDim2.new(1, 0, 1, 0);
-ThanHub["13"]["Position"] = UDim2.new(-0.00013, 0, -0.00077, 0);
-ThanHub["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["13"]["Name"] = [[Blue]];
-ThanHub["13"]["BackgroundTransparency"] = 0.6;
+Than_Hub["13"] = Instance.new("Frame", Than_Hub["d"]);
+Than_Hub["13"]["BorderSizePixel"] = 0;
+Than_Hub["13"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
+Than_Hub["13"]["Size"] = UDim2.new(1, 0, 1, 0);
+Than_Hub["13"]["Position"] = UDim2.new(-0.00013, 0, -0.00077, 0);
+Than_Hub["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["13"]["Name"] = [[Blue]];
+Than_Hub["13"]["BackgroundTransparency"] = 0.6;
 
 
 -- Than Hub.BackgroundFrame.Side.Blue.UIGradient
-ThanHub["14"] = Instance.new("UIGradient", ThanHub["13"]);
-ThanHub["14"]["Rotation"] = -70;
-ThanHub["14"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(16, 16, 16)),ColorSequenceKeypoint.new(0.491, Color3.fromRGB(0, 50, 123)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(16, 16, 16))};
+Than_Hub["14"] = Instance.new("UIGradient", Than_Hub["13"]);
+Than_Hub["14"]["Rotation"] = -70;
+Than_Hub["14"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(16, 16, 16)),ColorSequenceKeypoint.new(0.491, Color3.fromRGB(0, 50, 123)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(16, 16, 16))};
 
 
 -- Than Hub.BackgroundFrame.Side.Blue.UICorner
-ThanHub["15"] = Instance.new("UICorner", ThanHub["13"]);
-ThanHub["15"]["CornerRadius"] = UDim.new(0, 10);
+Than_Hub["15"] = Instance.new("UICorner", Than_Hub["13"]);
+Than_Hub["15"]["CornerRadius"] = UDim.new(0, 10);
 
 
 -- Than Hub.BackgroundFrame.Side.Cyan
-ThanHub["16"] = Instance.new("CanvasGroup", ThanHub["d"]);
-ThanHub["16"]["BorderSizePixel"] = 0;
-ThanHub["16"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
-ThanHub["16"]["Size"] = UDim2.new(1, 0, 1, 0);
-ThanHub["16"]["Position"] = UDim2.new(-0.00013, 0, -0.00077, 0);
-ThanHub["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["16"]["Name"] = [[Cyan]];
-ThanHub["16"]["BackgroundTransparency"] = 0.8;
+Than_Hub["16"] = Instance.new("CanvasGroup", Than_Hub["d"]);
+Than_Hub["16"]["BorderSizePixel"] = 0;
+Than_Hub["16"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
+Than_Hub["16"]["Size"] = UDim2.new(1, 0, 1, 0);
+Than_Hub["16"]["Position"] = UDim2.new(-0.00013, 0, -0.00077, 0);
+Than_Hub["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["16"]["Name"] = [[Cyan]];
+Than_Hub["16"]["BackgroundTransparency"] = 0.8;
 
 
 -- Than Hub.BackgroundFrame.Side.Cyan.UIGradient
-ThanHub["17"] = Instance.new("UIGradient", ThanHub["16"]);
-ThanHub["17"]["Rotation"] = -26;
-ThanHub["17"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(16, 16, 16)),ColorSequenceKeypoint.new(0.500, Color3.fromRGB(0, 35, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(16, 16, 16))};
+Than_Hub["17"] = Instance.new("UIGradient", Than_Hub["16"]);
+Than_Hub["17"]["Rotation"] = -26;
+Than_Hub["17"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(16, 16, 16)),ColorSequenceKeypoint.new(0.500, Color3.fromRGB(0, 35, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(16, 16, 16))};
 
 
 -- Than Hub.BackgroundFrame.Side.Cyan.UICorner
-ThanHub["18"] = Instance.new("UICorner", ThanHub["16"]);
-ThanHub["18"]["CornerRadius"] = UDim.new(0, 10);
+Than_Hub["18"] = Instance.new("UICorner", Than_Hub["16"]);
+Than_Hub["18"]["CornerRadius"] = UDim.new(0, 10);
 
 
 -- Than Hub.BackgroundFrame.Side.Cyan.AbstractBg
-ThanHub["19"] = Instance.new("ImageLabel", ThanHub["16"]);
-ThanHub["19"]["BorderSizePixel"] = 0;
-ThanHub["19"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["19"]["ImageColor3"] = Color3.fromRGB(0, 183, 22);
-ThanHub["19"]["Image"] = [[rbxassetid://88984077541230]];
-ThanHub["19"]["Size"] = UDim2.new(0, 549, 0, 364);
-ThanHub["19"]["Visible"] = false;
-ThanHub["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["19"]["BackgroundTransparency"] = 1;
-ThanHub["19"]["Rotation"] = 40;
-ThanHub["19"]["Name"] = [[AbstractBg]];
-ThanHub["19"]["Position"] = UDim2.new(0.41197, 0, 0.48528, 0);
+Than_Hub["19"] = Instance.new("ImageLabel", Than_Hub["16"]);
+Than_Hub["19"]["BorderSizePixel"] = 0;
+Than_Hub["19"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["19"]["ImageColor3"] = Color3.fromRGB(0, 183, 22);
+Than_Hub["19"]["Image"] = [[rbxassetid://88984077541230]];
+Than_Hub["19"]["Size"] = UDim2.new(0, 549, 0, 364);
+Than_Hub["19"]["Visible"] = false;
+Than_Hub["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["19"]["BackgroundTransparency"] = 1;
+Than_Hub["19"]["Rotation"] = 40;
+Than_Hub["19"]["Name"] = [[AbstractBg]];
+Than_Hub["19"]["Position"] = UDim2.new(0.41197, 0, 0.48528, 0);
 
 
 -- Than Hub.BackgroundFrame.Side.TabButtons
-ThanHub["1a"] = Instance.new("ScrollingFrame", ThanHub["d"]);
-ThanHub["1a"]["ZIndex"] = 5;
-ThanHub["1a"]["BorderSizePixel"] = 0;
-ThanHub["1a"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
-ThanHub["1a"]["ElasticBehavior"] = Enum.ElasticBehavior.Never;
-ThanHub["1a"]["TopImage"] = [[rbxasset://textures/ui/Scroll/scroll-middle.png]];
-ThanHub["1a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["1a"]["Name"] = [[TabButtons]];
-ThanHub["1a"]["Selectable"] = false;
-ThanHub["1a"]["BottomImage"] = [[rbxasset://textures/ui/Scroll/scroll-middle.png]];
-ThanHub["1a"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y;
-ThanHub["1a"]["Size"] = UDim2.new(0, 140, 0, 285);
-ThanHub["1a"]["ScrollBarImageColor3"] = Color3.fromRGB(118, 118, 118);
-ThanHub["1a"]["Position"] = UDim2.new(0, 0, 0, 59);
-ThanHub["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["1a"]["ScrollBarThickness"] = 2;
-ThanHub["1a"]["BackgroundTransparency"] = 1;
+Than_Hub["1a"] = Instance.new("ScrollingFrame", Than_Hub["d"]);
+Than_Hub["1a"]["ZIndex"] = 5;
+Than_Hub["1a"]["BorderSizePixel"] = 0;
+Than_Hub["1a"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
+Than_Hub["1a"]["ElasticBehavior"] = Enum.ElasticBehavior.Never;
+Than_Hub["1a"]["TopImage"] = [[rbxasset://textures/ui/Scroll/scroll-middle.png]];
+Than_Hub["1a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["1a"]["Name"] = [[TabButtons]];
+Than_Hub["1a"]["Selectable"] = false;
+Than_Hub["1a"]["BottomImage"] = [[rbxasset://textures/ui/Scroll/scroll-middle.png]];
+Than_Hub["1a"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y;
+Than_Hub["1a"]["Size"] = UDim2.new(0, 140, 0, 285);
+Than_Hub["1a"]["ScrollBarImageColor3"] = Color3.fromRGB(118, 118, 118);
+Than_Hub["1a"]["Position"] = UDim2.new(0, 0, 0, 59);
+Than_Hub["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["1a"]["ScrollBarThickness"] = 2;
+Than_Hub["1a"]["BackgroundTransparency"] = 1;
 
 
 -- Than Hub.BackgroundFrame.Side.TabButtons.UIListLayout
-ThanHub["1b"] = Instance.new("UIListLayout", ThanHub["1a"]);
-ThanHub["1b"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+Than_Hub["1b"] = Instance.new("UIListLayout", Than_Hub["1a"]);
+Than_Hub["1b"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 
 -- Than Hub.BackgroundFrame.Side.DraggablePart
-ThanHub["1c"] = Instance.new("Frame", ThanHub["d"]);
-ThanHub["1c"]["ZIndex"] = 5;
-ThanHub["1c"]["BorderSizePixel"] = 0;
-ThanHub["1c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["1c"]["Size"] = UDim2.new(0, 140, 0, 55);
-ThanHub["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["1c"]["Name"] = [[DraggablePart]];
-ThanHub["1c"]["BackgroundTransparency"] = 1;
+Than_Hub["1c"] = Instance.new("Frame", Than_Hub["d"]);
+Than_Hub["1c"]["ZIndex"] = 5;
+Than_Hub["1c"]["BorderSizePixel"] = 0;
+Than_Hub["1c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["1c"]["Size"] = UDim2.new(0, 140, 0, 55);
+Than_Hub["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["1c"]["Name"] = [[DraggablePart]];
+Than_Hub["1c"]["BackgroundTransparency"] = 1;
 
 
 -- Than Hub.BackgroundFrame.Side.DraggablePart.Logo
-ThanHub["1d"] = Instance.new("ImageLabel", ThanHub["1c"]);
-ThanHub["1d"]["BorderSizePixel"] = 0;
-ThanHub["1d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["1d"]["Image"] = [[rbxassetid://114982618404413]];
-ThanHub["1d"]["Size"] = UDim2.new(0, 33, 0, 35);
-ThanHub["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["1d"]["BackgroundTransparency"] = 1;
-ThanHub["1d"]["Name"] = [[Logo]];
-ThanHub["1d"]["Position"] = UDim2.new(0, 12, 0, 13);
+Than_Hub["1d"] = Instance.new("ImageLabel", Than_Hub["1c"]);
+Than_Hub["1d"]["BorderSizePixel"] = 0;
+Than_Hub["1d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["1d"]["Image"] = [[rbxassetid://114982618404413]];
+Than_Hub["1d"]["Size"] = UDim2.new(0, 33, 0, 35);
+Than_Hub["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["1d"]["BackgroundTransparency"] = 1;
+Than_Hub["1d"]["Name"] = [[Logo]];
+Than_Hub["1d"]["Position"] = UDim2.new(0, 12, 0, 13);
 
 
 -- Than Hub.BackgroundFrame.Side.DraggablePart.Logo.UIAspectRatioConstraint
-ThanHub["1e"] = Instance.new("UIAspectRatioConstraint", ThanHub["1d"]);
+Than_Hub["1e"] = Instance.new("UIAspectRatioConstraint", Than_Hub["1d"]);
 
 
 
 -- Than Hub.BackgroundFrame.Side.DraggablePart.Logo.UICorner
-ThanHub["1f"] = Instance.new("UICorner", ThanHub["1d"]);
+Than_Hub["1f"] = Instance.new("UICorner", Than_Hub["1d"]);
 
 
 
 -- Than Hub.BackgroundFrame.Side.DraggablePart.Title
-ThanHub["20"] = Instance.new("TextLabel", ThanHub["1c"]);
-ThanHub["20"]["TextWrapped"] = true;
-ThanHub["20"]["BorderSizePixel"] = 0;
-ThanHub["20"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-ThanHub["20"]["TextScaled"] = true;
-ThanHub["20"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["20"]["TextSize"] = 14;
-ThanHub["20"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-ThanHub["20"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["20"]["BackgroundTransparency"] = 1;
-ThanHub["20"]["AnchorPoint"] = Vector2.new(0, 0.5);
-ThanHub["20"]["Size"] = UDim2.new(0, 80, 0, 17);
-ThanHub["20"]["Visible"] = false;
-ThanHub["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["20"]["Text"] = [[Than Hub]];
-ThanHub["20"]["Name"] = [[Title]];
-ThanHub["20"]["Position"] = UDim2.new(0, 55, 0, 29);
+Than_Hub["20"] = Instance.new("TextLabel", Than_Hub["1c"]);
+Than_Hub["20"]["TextWrapped"] = true;
+Than_Hub["20"]["BorderSizePixel"] = 0;
+Than_Hub["20"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+Than_Hub["20"]["TextScaled"] = true;
+Than_Hub["20"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["20"]["TextSize"] = 14;
+Than_Hub["20"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+Than_Hub["20"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["20"]["BackgroundTransparency"] = 1;
+Than_Hub["20"]["AnchorPoint"] = Vector2.new(0, 0.5);
+Than_Hub["20"]["Size"] = UDim2.new(0, 80, 0, 17);
+Than_Hub["20"]["Visible"] = false;
+Than_Hub["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["20"]["Text"] = [[Than Hub]];
+Than_Hub["20"]["Name"] = [[Title]];
+Than_Hub["20"]["Position"] = UDim2.new(0, 55, 0, 29);
 
 
 -- Than Hub.BackgroundFrame.Side.DraggablePart.Title.UIGradient
-ThanHub["21"] = Instance.new("UIGradient", ThanHub["20"]);
-ThanHub["21"]["Rotation"] = -90;
-ThanHub["21"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
+Than_Hub["21"] = Instance.new("UIGradient", Than_Hub["20"]);
+Than_Hub["21"]["Rotation"] = -90;
+Than_Hub["21"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
 
 
 -- Than Hub.BackgroundFrame.DropShadowHolder
-ThanHub["22"] = Instance.new("Frame", ThanHub["2"]);
-ThanHub["22"]["ZIndex"] = 0;
-ThanHub["22"]["BorderSizePixel"] = 0;
-ThanHub["22"]["Size"] = UDim2.new(1, 0, 1, 0);
-ThanHub["22"]["Name"] = [[DropShadowHolder]];
-ThanHub["22"]["BackgroundTransparency"] = 1;
+Than_Hub["22"] = Instance.new("Frame", Than_Hub["2"]);
+Than_Hub["22"]["ZIndex"] = 0;
+Than_Hub["22"]["BorderSizePixel"] = 0;
+Than_Hub["22"]["Size"] = UDim2.new(1, 0, 1, 0);
+Than_Hub["22"]["Name"] = [[DropShadowHolder]];
+Than_Hub["22"]["BackgroundTransparency"] = 1;
 
 
 -- Than Hub.BackgroundFrame.DropShadowHolder.DropShadow
-ThanHub["23"] = Instance.new("ImageLabel", ThanHub["22"]);
-ThanHub["23"]["ZIndex"] = 0;
-ThanHub["23"]["BorderSizePixel"] = 0;
-ThanHub["23"]["SliceCenter"] = Rect.new(49, 49, 450, 450);
-ThanHub["23"]["ScaleType"] = Enum.ScaleType.Slice;
-ThanHub["23"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["23"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-ThanHub["23"]["Image"] = [[rbxassetid://6014261993]];
-ThanHub["23"]["Size"] = UDim2.new(1, 47, 1, 47);
-ThanHub["23"]["BackgroundTransparency"] = 1;
-ThanHub["23"]["Name"] = [[DropShadow]];
-ThanHub["23"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+Than_Hub["23"] = Instance.new("ImageLabel", Than_Hub["22"]);
+Than_Hub["23"]["ZIndex"] = 0;
+Than_Hub["23"]["BorderSizePixel"] = 0;
+Than_Hub["23"]["SliceCenter"] = Rect.new(49, 49, 450, 450);
+Than_Hub["23"]["ScaleType"] = Enum.ScaleType.Slice;
+Than_Hub["23"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["23"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+Than_Hub["23"]["Image"] = [[rbxassetid://6014261993]];
+Than_Hub["23"]["Size"] = UDim2.new(1, 47, 1, 47);
+Than_Hub["23"]["BackgroundTransparency"] = 1;
+Than_Hub["23"]["Name"] = [[DropShadow]];
+Than_Hub["23"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
 -- Than Hub.BackgroundFrame.Cyan
-ThanHub["24"] = Instance.new("Frame", ThanHub["2"]);
-ThanHub["24"]["BorderSizePixel"] = 0;
-ThanHub["24"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
-ThanHub["24"]["ClipsDescendants"] = true;
-ThanHub["24"]["Size"] = UDim2.new(1, 0, 1, 0);
-ThanHub["24"]["Position"] = UDim2.new(-0.00013, 0, -0.00077, 0);
-ThanHub["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["24"]["Name"] = [[Cyan]];
-ThanHub["24"]["BackgroundTransparency"] = 0.8;
+Than_Hub["24"] = Instance.new("Frame", Than_Hub["2"]);
+Than_Hub["24"]["BorderSizePixel"] = 0;
+Than_Hub["24"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
+Than_Hub["24"]["ClipsDescendants"] = true;
+Than_Hub["24"]["Size"] = UDim2.new(1, 0, 1, 0);
+Than_Hub["24"]["Position"] = UDim2.new(-0.00013, 0, -0.00077, 0);
+Than_Hub["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["24"]["Name"] = [[Cyan]];
+Than_Hub["24"]["BackgroundTransparency"] = 0.8;
 
 
 -- Than Hub.BackgroundFrame.Cyan.UIGradient
-ThanHub["25"] = Instance.new("UIGradient", ThanHub["24"]);
-ThanHub["25"]["Rotation"] = -26;
-ThanHub["25"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(16, 16, 16)),ColorSequenceKeypoint.new(0.500, Color3.fromRGB(0, 35, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(16, 16, 16))};
+Than_Hub["25"] = Instance.new("UIGradient", Than_Hub["24"]);
+Than_Hub["25"]["Rotation"] = -26;
+Than_Hub["25"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(16, 16, 16)),ColorSequenceKeypoint.new(0.500, Color3.fromRGB(0, 35, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(16, 16, 16))};
 
 
 -- Than Hub.BackgroundFrame.Cyan.UICorner
-ThanHub["26"] = Instance.new("UICorner", ThanHub["24"]);
-ThanHub["26"]["CornerRadius"] = UDim.new(0, 10);
+Than_Hub["26"] = Instance.new("UICorner", Than_Hub["24"]);
+Than_Hub["26"]["CornerRadius"] = UDim.new(0, 10);
 
 
 -- Than Hub.Library
-ThanHub["27"] = Instance.new("ModuleScript", ThanHub["1"]);
-ThanHub["27"]["Name"] = [[Library]];
+Than_Hub["27"] = Instance.new("ModuleScript", Than_Hub["1"]);
+Than_Hub["27"]["Name"] = [[Library]];
 
 
 -- Than Hub.IconLib
-ThanHub["28"] = Instance.new("ModuleScript", ThanHub["1"]);
-ThanHub["28"]["Name"] = [[IconLib]];
+Than_Hub["28"] = Instance.new("ModuleScript", Than_Hub["1"]);
+Than_Hub["28"]["Name"] = [[IconLib]];
 
 
 -- Than Hub.Template
-ThanHub["29"] = Instance.new("Folder", ThanHub["1"]);
-ThanHub["29"]["Name"] = [[Template]];
+Than_Hub["29"] = Instance.new("Folder", Than_Hub["1"]);
+Than_Hub["29"]["Name"] = [[Template]];
 
 
 -- Than Hub.Template.TabButton
-ThanHub["2a"] = Instance.new("TextButton", ThanHub["29"]);
-ThanHub["2a"]["BorderSizePixel"] = 0;
-ThanHub["2a"]["TextSize"] = 14;
-ThanHub["2a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["2a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["2a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-ThanHub["2a"]["Size"] = UDim2.new(0, 137, 0, 39);
-ThanHub["2a"]["BackgroundTransparency"] = 1;
-ThanHub["2a"]["Name"] = [[TabButton]];
-ThanHub["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["2a"]["Text"] = [[]];
-ThanHub["2a"]["Visible"] = false;
+Than_Hub["2a"] = Instance.new("TextButton", Than_Hub["29"]);
+Than_Hub["2a"]["BorderSizePixel"] = 0;
+Than_Hub["2a"]["TextSize"] = 14;
+Than_Hub["2a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["2a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["2a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+Than_Hub["2a"]["Size"] = UDim2.new(0, 137, 0, 39);
+Than_Hub["2a"]["BackgroundTransparency"] = 1;
+Than_Hub["2a"]["Name"] = [[TabButton]];
+Than_Hub["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["2a"]["Text"] = [[]];
+Than_Hub["2a"]["Visible"] = false;
 
 
 -- Than Hub.Template.TabButton.Icon
-ThanHub["2b"] = Instance.new("ImageLabel", ThanHub["2a"]);
-ThanHub["2b"]["BorderSizePixel"] = 0;
-ThanHub["2b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["2b"]["AnchorPoint"] = Vector2.new(0, 0.5);
-ThanHub["2b"]["Image"] = [[rbxassetid://97623395395101]];
-ThanHub["2b"]["Size"] = UDim2.new(0, 25, 0, 25);
-ThanHub["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["2b"]["BackgroundTransparency"] = 1;
-ThanHub["2b"]["Name"] = [[Icon]];
-ThanHub["2b"]["Position"] = UDim2.new(0.07, 0, 0.5, 0);
+Than_Hub["2b"] = Instance.new("ImageLabel", Than_Hub["2a"]);
+Than_Hub["2b"]["BorderSizePixel"] = 0;
+Than_Hub["2b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["2b"]["AnchorPoint"] = Vector2.new(0, 0.5);
+Than_Hub["2b"]["Image"] = [[rbxassetid://97623395395101]];
+Than_Hub["2b"]["Size"] = UDim2.new(0, 25, 0, 25);
+Than_Hub["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["2b"]["BackgroundTransparency"] = 1;
+Than_Hub["2b"]["Name"] = [[Icon]];
+Than_Hub["2b"]["Position"] = UDim2.new(0.07, 0, 0.5, 0);
 
 
 -- Than Hub.Template.TabButton.Icon.UIAspectRatioConstraint
-ThanHub["2c"] = Instance.new("UIAspectRatioConstraint", ThanHub["2b"]);
+Than_Hub["2c"] = Instance.new("UIAspectRatioConstraint", Than_Hub["2b"]);
 
 
 
 -- Than Hub.Template.TabButton.Title
-ThanHub["2d"] = Instance.new("TextLabel", ThanHub["2a"]);
-ThanHub["2d"]["TextWrapped"] = true;
-ThanHub["2d"]["BorderSizePixel"] = 0;
-ThanHub["2d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-ThanHub["2d"]["TextScaled"] = true;
-ThanHub["2d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["2d"]["TextSize"] = 14;
-ThanHub["2d"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-ThanHub["2d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["2d"]["BackgroundTransparency"] = 1;
-ThanHub["2d"]["AnchorPoint"] = Vector2.new(0, 0.5);
-ThanHub["2d"]["Size"] = UDim2.new(0, 90, 0, 17);
-ThanHub["2d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["2d"]["Text"] = [[General]];
-ThanHub["2d"]["Name"] = [[Title]];
-ThanHub["2d"]["Position"] = UDim2.new(0.33, 0, 0.5, 0);
+Than_Hub["2d"] = Instance.new("TextLabel", Than_Hub["2a"]);
+Than_Hub["2d"]["TextWrapped"] = true;
+Than_Hub["2d"]["BorderSizePixel"] = 0;
+Than_Hub["2d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+Than_Hub["2d"]["TextScaled"] = true;
+Than_Hub["2d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["2d"]["TextSize"] = 14;
+Than_Hub["2d"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+Than_Hub["2d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["2d"]["BackgroundTransparency"] = 1;
+Than_Hub["2d"]["AnchorPoint"] = Vector2.new(0, 0.5);
+Than_Hub["2d"]["Size"] = UDim2.new(0, 90, 0, 17);
+Than_Hub["2d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["2d"]["Text"] = [[General]];
+Than_Hub["2d"]["Name"] = [[Title]];
+Than_Hub["2d"]["Position"] = UDim2.new(0.33, 0, 0.5, 0);
 
 
 -- Than Hub.Template.TabButton.Title.UIGradient
-ThanHub["2e"] = Instance.new("UIGradient", ThanHub["2d"]);
-ThanHub["2e"]["Rotation"] = -90;
-ThanHub["2e"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
+Than_Hub["2e"] = Instance.new("UIGradient", Than_Hub["2d"]);
+Than_Hub["2e"]["Rotation"] = -90;
+Than_Hub["2e"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
 
 
 -- Than Hub.Template.TabFrame
-ThanHub["2f"] = Instance.new("Frame", ThanHub["29"]);
-ThanHub["2f"]["Visible"] = false;
-ThanHub["2f"]["ZIndex"] = 0;
-ThanHub["2f"]["BorderSizePixel"] = 0;
-ThanHub["2f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["2f"]["Size"] = UDim2.new(1, 0, 1, 0);
-ThanHub["2f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["2f"]["Name"] = [[TabFrame]];
-ThanHub["2f"]["BackgroundTransparency"] = 1;
+Than_Hub["2f"] = Instance.new("Frame", Than_Hub["29"]);
+Than_Hub["2f"]["Visible"] = false;
+Than_Hub["2f"]["ZIndex"] = 0;
+Than_Hub["2f"]["BorderSizePixel"] = 0;
+Than_Hub["2f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["2f"]["Size"] = UDim2.new(1, 0, 1, 0);
+Than_Hub["2f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["2f"]["Name"] = [[TabFrame]];
+Than_Hub["2f"]["BackgroundTransparency"] = 1;
 
 
 -- Than Hub.Template.TabFrame.ScrollingFrameRight
-ThanHub["30"] = Instance.new("ScrollingFrame", ThanHub["2f"]);
-ThanHub["30"]["Active"] = true;
-ThanHub["30"]["ZIndex"] = 2;
-ThanHub["30"]["BorderSizePixel"] = 0;
-ThanHub["30"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
-ThanHub["30"]["ElasticBehavior"] = Enum.ElasticBehavior.Never;
-ThanHub["30"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["30"]["Name"] = [[ScrollingFrameRight]];
-ThanHub["30"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y;
-ThanHub["30"]["Size"] = UDim2.new(0.5, 0, 1, 0);
-ThanHub["30"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["30"]["Position"] = UDim2.new(0.5, 0, 0, 0);
-ThanHub["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["30"]["ScrollBarThickness"] = 0;
-ThanHub["30"]["BackgroundTransparency"] = 1;
+Than_Hub["30"] = Instance.new("ScrollingFrame", Than_Hub["2f"]);
+Than_Hub["30"]["Active"] = true;
+Than_Hub["30"]["ZIndex"] = 2;
+Than_Hub["30"]["BorderSizePixel"] = 0;
+Than_Hub["30"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
+Than_Hub["30"]["ElasticBehavior"] = Enum.ElasticBehavior.Never;
+Than_Hub["30"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["30"]["Name"] = [[ScrollingFrameRight]];
+Than_Hub["30"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y;
+Than_Hub["30"]["Size"] = UDim2.new(0.5, 0, 1, 0);
+Than_Hub["30"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["30"]["Position"] = UDim2.new(0.5, 0, 0, 0);
+Than_Hub["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["30"]["ScrollBarThickness"] = 0;
+Than_Hub["30"]["BackgroundTransparency"] = 1;
 
 
 -- Than Hub.Template.TabFrame.ScrollingFrameRight.UIListLayout
-ThanHub["31"] = Instance.new("UIListLayout", ThanHub["30"]);
-ThanHub["31"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
-ThanHub["31"]["Padding"] = UDim.new(0, 10);
-ThanHub["31"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+Than_Hub["31"] = Instance.new("UIListLayout", Than_Hub["30"]);
+Than_Hub["31"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+Than_Hub["31"]["Padding"] = UDim.new(0, 10);
+Than_Hub["31"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 
 -- Than Hub.Template.TabFrame.ScrollingFrameRight.UIPadding
-ThanHub["32"] = Instance.new("UIPadding", ThanHub["30"]);
-ThanHub["32"]["PaddingTop"] = UDim.new(0, 10);
-ThanHub["32"]["PaddingBottom"] = UDim.new(0, 10);
+Than_Hub["32"] = Instance.new("UIPadding", Than_Hub["30"]);
+Than_Hub["32"]["PaddingTop"] = UDim.new(0, 10);
+Than_Hub["32"]["PaddingBottom"] = UDim.new(0, 10);
 
 
 -- Than Hub.Template.TabFrame.ScrollingFrameLeft
-ThanHub["33"] = Instance.new("ScrollingFrame", ThanHub["2f"]);
-ThanHub["33"]["Active"] = true;
-ThanHub["33"]["ZIndex"] = 0;
-ThanHub["33"]["BorderSizePixel"] = 0;
-ThanHub["33"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
-ThanHub["33"]["ElasticBehavior"] = Enum.ElasticBehavior.Never;
-ThanHub["33"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["33"]["Name"] = [[ScrollingFrameLeft]];
-ThanHub["33"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y;
-ThanHub["33"]["Size"] = UDim2.new(0.5, 0, 1, 0);
-ThanHub["33"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["33"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["33"]["ScrollBarThickness"] = 0;
-ThanHub["33"]["BackgroundTransparency"] = 1;
+Than_Hub["33"] = Instance.new("ScrollingFrame", Than_Hub["2f"]);
+Than_Hub["33"]["Active"] = true;
+Than_Hub["33"]["ZIndex"] = 0;
+Than_Hub["33"]["BorderSizePixel"] = 0;
+Than_Hub["33"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
+Than_Hub["33"]["ElasticBehavior"] = Enum.ElasticBehavior.Never;
+Than_Hub["33"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["33"]["Name"] = [[ScrollingFrameLeft]];
+Than_Hub["33"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y;
+Than_Hub["33"]["Size"] = UDim2.new(0.5, 0, 1, 0);
+Than_Hub["33"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["33"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["33"]["ScrollBarThickness"] = 0;
+Than_Hub["33"]["BackgroundTransparency"] = 1;
 
 
 -- Than Hub.Template.TabFrame.ScrollingFrameLeft.UIListLayout
-ThanHub["34"] = Instance.new("UIListLayout", ThanHub["33"]);
-ThanHub["34"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
-ThanHub["34"]["Padding"] = UDim.new(0, 10);
-ThanHub["34"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+Than_Hub["34"] = Instance.new("UIListLayout", Than_Hub["33"]);
+Than_Hub["34"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+Than_Hub["34"]["Padding"] = UDim.new(0, 10);
+Than_Hub["34"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 
 -- Than Hub.Template.TabFrame.ScrollingFrameLeft.UIPadding
-ThanHub["35"] = Instance.new("UIPadding", ThanHub["33"]);
-ThanHub["35"]["PaddingTop"] = UDim.new(0, 10);
-ThanHub["35"]["PaddingBottom"] = UDim.new(0, 10);
-
-
--- Than Hub.Template.Button
-ThanHub["36"] = Instance.new("Frame", ThanHub["29"]);
-ThanHub["36"]["Visible"] = false;
-ThanHub["36"]["BorderSizePixel"] = 0;
-ThanHub["36"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["36"]["Size"] = UDim2.new(0, 145, 0, 39);
-ThanHub["36"]["Position"] = UDim2.new(0, 0, 0.58209, 0);
-ThanHub["36"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["36"]["Name"] = [[Button]];
-ThanHub["36"]["BackgroundTransparency"] = 1;
-
-
--- Than Hub.Template.Button.Button
-ThanHub["37"] = Instance.new("TextButton", ThanHub["36"]);
-ThanHub["37"]["BorderSizePixel"] = 0;
-ThanHub["37"]["AutoButtonColor"] = false;
-ThanHub["37"]["TextSize"] = 14;
-ThanHub["37"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["37"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
-ThanHub["37"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-ThanHub["37"]["Size"] = UDim2.new(0, 131, 0, 24);
-ThanHub["37"]["Name"] = [[Button]];
-ThanHub["37"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["37"]["Text"] = [[]];
-ThanHub["37"]["Position"] = UDim2.new(0.00752, 0, 0.16667, 0);
-
-
--- Than Hub.Template.Button.Button.UICorner
-ThanHub["38"] = Instance.new("UICorner", ThanHub["37"]);
-ThanHub["38"]["CornerRadius"] = UDim.new(0, 4);
-
-
--- Than Hub.Template.Button.Button.UIStroke
-ThanHub["39"] = Instance.new("UIStroke", ThanHub["37"]);
-ThanHub["39"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-ThanHub["39"]["Thickness"] = 1.5;
-ThanHub["39"]["Color"] = Color3.fromRGB(56, 56, 56);
-
-
--- Than Hub.Template.Button.Button.UIStroke.UIGradient
-ThanHub["3a"] = Instance.new("UIGradient", ThanHub["39"]);
-ThanHub["3a"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 39, 255))};
-
-
--- Than Hub.Template.Button.Button.UIGradientOff
-ThanHub["3b"] = Instance.new("UIGradient", ThanHub["37"]);
-ThanHub["3b"]["Rotation"] = -90;
-ThanHub["3b"]["Name"] = [[UIGradientOff]];
-ThanHub["3b"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(14, 43, 140))};
-
-
--- Than Hub.Template.Button.Button.TextLabel
-ThanHub["3c"] = Instance.new("TextLabel", ThanHub["37"]);
-ThanHub["3c"]["TextWrapped"] = true;
-ThanHub["3c"]["BorderSizePixel"] = 0;
-ThanHub["3c"]["TextScaled"] = true;
-ThanHub["3c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["3c"]["TextSize"] = 14;
-ThanHub["3c"]["FontFace"] = Font.new([[rbxassetid://11702779517]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-ThanHub["3c"]["TextColor3"] = Color3.fromRGB(246, 246, 246);
-ThanHub["3c"]["BackgroundTransparency"] = 1;
-ThanHub["3c"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-ThanHub["3c"]["Size"] = UDim2.new(1, 0, 0.5, 0);
-ThanHub["3c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["3c"]["Text"] = [[Button]];
-ThanHub["3c"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-
-
--- Than Hub.Template.Button.Button.TextLabel.UIGradient
-ThanHub["3d"] = Instance.new("UIGradient", ThanHub["3c"]);
-ThanHub["3d"]["Rotation"] = -90;
-ThanHub["3d"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
-
-
--- Than Hub.Template.Button.Button.UIGradientOn
-ThanHub["3e"] = Instance.new("UIGradient", ThanHub["37"]);
-ThanHub["3e"]["Enabled"] = false;
-ThanHub["3e"]["Name"] = [[UIGradientOn]];
-ThanHub["3e"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
-
-
--- Than Hub.Template.Button.UIListLayout
-ThanHub["3f"] = Instance.new("UIListLayout", ThanHub["36"]);
-ThanHub["3f"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
-ThanHub["3f"]["Padding"] = UDim.new(0, 10);
-ThanHub["3f"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
-ThanHub["3f"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-ThanHub["3f"]["FillDirection"] = Enum.FillDirection.Horizontal;
-
-
--- Than Hub.Template.Button.UIPadding
-ThanHub["40"] = Instance.new("UIPadding", ThanHub["36"]);
-ThanHub["40"]["PaddingRight"] = UDim.new(0, 6);
-ThanHub["40"]["PaddingLeft"] = UDim.new(0, 6);
-
-
--- Than Hub.Template.Dropdown
-ThanHub["41"] = Instance.new("Frame", ThanHub["29"]);
-ThanHub["41"]["Visible"] = false;
-ThanHub["41"]["BorderSizePixel"] = 0;
-ThanHub["41"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["41"]["AutomaticSize"] = Enum.AutomaticSize.Y;
-ThanHub["41"]["Size"] = UDim2.new(0, 145, 0, 54);
-ThanHub["41"]["Position"] = UDim2.new(0, 0, 0.78629, 0);
-ThanHub["41"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["41"]["Name"] = [[Dropdown]];
-ThanHub["41"]["BackgroundTransparency"] = 1;
-
-
--- Than Hub.Template.Dropdown.UIListLayout
-ThanHub["42"] = Instance.new("UIListLayout", ThanHub["41"]);
-ThanHub["42"]["Padding"] = UDim.new(0, 5);
-ThanHub["42"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
-ThanHub["42"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-
-
--- Than Hub.Template.Dropdown.UIPadding
-ThanHub["43"] = Instance.new("UIPadding", ThanHub["41"]);
-ThanHub["43"]["PaddingRight"] = UDim.new(0, 6);
-ThanHub["43"]["PaddingLeft"] = UDim.new(0, 8);
-
-
--- Than Hub.Template.Dropdown.Frame
-ThanHub["44"] = Instance.new("Frame", ThanHub["41"]);
-ThanHub["44"]["BorderSizePixel"] = 0;
-ThanHub["44"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["44"]["Size"] = UDim2.new(0, 65, 0, 13);
-ThanHub["44"]["Position"] = UDim2.new(0, 0, 0.28333, 0);
-ThanHub["44"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["44"]["BackgroundTransparency"] = 1;
-
-
--- Than Hub.Template.Dropdown.Frame.Title
-ThanHub["45"] = Instance.new("TextLabel", ThanHub["44"]);
-ThanHub["45"]["TextWrapped"] = true;
-ThanHub["45"]["BorderSizePixel"] = 0;
-ThanHub["45"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-ThanHub["45"]["TextScaled"] = true;
-ThanHub["45"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["45"]["TextSize"] = 14;
-ThanHub["45"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-ThanHub["45"]["TextColor3"] = Color3.fromRGB(246, 246, 246);
-ThanHub["45"]["BackgroundTransparency"] = 1;
-ThanHub["45"]["AnchorPoint"] = Vector2.new(0, 0.5);
-ThanHub["45"]["Size"] = UDim2.new(1, 0, 1, 0);
-ThanHub["45"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["45"]["Text"] = [[Dropdown]];
-ThanHub["45"]["Name"] = [[Title]];
-ThanHub["45"]["Position"] = UDim2.new(0, 0, 0.5, 0);
-
-
--- Than Hub.Template.Dropdown.Frame.Title.UIGradient
-ThanHub["46"] = Instance.new("UIGradient", ThanHub["45"]);
-ThanHub["46"]["Enabled"] = false;
-ThanHub["46"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 90, 255)),ColorSequenceKeypoint.new(0.247, Color3.fromRGB(63, 156, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 248))};
-
-
--- Than Hub.Template.Dropdown.DropdownButton
-ThanHub["47"] = Instance.new("Frame", ThanHub["41"]);
-ThanHub["47"]["BorderSizePixel"] = 0;
-ThanHub["47"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
-ThanHub["47"]["Selectable"] = true;
-ThanHub["47"]["ClipsDescendants"] = true;
-ThanHub["47"]["Size"] = UDim2.new(0, 130, 0, 18);
-ThanHub["47"]["Position"] = UDim2.new(-0.00763, 0, 0.14595, 0);
-ThanHub["47"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["47"]["Name"] = [[DropdownButton]];
-ThanHub["47"]["SelectionGroup"] = true;
-
-
--- Than Hub.Template.Dropdown.DropdownButton.Button
-ThanHub["48"] = Instance.new("TextButton", ThanHub["47"]);
-ThanHub["48"]["BorderSizePixel"] = 0;
-ThanHub["48"]["AutoButtonColor"] = false;
-ThanHub["48"]["TextSize"] = 14;
-ThanHub["48"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["48"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
-ThanHub["48"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-ThanHub["48"]["Size"] = UDim2.new(0, 130, 0, 18);
-ThanHub["48"]["Name"] = [[Button]];
-ThanHub["48"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["48"]["Text"] = [[]];
-
-
--- Than Hub.Template.Dropdown.DropdownButton.Button.UICorner
-ThanHub["49"] = Instance.new("UICorner", ThanHub["48"]);
-ThanHub["49"]["CornerRadius"] = UDim.new(0, 4);
-
-
--- Than Hub.Template.Dropdown.DropdownButton.Button.UIStroke
-ThanHub["4a"] = Instance.new("UIStroke", ThanHub["48"]);
-ThanHub["4a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-ThanHub["4a"]["Thickness"] = 1.5;
-ThanHub["4a"]["Color"] = Color3.fromRGB(56, 56, 56);
-
-
--- Than Hub.Template.Dropdown.DropdownButton.Button.UIStroke.UIGradient
-ThanHub["4b"] = Instance.new("UIGradient", ThanHub["4a"]);
-ThanHub["4b"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 39, 255))};
-
-
--- Than Hub.Template.Dropdown.DropdownButton.Button.TextLabel
-ThanHub["4c"] = Instance.new("TextLabel", ThanHub["48"]);
-ThanHub["4c"]["TextTruncate"] = Enum.TextTruncate.AtEnd;
-ThanHub["4c"]["BorderSizePixel"] = 0;
-ThanHub["4c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["4c"]["TextSize"] = 14;
-ThanHub["4c"]["FontFace"] = Font.new([[rbxassetid://11702779517]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-ThanHub["4c"]["TextColor3"] = Color3.fromRGB(246, 246, 246);
-ThanHub["4c"]["BackgroundTransparency"] = 1;
-ThanHub["4c"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-ThanHub["4c"]["Size"] = UDim2.new(1, 0, 0.7, 0);
-ThanHub["4c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["4c"]["Text"] = [[Test]];
-ThanHub["4c"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-
-
--- Than Hub.Template.Dropdown.DropdownButton.Button.TextLabel.UIGradient
-ThanHub["4d"] = Instance.new("UIGradient", ThanHub["4c"]);
-ThanHub["4d"]["Rotation"] = -90;
-ThanHub["4d"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
-
-
--- Than Hub.Template.Dropdown.DropdownButton.Button.UIGradientOff
-ThanHub["4e"] = Instance.new("UIGradient", ThanHub["48"]);
-ThanHub["4e"]["Rotation"] = -90;
-ThanHub["4e"]["Name"] = [[UIGradientOff]];
-ThanHub["4e"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(14, 43, 140))};
-
-
--- Than Hub.Template.Dropdown.DropdownButton.Button.UIGradientOn
-ThanHub["4f"] = Instance.new("UIGradient", ThanHub["48"]);
-ThanHub["4f"]["Enabled"] = false;
-ThanHub["4f"]["Name"] = [[UIGradientOn]];
-ThanHub["4f"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
-
-
--- Than Hub.Template.Dropdown.DropdownButton.UICorner
-ThanHub["50"] = Instance.new("UICorner", ThanHub["47"]);
-ThanHub["50"]["CornerRadius"] = UDim.new(0, 4);
-
-
--- Than Hub.Template.Dropdown.DropdownButton.UIStroke
-ThanHub["51"] = Instance.new("UIStroke", ThanHub["47"]);
-ThanHub["51"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-ThanHub["51"]["Color"] = Color3.fromRGB(45, 45, 45);
-
-
--- Than Hub.Template.Dropdown.DropdownButton.UIStroke.UIGradient
-ThanHub["52"] = Instance.new("UIGradient", ThanHub["51"]);
-ThanHub["52"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 39, 255))};
-
-
--- Than Hub.Template.Dropdown.DropdownButton.ScrollingFrame
-ThanHub["53"] = Instance.new("ScrollingFrame", ThanHub["47"]);
-ThanHub["53"]["Active"] = true;
-ThanHub["53"]["BorderSizePixel"] = 0;
-ThanHub["53"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
-ThanHub["53"]["ElasticBehavior"] = Enum.ElasticBehavior.Never;
-ThanHub["53"]["TopImage"] = [[rbxasset://textures/ui/Scroll/scroll-middle.png]];
-ThanHub["53"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["53"]["BottomImage"] = [[rbxasset://textures/ui/Scroll/scroll-middle.png]];
-ThanHub["53"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y;
-ThanHub["53"]["Size"] = UDim2.new(1, 0, 0.11377, 100);
-ThanHub["53"]["Position"] = UDim2.new(0, 0, 0, 48);
-ThanHub["53"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["53"]["ScrollBarThickness"] = 2;
-ThanHub["53"]["BackgroundTransparency"] = 1;
-
-
--- Than Hub.Template.Dropdown.DropdownButton.ScrollingFrame.UIListLayout
-ThanHub["54"] = Instance.new("UIListLayout", ThanHub["53"]);
-ThanHub["54"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
-ThanHub["54"]["Padding"] = UDim.new(0, 5);
-ThanHub["54"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-
-
--- Than Hub.Template.Dropdown.DropdownButton.SeacrhBox
-ThanHub["55"] = Instance.new("Frame", ThanHub["47"]);
-ThanHub["55"]["Active"] = true;
-ThanHub["55"]["BorderSizePixel"] = 0;
-ThanHub["55"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
-ThanHub["55"]["Selectable"] = true;
-ThanHub["55"]["AnchorPoint"] = Vector2.new(0.5, 0);
-ThanHub["55"]["Size"] = UDim2.new(0, 117, 0, 17);
-ThanHub["55"]["Position"] = UDim2.new(0.5, 0, 0, 25);
-ThanHub["55"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["55"]["Name"] = [[SeacrhBox]];
-
-
--- Than Hub.Template.Dropdown.DropdownButton.SeacrhBox.UIStroke
-ThanHub["56"] = Instance.new("UIStroke", ThanHub["55"]);
-ThanHub["56"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-ThanHub["56"]["Thickness"] = 1.5;
-ThanHub["56"]["Color"] = Color3.fromRGB(56, 56, 56);
-
-
--- Than Hub.Template.Dropdown.DropdownButton.SeacrhBox.UIStroke.UIGradient
-ThanHub["57"] = Instance.new("UIGradient", ThanHub["56"]);
-ThanHub["57"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 39, 255))};
-
-
--- Than Hub.Template.Dropdown.DropdownButton.SeacrhBox.UIGradient
-ThanHub["58"] = Instance.new("UIGradient", ThanHub["55"]);
-ThanHub["58"]["Rotation"] = -90;
-ThanHub["58"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(14, 43, 140))};
-
-
--- Than Hub.Template.Dropdown.DropdownButton.SeacrhBox.TextBox
-ThanHub["59"] = Instance.new("TextBox", ThanHub["55"]);
-ThanHub["59"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["59"]["PlaceholderColor3"] = Color3.fromRGB(179, 179, 179);
-ThanHub["59"]["BorderSizePixel"] = 0;
-ThanHub["59"]["TextWrapped"] = true;
-ThanHub["59"]["TextTruncate"] = Enum.TextTruncate.AtEnd;
-ThanHub["59"]["TextSize"] = 11;
-ThanHub["59"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["59"]["FontFace"] = Font.new([[rbxassetid://11702779517]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-ThanHub["59"]["PlaceholderText"] = [[Search Here]];
-ThanHub["59"]["Size"] = UDim2.new(1, 0, 1, 0);
-ThanHub["59"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["59"]["Text"] = [[]];
-ThanHub["59"]["BackgroundTransparency"] = 1;
-
-
--- Than Hub.Template.Dropdown.DropdownButton.SeacrhBox.UICorner
-ThanHub["5a"] = Instance.new("UICorner", ThanHub["55"]);
-ThanHub["5a"]["CornerRadius"] = UDim.new(0, 4);
-
-
--- Than Hub.Template.Dropdown.DropdownButton.ScrollingFrameSearch
-ThanHub["5b"] = Instance.new("ScrollingFrame", ThanHub["47"]);
-ThanHub["5b"]["Visible"] = false;
-ThanHub["5b"]["Active"] = true;
-ThanHub["5b"]["BorderSizePixel"] = 0;
-ThanHub["5b"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
-ThanHub["5b"]["ElasticBehavior"] = Enum.ElasticBehavior.Never;
-ThanHub["5b"]["TopImage"] = [[rbxasset://textures/ui/Scroll/scroll-middle.png]];
-ThanHub["5b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["5b"]["Name"] = [[ScrollingFrameSearch]];
-ThanHub["5b"]["BottomImage"] = [[rbxasset://textures/ui/Scroll/scroll-middle.png]];
-ThanHub["5b"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y;
-ThanHub["5b"]["Size"] = UDim2.new(1, 0, 0.11377, 100);
-ThanHub["5b"]["Position"] = UDim2.new(0, 0, 0, 48);
-ThanHub["5b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["5b"]["ScrollBarThickness"] = 2;
-ThanHub["5b"]["BackgroundTransparency"] = 1;
-
-
--- Than Hub.Template.Dropdown.DropdownButton.ScrollingFrameSearch.UIListLayout
-ThanHub["5c"] = Instance.new("UIListLayout", ThanHub["5b"]);
-ThanHub["5c"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
-ThanHub["5c"]["Padding"] = UDim.new(0, 5);
-ThanHub["5c"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-
-
--- Than Hub.Template.Dropdown.DropdownButton.UIGradient
-ThanHub["5d"] = Instance.new("UIGradient", ThanHub["47"]);
-ThanHub["5d"]["Rotation"] = -90;
-ThanHub["5d"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(14, 43, 140))};
-
-
--- Than Hub.Template.Dropdown.UIGradient
-ThanHub["5e"] = Instance.new("UIGradient", ThanHub["41"]);
-ThanHub["5e"]["Rotation"] = -90;
-ThanHub["5e"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(14, 43, 140))};
-
-
--- Than Hub.Template.Dropdown.OnChanged
-ThanHub["5f"] = Instance.new("BindableEvent", ThanHub["41"]);
-ThanHub["5f"]["Name"] = [[OnChanged]];
-
-
--- Than Hub.Template.Paragraph
-ThanHub["60"] = Instance.new("Frame", ThanHub["29"]);
-ThanHub["60"]["Visible"] = false;
-ThanHub["60"]["BorderSizePixel"] = 0;
-ThanHub["60"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["60"]["AutomaticSize"] = Enum.AutomaticSize.Y;
-ThanHub["60"]["Size"] = UDim2.new(0, 145, 0, 42);
-ThanHub["60"]["Position"] = UDim2.new(0, 0, 0.91602, 0);
-ThanHub["60"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["60"]["Name"] = [[Paragraph]];
-ThanHub["60"]["BackgroundTransparency"] = 1;
-
-
--- Than Hub.Template.Paragraph.UIListLayout
-ThanHub["61"] = Instance.new("UIListLayout", ThanHub["60"]);
-ThanHub["61"]["Padding"] = UDim.new(0, 5);
-ThanHub["61"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
-ThanHub["61"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-ThanHub["61"]["FillDirection"] = Enum.FillDirection.Horizontal;
-
-
--- Than Hub.Template.Paragraph.UIPadding
-ThanHub["62"] = Instance.new("UIPadding", ThanHub["60"]);
-ThanHub["62"]["PaddingRight"] = UDim.new(0, 8);
-ThanHub["62"]["PaddingLeft"] = UDim.new(0, 8);
-
-
--- Than Hub.Template.Paragraph.Paragraph
-ThanHub["63"] = Instance.new("Frame", ThanHub["60"]);
-ThanHub["63"]["BorderSizePixel"] = 0;
-ThanHub["63"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["63"]["Selectable"] = true;
-ThanHub["63"]["ClipsDescendants"] = true;
-ThanHub["63"]["AutomaticSize"] = Enum.AutomaticSize.Y;
-ThanHub["63"]["Size"] = UDim2.new(0, 130, 0, 28);
-ThanHub["63"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["63"]["Name"] = [[Paragraph]];
-ThanHub["63"]["BackgroundTransparency"] = 0.8;
-
-
--- Than Hub.Template.Paragraph.Paragraph.UICorner
-ThanHub["64"] = Instance.new("UICorner", ThanHub["63"]);
-ThanHub["64"]["CornerRadius"] = UDim.new(0, 4);
-
-
--- Than Hub.Template.Paragraph.Paragraph.Title
-ThanHub["65"] = Instance.new("TextLabel", ThanHub["63"]);
-ThanHub["65"]["TextWrapped"] = true;
-ThanHub["65"]["BorderSizePixel"] = 0;
-ThanHub["65"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-ThanHub["65"]["TextScaled"] = true;
-ThanHub["65"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["65"]["TextSize"] = 14;
-ThanHub["65"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-ThanHub["65"]["TextColor3"] = Color3.fromRGB(246, 246, 246);
-ThanHub["65"]["BackgroundTransparency"] = 1;
-ThanHub["65"]["Size"] = UDim2.new(0, 130, 0, 27);
-ThanHub["65"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["65"]["Text"] = [[Paragraph]];
-ThanHub["65"]["Name"] = [[Title]];
-
-
--- Than Hub.Template.Paragraph.Paragraph.Title.UIGradient
-ThanHub["66"] = Instance.new("UIGradient", ThanHub["65"]);
-ThanHub["66"]["Enabled"] = false;
-ThanHub["66"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 90, 255)),ColorSequenceKeypoint.new(0.247, Color3.fromRGB(63, 156, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 248))};
-
-
--- Than Hub.Template.Paragraph.Paragraph.Title.UIPadding
-ThanHub["67"] = Instance.new("UIPadding", ThanHub["65"]);
-ThanHub["67"]["PaddingTop"] = UDim.new(0, 6);
-ThanHub["67"]["PaddingLeft"] = UDim.new(0, 6);
-ThanHub["67"]["PaddingBottom"] = UDim.new(0, 6);
-
-
--- Than Hub.Template.Paragraph.Paragraph.UIStroke
-ThanHub["68"] = Instance.new("UIStroke", ThanHub["63"]);
-ThanHub["68"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-ThanHub["68"]["Thickness"] = 1.5;
-ThanHub["68"]["Color"] = Color3.fromRGB(56, 56, 56);
-
-
--- Than Hub.Template.Paragraph.Paragraph.UIStroke.UIGradient
-ThanHub["69"] = Instance.new("UIGradient", ThanHub["68"]);
-ThanHub["69"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 39, 255))};
-
-
--- Than Hub.Template.Paragraph.Paragraph.Content
-ThanHub["6a"] = Instance.new("TextLabel", ThanHub["63"]);
-ThanHub["6a"]["TextWrapped"] = true;
-ThanHub["6a"]["BorderSizePixel"] = 0;
-ThanHub["6a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-ThanHub["6a"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-ThanHub["6a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["6a"]["TextSize"] = 13;
-ThanHub["6a"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-ThanHub["6a"]["TextColor3"] = Color3.fromRGB(246, 246, 246);
-ThanHub["6a"]["BackgroundTransparency"] = 1;
-ThanHub["6a"]["RichText"] = true;
-ThanHub["6a"]["Size"] = UDim2.new(0, 130, 0, 15);
-ThanHub["6a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["6a"]["Text"] = [[Content]];
-ThanHub["6a"]["AutomaticSize"] = Enum.AutomaticSize.Y;
-ThanHub["6a"]["Name"] = [[Content]];
-ThanHub["6a"]["Position"] = UDim2.new(0, 0, 0, 27);
-
-
--- Than Hub.Template.Paragraph.Paragraph.Content.UIGradient
-ThanHub["6b"] = Instance.new("UIGradient", ThanHub["6a"]);
-ThanHub["6b"]["Enabled"] = false;
-ThanHub["6b"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 90, 255)),ColorSequenceKeypoint.new(0.247, Color3.fromRGB(63, 156, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 248))};
-
-
--- Than Hub.Template.Paragraph.Paragraph.Content.UIPadding
-ThanHub["6c"] = Instance.new("UIPadding", ThanHub["6a"]);
-ThanHub["6c"]["PaddingLeft"] = UDim.new(0, 6);
-
-
--- Than Hub.Template.Paragraph.Paragraph.UIPadding
-ThanHub["6d"] = Instance.new("UIPadding", ThanHub["63"]);
-ThanHub["6d"]["PaddingRight"] = UDim.new(0, 5);
-ThanHub["6d"]["PaddingBottom"] = UDim.new(0, 5);
-
-
--- Than Hub.Template.Slider
-ThanHub["6e"] = Instance.new("Frame", ThanHub["29"]);
-ThanHub["6e"]["Visible"] = false;
-ThanHub["6e"]["BorderSizePixel"] = 0;
-ThanHub["6e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["6e"]["Size"] = UDim2.new(0, 145, 0, 47);
-ThanHub["6e"]["Position"] = UDim2.new(0, 0, 0.63063, 0);
-ThanHub["6e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["6e"]["Name"] = [[Slider]];
-ThanHub["6e"]["BackgroundTransparency"] = 1;
-
-
--- Than Hub.Template.Slider.UIListLayout
-ThanHub["6f"] = Instance.new("UIListLayout", ThanHub["6e"]);
-ThanHub["6f"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
-ThanHub["6f"]["Padding"] = UDim.new(0, 6);
-ThanHub["6f"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
-ThanHub["6f"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-
-
--- Than Hub.Template.Slider.UIPadding
-ThanHub["70"] = Instance.new("UIPadding", ThanHub["6e"]);
-ThanHub["70"]["PaddingRight"] = UDim.new(0, 6);
-ThanHub["70"]["PaddingLeft"] = UDim.new(0, 8);
-
-
--- Than Hub.Template.Slider.Frame
-ThanHub["71"] = Instance.new("Frame", ThanHub["6e"]);
-ThanHub["71"]["BorderSizePixel"] = 0;
-ThanHub["71"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["71"]["Size"] = UDim2.new(0, 125, 0, 13);
-ThanHub["71"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["71"]["BackgroundTransparency"] = 1;
-
-
--- Than Hub.Template.Slider.Frame.Title
-ThanHub["72"] = Instance.new("TextLabel", ThanHub["71"]);
-ThanHub["72"]["TextWrapped"] = true;
-ThanHub["72"]["BorderSizePixel"] = 0;
-ThanHub["72"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-ThanHub["72"]["TextScaled"] = true;
-ThanHub["72"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["72"]["TextSize"] = 14;
-ThanHub["72"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-ThanHub["72"]["TextColor3"] = Color3.fromRGB(246, 246, 246);
-ThanHub["72"]["BackgroundTransparency"] = 1;
-ThanHub["72"]["AnchorPoint"] = Vector2.new(0, 0.5);
-ThanHub["72"]["Size"] = UDim2.new(0.5, 0, 1, 0);
-ThanHub["72"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["72"]["Text"] = [[Slider]];
-ThanHub["72"]["Name"] = [[Title]];
-ThanHub["72"]["Position"] = UDim2.new(0, 0, 0.5, 0);
-
-
--- Than Hub.Template.Slider.Frame.Title.UIGradient
-ThanHub["73"] = Instance.new("UIGradient", ThanHub["72"]);
-ThanHub["73"]["Enabled"] = false;
-ThanHub["73"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 90, 255)),ColorSequenceKeypoint.new(0.247, Color3.fromRGB(63, 156, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 248))};
-
-
--- Than Hub.Template.Slider.Frame.ValueText
-ThanHub["74"] = Instance.new("TextBox", ThanHub["71"]);
-ThanHub["74"]["Active"] = false;
-ThanHub["74"]["TextColor3"] = Color3.fromRGB(246, 246, 246);
-ThanHub["74"]["BorderSizePixel"] = 0;
-ThanHub["74"]["TextXAlignment"] = Enum.TextXAlignment.Right;
-ThanHub["74"]["TextWrapped"] = true;
-ThanHub["74"]["TextSize"] = 14;
-ThanHub["74"]["Name"] = [[ValueText]];
-ThanHub["74"]["TextScaled"] = true;
-ThanHub["74"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["74"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-ThanHub["74"]["Selectable"] = false;
-ThanHub["74"]["AnchorPoint"] = Vector2.new(0, 0.5);
-ThanHub["74"]["Size"] = UDim2.new(0.5, -1, 1, 0);
-ThanHub["74"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-ThanHub["74"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["74"]["Text"] = [[0]];
-ThanHub["74"]["BackgroundTransparency"] = 1;
-
-
--- Than Hub.Template.Slider.Frame.ValueText.UIGradient
-ThanHub["75"] = Instance.new("UIGradient", ThanHub["74"]);
-ThanHub["75"]["Enabled"] = false;
-ThanHub["75"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 90, 255)),ColorSequenceKeypoint.new(0.247, Color3.fromRGB(63, 156, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 248))};
-
-
--- Than Hub.Template.Slider.Trigger
-ThanHub["76"] = Instance.new("TextButton", ThanHub["6e"]);
-ThanHub["76"]["BorderSizePixel"] = 0;
-ThanHub["76"]["AutoButtonColor"] = false;
-ThanHub["76"]["TextSize"] = 14;
-ThanHub["76"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["76"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["76"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-ThanHub["76"]["Size"] = UDim2.new(0, 120, 0, 10);
-ThanHub["76"]["BackgroundTransparency"] = 1;
-ThanHub["76"]["Name"] = [[Trigger]];
-ThanHub["76"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["76"]["Text"] = [[]];
-ThanHub["76"]["Position"] = UDim2.new(0.00763, 0, 0.59239, 0);
-
-
--- Than Hub.Template.Slider.Trigger.Fill
-ThanHub["77"] = Instance.new("TextButton", ThanHub["76"]);
-ThanHub["77"]["Active"] = false;
-ThanHub["77"]["Interactable"] = false;
-ThanHub["77"]["BorderSizePixel"] = 0;
-ThanHub["77"]["AutoButtonColor"] = false;
-ThanHub["77"]["TextSize"] = 14;
-ThanHub["77"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["77"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["77"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-ThanHub["77"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-ThanHub["77"]["Size"] = UDim2.new(0, 120, 0, 4);
-ThanHub["77"]["Name"] = [[Fill]];
-ThanHub["77"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["77"]["Text"] = [[]];
-ThanHub["77"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-
-
--- Than Hub.Template.Slider.Trigger.Fill.UIGradient
-ThanHub["78"] = Instance.new("UIGradient", ThanHub["77"]);
-ThanHub["78"]["Rotation"] = 180;
-ThanHub["78"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(14, 43, 140))};
-
-
--- Than Hub.Template.Slider.Trigger.Fill.UICorner
-ThanHub["79"] = Instance.new("UICorner", ThanHub["77"]);
-ThanHub["79"]["CornerRadius"] = UDim.new(10, 10);
-
-
--- Than Hub.Template.Slider.Trigger.Fill.Circle
-ThanHub["7a"] = Instance.new("Frame", ThanHub["77"]);
-ThanHub["7a"]["BorderSizePixel"] = 0;
-ThanHub["7a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["7a"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-ThanHub["7a"]["Size"] = UDim2.new(0, 10, 0, 10);
-ThanHub["7a"]["Position"] = UDim2.new(0, 0, 0.5, 0);
-ThanHub["7a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["7a"]["Name"] = [[Circle]];
-
-
--- Than Hub.Template.Slider.Trigger.Fill.Circle.UICorner
-ThanHub["7b"] = Instance.new("UICorner", ThanHub["7a"]);
-ThanHub["7b"]["CornerRadius"] = UDim.new(10, 10);
-
-
--- Than Hub.Template.Slider.OnChanged
-ThanHub["7c"] = Instance.new("BindableEvent", ThanHub["6e"]);
-ThanHub["7c"]["Name"] = [[OnChanged]];
-
-
--- Than Hub.Template.Textbox
-ThanHub["7d"] = Instance.new("Frame", ThanHub["29"]);
-ThanHub["7d"]["Visible"] = false;
-ThanHub["7d"]["BorderSizePixel"] = 0;
-ThanHub["7d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["7d"]["Size"] = UDim2.new(0, 145, 0, 35);
-ThanHub["7d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["7d"]["Name"] = [[Textbox]];
-ThanHub["7d"]["BackgroundTransparency"] = 1;
-
-
--- Than Hub.Template.Textbox.UIListLayout
-ThanHub["7e"] = Instance.new("UIListLayout", ThanHub["7d"]);
-ThanHub["7e"]["Padding"] = UDim.new(0, 5);
-ThanHub["7e"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
-ThanHub["7e"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-ThanHub["7e"]["FillDirection"] = Enum.FillDirection.Horizontal;
-
-
--- Than Hub.Template.Textbox.UIPadding
-ThanHub["7f"] = Instance.new("UIPadding", ThanHub["7d"]);
-ThanHub["7f"]["PaddingRight"] = UDim.new(0, 8);
-ThanHub["7f"]["PaddingLeft"] = UDim.new(0, 8);
-
-
--- Than Hub.Template.Textbox.Title
-ThanHub["80"] = Instance.new("TextLabel", ThanHub["7d"]);
-ThanHub["80"]["TextWrapped"] = true;
-ThanHub["80"]["BorderSizePixel"] = 0;
-ThanHub["80"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-ThanHub["80"]["TextScaled"] = true;
-ThanHub["80"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["80"]["TextSize"] = 14;
-ThanHub["80"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-ThanHub["80"]["TextColor3"] = Color3.fromRGB(246, 246, 246);
-ThanHub["80"]["BackgroundTransparency"] = 1;
-ThanHub["80"]["Size"] = UDim2.new(0, 65, 0, 13);
-ThanHub["80"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["80"]["Text"] = [[Textbox]];
-ThanHub["80"]["Name"] = [[Title]];
-ThanHub["80"]["Position"] = UDim2.new(0, 0, 0, 11);
-
-
--- Than Hub.Template.Textbox.Title.UIGradient
-ThanHub["81"] = Instance.new("UIGradient", ThanHub["80"]);
-ThanHub["81"]["Enabled"] = false;
-ThanHub["81"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 90, 255)),ColorSequenceKeypoint.new(0.247, Color3.fromRGB(63, 156, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 248))};
-
-
--- Than Hub.Template.Textbox.Box
-ThanHub["82"] = Instance.new("TextButton", ThanHub["7d"]);
-ThanHub["82"]["TextWrapped"] = true;
-ThanHub["82"]["BorderSizePixel"] = 0;
-ThanHub["82"]["AutoButtonColor"] = false;
-ThanHub["82"]["TextSize"] = 14;
-ThanHub["82"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["82"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
-ThanHub["82"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-ThanHub["82"]["Size"] = UDim2.new(0, 60, 0, 22);
-ThanHub["82"]["Name"] = [[Box]];
-ThanHub["82"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["82"]["Text"] = [[]];
-ThanHub["82"]["Position"] = UDim2.new(0.54264, 0, 0.18571, 0);
-
-
--- Than Hub.Template.Textbox.Box.UICorner
-ThanHub["83"] = Instance.new("UICorner", ThanHub["82"]);
-ThanHub["83"]["CornerRadius"] = UDim.new(0, 4);
-
-
--- Than Hub.Template.Textbox.Box.UIStroke
-ThanHub["84"] = Instance.new("UIStroke", ThanHub["82"]);
-ThanHub["84"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-ThanHub["84"]["Thickness"] = 1.5;
-ThanHub["84"]["Color"] = Color3.fromRGB(56, 56, 56);
-
-
--- Than Hub.Template.Textbox.Box.UIStroke.UIGradient
-ThanHub["85"] = Instance.new("UIGradient", ThanHub["84"]);
-ThanHub["85"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 39, 255))};
-
-
--- Than Hub.Template.Textbox.Box.UIGradient
-ThanHub["86"] = Instance.new("UIGradient", ThanHub["82"]);
-ThanHub["86"]["Rotation"] = -90;
-ThanHub["86"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(14, 43, 140))};
-
-
--- Than Hub.Template.Textbox.Box.Textbox
-ThanHub["87"] = Instance.new("TextBox", ThanHub["82"]);
-ThanHub["87"]["TextColor3"] = Color3.fromRGB(151, 151, 151);
-ThanHub["87"]["PlaceholderColor3"] = Color3.fromRGB(96, 96, 96);
-ThanHub["87"]["BorderSizePixel"] = 0;
-ThanHub["87"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-ThanHub["87"]["TextWrapped"] = true;
-ThanHub["87"]["TextTruncate"] = Enum.TextTruncate.AtEnd;
-ThanHub["87"]["TextSize"] = 12;
-ThanHub["87"]["Name"] = [[Textbox]];
-ThanHub["87"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["87"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-ThanHub["87"]["Selectable"] = false;
-ThanHub["87"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-ThanHub["87"]["ClearTextOnFocus"] = false;
-ThanHub["87"]["Size"] = UDim2.new(1, 0, 1, 0);
-ThanHub["87"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-ThanHub["87"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["87"]["Text"] = [[]];
-ThanHub["87"]["BackgroundTransparency"] = 1;
-
-
--- Than Hub.Template.Textbox.Box.Textbox.UIGradient
-ThanHub["88"] = Instance.new("UIGradient", ThanHub["87"]);
-ThanHub["88"]["Enabled"] = false;
-ThanHub["88"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 90, 255)),ColorSequenceKeypoint.new(0.247, Color3.fromRGB(63, 156, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 248))};
-
-
--- Than Hub.Template.Textbox.Box.Textbox.UIPadding
-ThanHub["89"] = Instance.new("UIPadding", ThanHub["87"]);
-ThanHub["89"]["PaddingTop"] = UDim.new(0, 5);
-ThanHub["89"]["PaddingLeft"] = UDim.new(0, 5);
-ThanHub["89"]["PaddingBottom"] = UDim.new(0, 5);
-
-
--- Than Hub.Template.Textbox.OnChanged
-ThanHub["8a"] = Instance.new("BindableEvent", ThanHub["7d"]);
-ThanHub["8a"]["Name"] = [[OnChanged]];
-
-
--- Than Hub.Template.Toggle
-ThanHub["8b"] = Instance.new("Frame", ThanHub["29"]);
-ThanHub["8b"]["Visible"] = false;
-ThanHub["8b"]["BorderSizePixel"] = 0;
-ThanHub["8b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["8b"]["Size"] = UDim2.new(0, 145, 0, 35);
-ThanHub["8b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["8b"]["Name"] = [[Toggle]];
-ThanHub["8b"]["BackgroundTransparency"] = 1;
-
-
--- Than Hub.Template.Toggle.Title
-ThanHub["8c"] = Instance.new("TextLabel", ThanHub["8b"]);
-ThanHub["8c"]["TextWrapped"] = true;
-ThanHub["8c"]["BorderSizePixel"] = 0;
-ThanHub["8c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-ThanHub["8c"]["TextTransparency"] = 0.7;
-ThanHub["8c"]["TextScaled"] = true;
-ThanHub["8c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["8c"]["TextSize"] = 14;
-ThanHub["8c"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-ThanHub["8c"]["TextColor3"] = Color3.fromRGB(246, 246, 246);
-ThanHub["8c"]["BackgroundTransparency"] = 1;
-ThanHub["8c"]["Size"] = UDim2.new(0, 103, 0, 13);
-ThanHub["8c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["8c"]["Text"] = [[Toggle]];
-ThanHub["8c"]["Name"] = [[Title]];
-ThanHub["8c"]["Position"] = UDim2.new(0, 32, 0, 11);
-
-
--- Than Hub.Template.Toggle.Title.UIGradient
-ThanHub["8d"] = Instance.new("UIGradient", ThanHub["8c"]);
-ThanHub["8d"]["Enabled"] = false;
-ThanHub["8d"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 90, 255)),ColorSequenceKeypoint.new(0.247, Color3.fromRGB(63, 156, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 248))};
-
-
--- Than Hub.Template.Toggle.UIListLayout
-ThanHub["8e"] = Instance.new("UIListLayout", ThanHub["8b"]);
-ThanHub["8e"]["Padding"] = UDim.new(0, 5);
-ThanHub["8e"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
-ThanHub["8e"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-ThanHub["8e"]["FillDirection"] = Enum.FillDirection.Horizontal;
-
-
--- Than Hub.Template.Toggle.UIPadding
-ThanHub["8f"] = Instance.new("UIPadding", ThanHub["8b"]);
-ThanHub["8f"]["PaddingRight"] = UDim.new(0, 8);
-ThanHub["8f"]["PaddingLeft"] = UDim.new(0, 8);
-
-
--- Than Hub.Template.Toggle.Toggle
-ThanHub["90"] = Instance.new("TextButton", ThanHub["8b"]);
-ThanHub["90"]["BorderSizePixel"] = 0;
-ThanHub["90"]["AutoButtonColor"] = false;
-ThanHub["90"]["TextSize"] = 14;
-ThanHub["90"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["90"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
-ThanHub["90"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-ThanHub["90"]["Size"] = UDim2.new(0, 22, 0, 22);
-ThanHub["90"]["Name"] = [[Toggle]];
-ThanHub["90"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["90"]["Text"] = [[]];
-ThanHub["90"]["Position"] = UDim2.new(0.05517, 0, 0.13333, 0);
-
-
--- Than Hub.Template.Toggle.Toggle.UICorner
-ThanHub["91"] = Instance.new("UICorner", ThanHub["90"]);
-ThanHub["91"]["CornerRadius"] = UDim.new(0, 4);
-
-
--- Than Hub.Template.Toggle.Toggle.UIStroke
-ThanHub["92"] = Instance.new("UIStroke", ThanHub["90"]);
-ThanHub["92"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-ThanHub["92"]["Thickness"] = 1.5;
-ThanHub["92"]["Color"] = Color3.fromRGB(56, 56, 56);
-
-
--- Than Hub.Template.Toggle.Toggle.UIStroke.UIGradient
-ThanHub["93"] = Instance.new("UIGradient", ThanHub["92"]);
-ThanHub["93"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 39, 255))};
-
-
--- Than Hub.Template.Toggle.Toggle.UIGradient
-ThanHub["94"] = Instance.new("UIGradient", ThanHub["90"]);
-ThanHub["94"]["Rotation"] = -90;
-ThanHub["94"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(14, 43, 140))};
-
-
--- Than Hub.Template.Toggle.State
-ThanHub["95"] = Instance.new("BoolValue", ThanHub["8b"]);
-ThanHub["95"]["Name"] = [[State]];
-ThanHub["95"]["Value"] = true;
-
-
--- Than Hub.Template.Toggle.OnChanged
-ThanHub["96"] = Instance.new("BindableEvent", ThanHub["8b"]);
-ThanHub["96"]["Name"] = [[OnChanged]];
+Than_Hub["35"] = Instance.new("UIPadding", Than_Hub["33"]);
+Than_Hub["35"]["PaddingTop"] = UDim.new(0, 10);
+Than_Hub["35"]["PaddingBottom"] = UDim.new(0, 10);
 
 
 -- Than Hub.Template.Section
-ThanHub["97"] = Instance.new("Frame", ThanHub["29"]);
-ThanHub["97"]["Visible"] = false;
-ThanHub["97"]["ZIndex"] = 2;
-ThanHub["97"]["BorderSizePixel"] = 0;
-ThanHub["97"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["97"]["AutomaticSize"] = Enum.AutomaticSize.Y;
-ThanHub["97"]["Size"] = UDim2.new(0, 145, 0, 2);
-ThanHub["97"]["Position"] = UDim2.new(0.04662, 0, 0.10811, 0);
-ThanHub["97"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["97"]["Name"] = [[Section]];
-ThanHub["97"]["BackgroundTransparency"] = 0.75;
+Than_Hub["36"] = Instance.new("Frame", Than_Hub["29"]);
+Than_Hub["36"]["Visible"] = false;
+Than_Hub["36"]["ZIndex"] = 2;
+Than_Hub["36"]["BorderSizePixel"] = 0;
+Than_Hub["36"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["36"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+Than_Hub["36"]["Size"] = UDim2.new(0, 145, 0, 2);
+Than_Hub["36"]["Position"] = UDim2.new(0.04662, 0, 0.10811, 0);
+Than_Hub["36"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["36"]["Name"] = [[Section]];
+Than_Hub["36"]["BackgroundTransparency"] = 0.75;
 
 
 -- Than Hub.Template.Section.UICorner
-ThanHub["98"] = Instance.new("UICorner", ThanHub["97"]);
-ThanHub["98"]["CornerRadius"] = UDim.new(0, 5);
+Than_Hub["37"] = Instance.new("UICorner", Than_Hub["36"]);
+Than_Hub["37"]["CornerRadius"] = UDim.new(0, 5);
 
 
 -- Than Hub.Template.Section.Seperator
-ThanHub["99"] = Instance.new("Frame", ThanHub["97"]);
-ThanHub["99"]["BorderSizePixel"] = 0;
-ThanHub["99"]["BackgroundColor3"] = Color3.fromRGB(56, 56, 56);
-ThanHub["99"]["Size"] = UDim2.new(1, 0, 0, 2);
-ThanHub["99"]["Position"] = UDim2.new(0, 0, 0, 24);
-ThanHub["99"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["99"]["Name"] = [[Seperator]];
+Than_Hub["38"] = Instance.new("Frame", Than_Hub["36"]);
+Than_Hub["38"]["BorderSizePixel"] = 0;
+Than_Hub["38"]["BackgroundColor3"] = Color3.fromRGB(56, 56, 56);
+Than_Hub["38"]["Size"] = UDim2.new(1, 0, 0, 2);
+Than_Hub["38"]["Position"] = UDim2.new(0, 0, 0, 24);
+Than_Hub["38"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["38"]["Name"] = [[Seperator]];
 
 
 -- Than Hub.Template.Section.Seperator.UIGradient
-ThanHub["9a"] = Instance.new("UIGradient", ThanHub["99"]);
-ThanHub["9a"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(58, 144, 255))};
+Than_Hub["39"] = Instance.new("UIGradient", Than_Hub["38"]);
+Than_Hub["39"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(58, 144, 255))};
 
 
 -- Than Hub.Template.Section.Title
-ThanHub["9b"] = Instance.new("TextLabel", ThanHub["97"]);
-ThanHub["9b"]["TextWrapped"] = true;
-ThanHub["9b"]["BorderSizePixel"] = 0;
-ThanHub["9b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-ThanHub["9b"]["TextScaled"] = true;
-ThanHub["9b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["9b"]["TextSize"] = 14;
-ThanHub["9b"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-ThanHub["9b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["9b"]["BackgroundTransparency"] = 1;
-ThanHub["9b"]["Size"] = UDim2.new(0, 95, 0, 13);
-ThanHub["9b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["9b"]["Text"] = [[Section]];
-ThanHub["9b"]["Name"] = [[Title]];
-ThanHub["9b"]["Position"] = UDim2.new(0, 8, 0, 7);
+Than_Hub["3a"] = Instance.new("TextLabel", Than_Hub["36"]);
+Than_Hub["3a"]["TextWrapped"] = true;
+Than_Hub["3a"]["BorderSizePixel"] = 0;
+Than_Hub["3a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+Than_Hub["3a"]["TextScaled"] = true;
+Than_Hub["3a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["3a"]["TextSize"] = 14;
+Than_Hub["3a"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+Than_Hub["3a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["3a"]["BackgroundTransparency"] = 1;
+Than_Hub["3a"]["Size"] = UDim2.new(0, 95, 0, 13);
+Than_Hub["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["3a"]["Text"] = [[Section]];
+Than_Hub["3a"]["Name"] = [[Title]];
+Than_Hub["3a"]["Position"] = UDim2.new(0, 8, 0, 7);
 
 
 -- Than Hub.Template.Section.Title.UIGradient
-ThanHub["9c"] = Instance.new("UIGradient", ThanHub["9b"]);
-ThanHub["9c"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 90, 255)),ColorSequenceKeypoint.new(0.247, Color3.fromRGB(63, 156, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 248))};
+Than_Hub["3b"] = Instance.new("UIGradient", Than_Hub["3a"]);
+Than_Hub["3b"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 90, 255)),ColorSequenceKeypoint.new(0.247, Color3.fromRGB(63, 156, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 248))};
 
 
 -- Than Hub.Template.Section.SectionItems
-ThanHub["9d"] = Instance.new("Frame", ThanHub["97"]);
-ThanHub["9d"]["BorderSizePixel"] = 0;
-ThanHub["9d"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["9d"]["AutomaticSize"] = Enum.AutomaticSize.Y;
-ThanHub["9d"]["Size"] = UDim2.new(0, 145, 0, 0);
-ThanHub["9d"]["Position"] = UDim2.new(0, 0, 0, 26);
-ThanHub["9d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["9d"]["Name"] = [[SectionItems]];
-ThanHub["9d"]["BackgroundTransparency"] = 1;
+Than_Hub["3c"] = Instance.new("Frame", Than_Hub["36"]);
+Than_Hub["3c"]["BorderSizePixel"] = 0;
+Than_Hub["3c"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["3c"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+Than_Hub["3c"]["Size"] = UDim2.new(0, 145, 0, 0);
+Than_Hub["3c"]["Position"] = UDim2.new(0, 0, 0, 26);
+Than_Hub["3c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["3c"]["Name"] = [[SectionItems]];
+Than_Hub["3c"]["BackgroundTransparency"] = 1;
 
 
 -- Than Hub.Template.Section.SectionItems.UIListLayout
-ThanHub["9e"] = Instance.new("UIListLayout", ThanHub["9d"]);
-ThanHub["9e"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
-ThanHub["9e"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+Than_Hub["3d"] = Instance.new("UIListLayout", Than_Hub["3c"]);
+Than_Hub["3d"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+Than_Hub["3d"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 
 -- Than Hub.Template.Section.SectionItems.UIPadding
-ThanHub["9f"] = Instance.new("UIPadding", ThanHub["9d"]);
-ThanHub["9f"]["PaddingTop"] = UDim.new(0, 6);
+Than_Hub["3e"] = Instance.new("UIPadding", Than_Hub["3c"]);
+Than_Hub["3e"]["PaddingTop"] = UDim.new(0, 6);
 
 
 -- Than Hub.Template.Section.Mark
-ThanHub["a0"] = Instance.new("Frame", ThanHub["97"]);
-ThanHub["a0"]["BorderSizePixel"] = 0;
-ThanHub["a0"]["BackgroundColor3"] = Color3.fromRGB(246, 246, 246);
-ThanHub["a0"]["Size"] = UDim2.new(1, 0, 0, 2);
-ThanHub["a0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["a0"]["Name"] = [[Mark]];
+Than_Hub["3f"] = Instance.new("Frame", Than_Hub["36"]);
+Than_Hub["3f"]["BorderSizePixel"] = 0;
+Than_Hub["3f"]["BackgroundColor3"] = Color3.fromRGB(246, 246, 246);
+Than_Hub["3f"]["Size"] = UDim2.new(1, 0, 0, 2);
+Than_Hub["3f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["3f"]["Name"] = [[Mark]];
 
 
 -- Than Hub.Template.Section.Mark.UIGradient
-ThanHub["a1"] = Instance.new("UIGradient", ThanHub["a0"]);
-ThanHub["a1"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
+Than_Hub["40"] = Instance.new("UIGradient", Than_Hub["3f"]);
+Than_Hub["40"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
 
 
 -- Than Hub.Template.Section.UIPadding
-ThanHub["a2"] = Instance.new("UIPadding", ThanHub["97"]);
-ThanHub["a2"]["PaddingBottom"] = UDim.new(0, 6);
+Than_Hub["41"] = Instance.new("UIPadding", Than_Hub["36"]);
+Than_Hub["41"]["PaddingBottom"] = UDim.new(0, 6);
 
 
 -- Than Hub.Template.DropdownButton
-ThanHub["a3"] = Instance.new("TextButton", ThanHub["29"]);
-ThanHub["a3"]["TextWrapped"] = true;
-ThanHub["a3"]["BorderSizePixel"] = 0;
-ThanHub["a3"]["TextSize"] = 14;
-ThanHub["a3"]["TextColor3"] = Color3.fromRGB(246, 246, 246);
-ThanHub["a3"]["TextScaled"] = true;
-ThanHub["a3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["a3"]["FontFace"] = Font.new([[rbxassetid://11702779517]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-ThanHub["a3"]["Selectable"] = false;
-ThanHub["a3"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-ThanHub["a3"]["Size"] = UDim2.new(1, 0, 0.11026, 0);
-ThanHub["a3"]["BackgroundTransparency"] = 1;
-ThanHub["a3"]["Name"] = [[DropdownButton]];
-ThanHub["a3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["a3"]["Text"] = [[Test1]];
-ThanHub["a3"]["Visible"] = false;
-ThanHub["a3"]["Position"] = UDim2.new(0.5, 0, 0.05513, 0);
+Than_Hub["42"] = Instance.new("TextButton", Than_Hub["29"]);
+Than_Hub["42"]["TextWrapped"] = true;
+Than_Hub["42"]["BorderSizePixel"] = 0;
+Than_Hub["42"]["TextSize"] = 14;
+Than_Hub["42"]["TextColor3"] = Color3.fromRGB(246, 246, 246);
+Than_Hub["42"]["TextScaled"] = true;
+Than_Hub["42"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["42"]["FontFace"] = Font.new([[rbxassetid://11702779517]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+Than_Hub["42"]["Selectable"] = false;
+Than_Hub["42"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+Than_Hub["42"]["Size"] = UDim2.new(1, 0, 0.11026, 0);
+Than_Hub["42"]["BackgroundTransparency"] = 1;
+Than_Hub["42"]["Name"] = [[DropdownButton]];
+Than_Hub["42"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["42"]["Text"] = [[Test1]];
+Than_Hub["42"]["Visible"] = false;
+Than_Hub["42"]["Position"] = UDim2.new(0.5, 0, 0.05513, 0);
 
 
 -- Than Hub.Template.DropdownButton.UIGradient
-ThanHub["a4"] = Instance.new("UIGradient", ThanHub["a3"]);
-ThanHub["a4"]["Enabled"] = false;
-ThanHub["a4"]["Rotation"] = -90;
-ThanHub["a4"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
+Than_Hub["43"] = Instance.new("UIGradient", Than_Hub["42"]);
+Than_Hub["43"]["Enabled"] = false;
+Than_Hub["43"]["Rotation"] = -90;
+Than_Hub["43"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
 
 
 -- Than Hub.Template.Notification
-ThanHub["a5"] = Instance.new("Frame", ThanHub["29"]);
-ThanHub["a5"]["Visible"] = false;
-ThanHub["a5"]["BorderSizePixel"] = 0;
-ThanHub["a5"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
-ThanHub["a5"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-ThanHub["a5"]["AutomaticSize"] = Enum.AutomaticSize.Y;
-ThanHub["a5"]["Size"] = UDim2.new(0, 265, 0, 65);
-ThanHub["a5"]["Position"] = UDim2.new(0.8244, 0, 0.88221, 0);
-ThanHub["a5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["a5"]["Name"] = [[Notification]];
+Than_Hub["44"] = Instance.new("Frame", Than_Hub["29"]);
+Than_Hub["44"]["Visible"] = false;
+Than_Hub["44"]["BorderSizePixel"] = 0;
+Than_Hub["44"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
+Than_Hub["44"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+Than_Hub["44"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+Than_Hub["44"]["Size"] = UDim2.new(0, 265, 0, 65);
+Than_Hub["44"]["Position"] = UDim2.new(0.8244, 0, 0.88221, 0);
+Than_Hub["44"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["44"]["Name"] = [[Notification]];
 
 
 -- Than Hub.Template.Notification.UICorner
-ThanHub["a6"] = Instance.new("UICorner", ThanHub["a5"]);
-ThanHub["a6"]["CornerRadius"] = UDim.new(0, 10);
+Than_Hub["45"] = Instance.new("UICorner", Than_Hub["44"]);
+Than_Hub["45"]["CornerRadius"] = UDim.new(0, 10);
 
 
 -- Than Hub.Template.Notification.UIGradient
-ThanHub["a7"] = Instance.new("UIGradient", ThanHub["a5"]);
-ThanHub["a7"]["Rotation"] = 180;
-ThanHub["a7"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(11, 11, 11)),ColorSequenceKeypoint.new(0.500, Color3.fromRGB(5, 185, 191)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(26, 26, 26))};
+Than_Hub["46"] = Instance.new("UIGradient", Than_Hub["44"]);
+Than_Hub["46"]["Rotation"] = 180;
+Than_Hub["46"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(11, 11, 11)),ColorSequenceKeypoint.new(0.500, Color3.fromRGB(5, 185, 191)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(26, 26, 26))};
 
 
 -- Than Hub.Template.Notification.LightBlue
-ThanHub["a8"] = Instance.new("Frame", ThanHub["a5"]);
-ThanHub["a8"]["BorderSizePixel"] = 0;
-ThanHub["a8"]["AutoLocalize"] = false;
-ThanHub["a8"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
-ThanHub["a8"]["BorderMode"] = Enum.BorderMode.Inset;
-ThanHub["a8"]["Size"] = UDim2.new(1, 0, 1, 0);
-ThanHub["a8"]["Position"] = UDim2.new(-0.00013, 0, -0.00077, 0);
-ThanHub["a8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["a8"]["Name"] = [[LightBlue]];
-ThanHub["a8"]["BackgroundTransparency"] = 0.8;
+Than_Hub["47"] = Instance.new("Frame", Than_Hub["44"]);
+Than_Hub["47"]["BorderSizePixel"] = 0;
+Than_Hub["47"]["AutoLocalize"] = false;
+Than_Hub["47"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
+Than_Hub["47"]["BorderMode"] = Enum.BorderMode.Inset;
+Than_Hub["47"]["Size"] = UDim2.new(1, 0, 1, 0);
+Than_Hub["47"]["Position"] = UDim2.new(-0.00013, 0, -0.00077, 0);
+Than_Hub["47"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["47"]["Name"] = [[LightBlue]];
+Than_Hub["47"]["BackgroundTransparency"] = 0.8;
 
 
 -- Than Hub.Template.Notification.LightBlue.UIGradient
-ThanHub["a9"] = Instance.new("UIGradient", ThanHub["a8"]);
-ThanHub["a9"]["Rotation"] = -77;
-ThanHub["a9"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(16, 16, 16)),ColorSequenceKeypoint.new(0.461, Color3.fromRGB(0, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(16, 16, 16))};
+Than_Hub["48"] = Instance.new("UIGradient", Than_Hub["47"]);
+Than_Hub["48"]["Rotation"] = -77;
+Than_Hub["48"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(16, 16, 16)),ColorSequenceKeypoint.new(0.461, Color3.fromRGB(0, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(16, 16, 16))};
 
 
 -- Than Hub.Template.Notification.LightBlue.UICorner
-ThanHub["aa"] = Instance.new("UICorner", ThanHub["a8"]);
-ThanHub["aa"]["CornerRadius"] = UDim.new(0, 10);
+Than_Hub["49"] = Instance.new("UICorner", Than_Hub["47"]);
+Than_Hub["49"]["CornerRadius"] = UDim.new(0, 10);
 
 
 -- Than Hub.Template.Notification.LightBlue.UISizeConstraint
-ThanHub["ab"] = Instance.new("UISizeConstraint", ThanHub["a8"]);
-ThanHub["ab"]["MaxSize"] = Vector2.new(265, math.huge);
+Than_Hub["4a"] = Instance.new("UISizeConstraint", Than_Hub["47"]);
+Than_Hub["4a"]["MaxSize"] = Vector2.new(265, inf);
 
 
 -- Than Hub.Template.Notification.Blue
-ThanHub["ac"] = Instance.new("Frame", ThanHub["a5"]);
-ThanHub["ac"]["BorderSizePixel"] = 0;
-ThanHub["ac"]["AutoLocalize"] = false;
-ThanHub["ac"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
-ThanHub["ac"]["BorderMode"] = Enum.BorderMode.Inset;
-ThanHub["ac"]["Size"] = UDim2.new(1, 0, 1, 0);
-ThanHub["ac"]["Position"] = UDim2.new(-0.00013, 0, -0.00077, 0);
-ThanHub["ac"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["ac"]["Name"] = [[Blue]];
-ThanHub["ac"]["BackgroundTransparency"] = 0.6;
+Than_Hub["4b"] = Instance.new("Frame", Than_Hub["44"]);
+Than_Hub["4b"]["BorderSizePixel"] = 0;
+Than_Hub["4b"]["AutoLocalize"] = false;
+Than_Hub["4b"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
+Than_Hub["4b"]["BorderMode"] = Enum.BorderMode.Inset;
+Than_Hub["4b"]["Size"] = UDim2.new(1, 0, 1, 0);
+Than_Hub["4b"]["Position"] = UDim2.new(-0.00013, 0, -0.00077, 0);
+Than_Hub["4b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["4b"]["Name"] = [[Blue]];
+Than_Hub["4b"]["BackgroundTransparency"] = 0.6;
 
 
 -- Than Hub.Template.Notification.Blue.UIGradient
-ThanHub["ad"] = Instance.new("UIGradient", ThanHub["ac"]);
-ThanHub["ad"]["Rotation"] = 93;
-ThanHub["ad"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(16, 16, 16)),ColorSequenceKeypoint.new(0.491, Color3.fromRGB(0, 50, 123)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(16, 16, 16))};
+Than_Hub["4c"] = Instance.new("UIGradient", Than_Hub["4b"]);
+Than_Hub["4c"]["Rotation"] = 93;
+Than_Hub["4c"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(16, 16, 16)),ColorSequenceKeypoint.new(0.491, Color3.fromRGB(0, 50, 123)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(16, 16, 16))};
 
 
 -- Than Hub.Template.Notification.Blue.UICorner
-ThanHub["ae"] = Instance.new("UICorner", ThanHub["ac"]);
-ThanHub["ae"]["CornerRadius"] = UDim.new(0, 10);
+Than_Hub["4d"] = Instance.new("UICorner", Than_Hub["4b"]);
+Than_Hub["4d"]["CornerRadius"] = UDim.new(0, 10);
 
 
 -- Than Hub.Template.Notification.Blue.UISizeConstraint
-ThanHub["af"] = Instance.new("UISizeConstraint", ThanHub["ac"]);
-ThanHub["af"]["MaxSize"] = Vector2.new(265, math.huge);
+Than_Hub["4e"] = Instance.new("UISizeConstraint", Than_Hub["4b"]);
+Than_Hub["4e"]["MaxSize"] = Vector2.new(265, inf);
 
 
 -- Than Hub.Template.Notification.Cyan
-ThanHub["b0"] = Instance.new("Frame", ThanHub["a5"]);
-ThanHub["b0"]["BorderSizePixel"] = 0;
-ThanHub["b0"]["AutoLocalize"] = false;
-ThanHub["b0"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
-ThanHub["b0"]["BorderMode"] = Enum.BorderMode.Inset;
-ThanHub["b0"]["ClipsDescendants"] = true;
-ThanHub["b0"]["Size"] = UDim2.new(1, 0, 1, 0);
-ThanHub["b0"]["Position"] = UDim2.new(-0.00013, 0, -0.00077, 0);
-ThanHub["b0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["b0"]["Name"] = [[Cyan]];
-ThanHub["b0"]["BackgroundTransparency"] = 0.8;
+Than_Hub["4f"] = Instance.new("Frame", Than_Hub["44"]);
+Than_Hub["4f"]["BorderSizePixel"] = 0;
+Than_Hub["4f"]["AutoLocalize"] = false;
+Than_Hub["4f"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
+Than_Hub["4f"]["BorderMode"] = Enum.BorderMode.Inset;
+Than_Hub["4f"]["ClipsDescendants"] = true;
+Than_Hub["4f"]["Size"] = UDim2.new(1, 0, 1, 0);
+Than_Hub["4f"]["Position"] = UDim2.new(-0.00013, 0, -0.00077, 0);
+Than_Hub["4f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["4f"]["Name"] = [[Cyan]];
+Than_Hub["4f"]["BackgroundTransparency"] = 0.8;
 
 
 -- Than Hub.Template.Notification.Cyan.UIGradient
-ThanHub["b1"] = Instance.new("UIGradient", ThanHub["b0"]);
-ThanHub["b1"]["Rotation"] = -98;
-ThanHub["b1"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(16, 16, 16)),ColorSequenceKeypoint.new(0.500, Color3.fromRGB(0, 35, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(16, 16, 16))};
+Than_Hub["50"] = Instance.new("UIGradient", Than_Hub["4f"]);
+Than_Hub["50"]["Rotation"] = -98;
+Than_Hub["50"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(16, 16, 16)),ColorSequenceKeypoint.new(0.500, Color3.fromRGB(0, 35, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(16, 16, 16))};
 
 
 -- Than Hub.Template.Notification.Cyan.UICorner
-ThanHub["b2"] = Instance.new("UICorner", ThanHub["b0"]);
-ThanHub["b2"]["CornerRadius"] = UDim.new(0, 10);
+Than_Hub["51"] = Instance.new("UICorner", Than_Hub["4f"]);
+Than_Hub["51"]["CornerRadius"] = UDim.new(0, 10);
 
 
 -- Than Hub.Template.Notification.Cyan.UISizeConstraint
-ThanHub["b3"] = Instance.new("UISizeConstraint", ThanHub["b0"]);
-ThanHub["b3"]["MaxSize"] = Vector2.new(265, math.huge);
+Than_Hub["52"] = Instance.new("UISizeConstraint", Than_Hub["4f"]);
+Than_Hub["52"]["MaxSize"] = Vector2.new(265, inf);
 
 
 -- Than Hub.Template.Notification.Items
-ThanHub["b4"] = Instance.new("ImageLabel", ThanHub["a5"]);
-ThanHub["b4"]["ZIndex"] = 2;
-ThanHub["b4"]["BorderSizePixel"] = 0;
-ThanHub["b4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["b4"]["AutomaticSize"] = Enum.AutomaticSize.Y;
-ThanHub["b4"]["Size"] = UDim2.new(1, 0, 1, 0);
-ThanHub["b4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["b4"]["BackgroundTransparency"] = 1;
-ThanHub["b4"]["Name"] = [[Items]];
+Than_Hub["53"] = Instance.new("ImageLabel", Than_Hub["44"]);
+Than_Hub["53"]["ZIndex"] = 2;
+Than_Hub["53"]["BorderSizePixel"] = 0;
+Than_Hub["53"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["53"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+Than_Hub["53"]["Size"] = UDim2.new(1, 0, 1, 0);
+Than_Hub["53"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["53"]["BackgroundTransparency"] = 1;
+Than_Hub["53"]["Name"] = [[Items]];
 
 
 -- Than Hub.Template.Notification.Items.UIListLayout
-ThanHub["b5"] = Instance.new("UIListLayout", ThanHub["b4"]);
-ThanHub["b5"]["Padding"] = UDim.new(0, 5);
-ThanHub["b5"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
-ThanHub["b5"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+Than_Hub["54"] = Instance.new("UIListLayout", Than_Hub["53"]);
+Than_Hub["54"]["Padding"] = UDim.new(0, 5);
+Than_Hub["54"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
+Than_Hub["54"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 
 -- Than Hub.Template.Notification.Items.UIPadding
-ThanHub["b6"] = Instance.new("UIPadding", ThanHub["b4"]);
-ThanHub["b6"]["PaddingTop"] = UDim.new(0, 15);
-ThanHub["b6"]["PaddingLeft"] = UDim.new(0, 15);
-ThanHub["b6"]["PaddingBottom"] = UDim.new(0, 15);
+Than_Hub["55"] = Instance.new("UIPadding", Than_Hub["53"]);
+Than_Hub["55"]["PaddingTop"] = UDim.new(0, 15);
+Than_Hub["55"]["PaddingLeft"] = UDim.new(0, 15);
+Than_Hub["55"]["PaddingBottom"] = UDim.new(0, 15);
 
 
 -- Than Hub.Template.Notification.Items.Title
-ThanHub["b7"] = Instance.new("TextLabel", ThanHub["b4"]);
-ThanHub["b7"]["TextWrapped"] = true;
-ThanHub["b7"]["BorderSizePixel"] = 0;
-ThanHub["b7"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-ThanHub["b7"]["TextScaled"] = true;
-ThanHub["b7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["b7"]["TextSize"] = 14;
-ThanHub["b7"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-ThanHub["b7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["b7"]["BackgroundTransparency"] = 1;
-ThanHub["b7"]["AnchorPoint"] = Vector2.new(0, 0.5);
-ThanHub["b7"]["Size"] = UDim2.new(0, 235, 0, 15);
-ThanHub["b7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["b7"]["Text"] = [[Notification]];
-ThanHub["b7"]["Name"] = [[Title]];
-ThanHub["b7"]["Position"] = UDim2.new(0, 0, 0, 9);
+Than_Hub["56"] = Instance.new("TextLabel", Than_Hub["53"]);
+Than_Hub["56"]["TextWrapped"] = true;
+Than_Hub["56"]["BorderSizePixel"] = 0;
+Than_Hub["56"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+Than_Hub["56"]["TextScaled"] = true;
+Than_Hub["56"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["56"]["TextSize"] = 14;
+Than_Hub["56"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+Than_Hub["56"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["56"]["BackgroundTransparency"] = 1;
+Than_Hub["56"]["AnchorPoint"] = Vector2.new(0, 0.5);
+Than_Hub["56"]["Size"] = UDim2.new(0, 235, 0, 15);
+Than_Hub["56"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["56"]["Text"] = [[Notification]];
+Than_Hub["56"]["Name"] = [[Title]];
+Than_Hub["56"]["Position"] = UDim2.new(0, 0, 0, 9);
 
 
 -- Than Hub.Template.Notification.Items.Title.UIGradient
-ThanHub["b8"] = Instance.new("UIGradient", ThanHub["b7"]);
-ThanHub["b8"]["Rotation"] = -90;
-ThanHub["b8"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
+Than_Hub["57"] = Instance.new("UIGradient", Than_Hub["56"]);
+Than_Hub["57"]["Rotation"] = -90;
+Than_Hub["57"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
 
 
 -- Than Hub.Template.Notification.Items.Title.Close
-ThanHub["b9"] = Instance.new("ImageButton", ThanHub["b7"]);
-ThanHub["b9"]["BorderSizePixel"] = 0;
-ThanHub["b9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["b9"]["AnchorPoint"] = Vector2.new(0, 0.5);
-ThanHub["b9"]["Image"] = [[rbxassetid://10747384394]];
-ThanHub["b9"]["Size"] = UDim2.new(0.09706, 0, 1.33333, 0);
-ThanHub["b9"]["BackgroundTransparency"] = 1;
-ThanHub["b9"]["Name"] = [[Close]];
-ThanHub["b9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["b9"]["Position"] = UDim2.new(0.92, 0, 0.5, 0);
+Than_Hub["58"] = Instance.new("ImageButton", Than_Hub["56"]);
+Than_Hub["58"]["BorderSizePixel"] = 0;
+Than_Hub["58"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["58"]["AnchorPoint"] = Vector2.new(0, 0.5);
+Than_Hub["58"]["Image"] = [[rbxassetid://10747384394]];
+Than_Hub["58"]["Size"] = UDim2.new(0.09706, 0, 1.33333, 0);
+Than_Hub["58"]["BackgroundTransparency"] = 1;
+Than_Hub["58"]["Name"] = [[Close]];
+Than_Hub["58"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["58"]["Position"] = UDim2.new(0.92, 0, 0.5, 0);
 
 
 -- Than Hub.Template.Notification.Items.Title.Close.UIGradient
-ThanHub["ba"] = Instance.new("UIGradient", ThanHub["b9"]);
-ThanHub["ba"]["Rotation"] = -90;
-ThanHub["ba"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
+Than_Hub["59"] = Instance.new("UIGradient", Than_Hub["58"]);
+Than_Hub["59"]["Rotation"] = -90;
+Than_Hub["59"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
 
 
 -- Than Hub.Template.Notification.Items.Title.Close.UIAspectRatioConstraint
-ThanHub["bb"] = Instance.new("UIAspectRatioConstraint", ThanHub["b9"]);
-ThanHub["bb"]["AspectRatio"] = 1.054;
+Than_Hub["5a"] = Instance.new("UIAspectRatioConstraint", Than_Hub["58"]);
+Than_Hub["5a"]["AspectRatio"] = 1.054;
 
 
 -- Than Hub.Template.Notification.Items.Content
-ThanHub["bc"] = Instance.new("TextLabel", ThanHub["b4"]);
-ThanHub["bc"]["TextWrapped"] = true;
-ThanHub["bc"]["BorderSizePixel"] = 0;
-ThanHub["bc"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-ThanHub["bc"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["bc"]["TextSize"] = 12;
-ThanHub["bc"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-ThanHub["bc"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["bc"]["BackgroundTransparency"] = 1;
-ThanHub["bc"]["AnchorPoint"] = Vector2.new(0, 0.5);
-ThanHub["bc"]["Size"] = UDim2.new(0, 218, 0, 10);
-ThanHub["bc"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["bc"]["Text"] = [[This is a notification]];
-ThanHub["bc"]["AutomaticSize"] = Enum.AutomaticSize.Y;
-ThanHub["bc"]["Name"] = [[Content]];
-ThanHub["bc"]["Position"] = UDim2.new(0, 0, 0, 19);
+Than_Hub["5b"] = Instance.new("TextLabel", Than_Hub["53"]);
+Than_Hub["5b"]["TextWrapped"] = true;
+Than_Hub["5b"]["BorderSizePixel"] = 0;
+Than_Hub["5b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+Than_Hub["5b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["5b"]["TextSize"] = 12;
+Than_Hub["5b"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+Than_Hub["5b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["5b"]["BackgroundTransparency"] = 1;
+Than_Hub["5b"]["AnchorPoint"] = Vector2.new(0, 0.5);
+Than_Hub["5b"]["Size"] = UDim2.new(0, 218, 0, 10);
+Than_Hub["5b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["5b"]["Text"] = [[This is a notification]];
+Than_Hub["5b"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+Than_Hub["5b"]["Name"] = [[Content]];
+Than_Hub["5b"]["Position"] = UDim2.new(0, 0, 0, 19);
 
 
 -- Than Hub.Template.Notification.Items.Content.UIGradient
-ThanHub["bd"] = Instance.new("UIGradient", ThanHub["bc"]);
-ThanHub["bd"]["Enabled"] = false;
-ThanHub["bd"]["Rotation"] = -90;
-ThanHub["bd"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
+Than_Hub["5c"] = Instance.new("UIGradient", Than_Hub["5b"]);
+Than_Hub["5c"]["Enabled"] = false;
+Than_Hub["5c"]["Rotation"] = -90;
+Than_Hub["5c"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
 
 
 -- Than Hub.Template.Notification.Items.SubContent
-ThanHub["be"] = Instance.new("TextLabel", ThanHub["b4"]);
-ThanHub["be"]["TextWrapped"] = true;
-ThanHub["be"]["BorderSizePixel"] = 0;
-ThanHub["be"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-ThanHub["be"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["be"]["TextSize"] = 12;
-ThanHub["be"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-ThanHub["be"]["TextColor3"] = Color3.fromRGB(181, 181, 181);
-ThanHub["be"]["BackgroundTransparency"] = 1;
-ThanHub["be"]["AnchorPoint"] = Vector2.new(0, 0.5);
-ThanHub["be"]["Size"] = UDim2.new(0, 218, 0, 10);
-ThanHub["be"]["Visible"] = false;
-ThanHub["be"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["be"]["Text"] = [[This is a notification]];
-ThanHub["be"]["AutomaticSize"] = Enum.AutomaticSize.Y;
-ThanHub["be"]["Name"] = [[SubContent]];
-ThanHub["be"]["Position"] = UDim2.new(0, 0, 0, 19);
+Than_Hub["5d"] = Instance.new("TextLabel", Than_Hub["53"]);
+Than_Hub["5d"]["TextWrapped"] = true;
+Than_Hub["5d"]["BorderSizePixel"] = 0;
+Than_Hub["5d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+Than_Hub["5d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["5d"]["TextSize"] = 12;
+Than_Hub["5d"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+Than_Hub["5d"]["TextColor3"] = Color3.fromRGB(181, 181, 181);
+Than_Hub["5d"]["BackgroundTransparency"] = 1;
+Than_Hub["5d"]["AnchorPoint"] = Vector2.new(0, 0.5);
+Than_Hub["5d"]["Size"] = UDim2.new(0, 218, 0, 10);
+Than_Hub["5d"]["Visible"] = false;
+Than_Hub["5d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["5d"]["Text"] = [[This is a notification]];
+Than_Hub["5d"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+Than_Hub["5d"]["Name"] = [[SubContent]];
+Than_Hub["5d"]["Position"] = UDim2.new(0, 0, 0, 19);
 
 
 -- Than Hub.Template.Notification.Items.SubContent.UIGradient
-ThanHub["bf"] = Instance.new("UIGradient", ThanHub["be"]);
-ThanHub["bf"]["Enabled"] = false;
-ThanHub["bf"]["Rotation"] = -90;
-ThanHub["bf"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
+Than_Hub["5e"] = Instance.new("UIGradient", Than_Hub["5d"]);
+Than_Hub["5e"]["Enabled"] = false;
+Than_Hub["5e"]["Rotation"] = -90;
+Than_Hub["5e"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
 
 
 -- Than Hub.Template.NotificationList
-ThanHub["c0"] = Instance.new("Frame", ThanHub["29"]);
-ThanHub["c0"]["Visible"] = false;
-ThanHub["c0"]["BorderSizePixel"] = 0;
-ThanHub["c0"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["c0"]["Size"] = UDim2.new(0.3349, 0, 1, 0);
-ThanHub["c0"]["Position"] = UDim2.new(0.665, 0, 0, 0);
-ThanHub["c0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["c0"]["Name"] = [[NotificationList]];
-ThanHub["c0"]["BackgroundTransparency"] = 1;
+Than_Hub["5f"] = Instance.new("Frame", Than_Hub["29"]);
+Than_Hub["5f"]["Visible"] = false;
+Than_Hub["5f"]["BorderSizePixel"] = 0;
+Than_Hub["5f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["5f"]["Size"] = UDim2.new(0.3349, 0, 1, 0);
+Than_Hub["5f"]["Position"] = UDim2.new(0.665, 0, 0, 0);
+Than_Hub["5f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["5f"]["Name"] = [[NotificationList]];
+Than_Hub["5f"]["BackgroundTransparency"] = 1;
 
 
 -- Than Hub.Template.NotificationList.UIListLayout
-ThanHub["c1"] = Instance.new("UIListLayout", ThanHub["c0"]);
-ThanHub["c1"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Right;
-ThanHub["c1"]["Padding"] = UDim.new(0, 10);
-ThanHub["c1"]["VerticalAlignment"] = Enum.VerticalAlignment.Bottom;
-ThanHub["c1"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+Than_Hub["60"] = Instance.new("UIListLayout", Than_Hub["5f"]);
+Than_Hub["60"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Right;
+Than_Hub["60"]["Padding"] = UDim.new(0, 10);
+Than_Hub["60"]["VerticalAlignment"] = Enum.VerticalAlignment.Bottom;
+Than_Hub["60"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 
 -- Than Hub.Template.NotificationList.UIPadding
-ThanHub["c2"] = Instance.new("UIPadding", ThanHub["c0"]);
-ThanHub["c2"]["PaddingRight"] = UDim.new(0, 30);
-ThanHub["c2"]["PaddingBottom"] = UDim.new(0, 30);
+Than_Hub["61"] = Instance.new("UIPadding", Than_Hub["5f"]);
+Than_Hub["61"]["PaddingRight"] = UDim.new(0, 30);
+Than_Hub["61"]["PaddingBottom"] = UDim.new(0, 30);
+
+
+-- Than Hub.Template.Button
+Than_Hub["62"] = Instance.new("Frame", Than_Hub["29"]);
+Than_Hub["62"]["Visible"] = false;
+Than_Hub["62"]["BorderSizePixel"] = 0;
+Than_Hub["62"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["62"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+Than_Hub["62"]["Size"] = UDim2.new(0, 145, 0, 39);
+Than_Hub["62"]["Position"] = UDim2.new(0, 0, 0.58209, 0);
+Than_Hub["62"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["62"]["Name"] = [[Button]];
+Than_Hub["62"]["BackgroundTransparency"] = 1;
+
+
+-- Than Hub.Template.Button.Button
+Than_Hub["63"] = Instance.new("TextButton", Than_Hub["62"]);
+Than_Hub["63"]["BorderSizePixel"] = 0;
+Than_Hub["63"]["AutoButtonColor"] = false;
+Than_Hub["63"]["TextSize"] = 14;
+Than_Hub["63"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["63"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
+Than_Hub["63"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+Than_Hub["63"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+Than_Hub["63"]["Size"] = UDim2.new(0, 131, 0, 24);
+Than_Hub["63"]["Name"] = [[Button]];
+Than_Hub["63"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["63"]["Text"] = [[]];
+Than_Hub["63"]["Position"] = UDim2.new(0.00752, 0, 0.16667, 0);
+
+
+-- Than Hub.Template.Button.Button.UICorner
+Than_Hub["64"] = Instance.new("UICorner", Than_Hub["63"]);
+Than_Hub["64"]["CornerRadius"] = UDim.new(0, 4);
+
+
+-- Than Hub.Template.Button.Button.UIStroke
+Than_Hub["65"] = Instance.new("UIStroke", Than_Hub["63"]);
+Than_Hub["65"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+Than_Hub["65"]["Thickness"] = 1.5;
+Than_Hub["65"]["Color"] = Color3.fromRGB(56, 56, 56);
+
+
+-- Than Hub.Template.Button.Button.UIStroke.UIGradient
+Than_Hub["66"] = Instance.new("UIGradient", Than_Hub["65"]);
+Than_Hub["66"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 39, 255))};
+
+
+-- Than Hub.Template.Button.Button.UIGradientOff
+Than_Hub["67"] = Instance.new("UIGradient", Than_Hub["63"]);
+Than_Hub["67"]["Rotation"] = -90;
+Than_Hub["67"]["Name"] = [[UIGradientOff]];
+Than_Hub["67"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(14, 43, 140))};
+
+
+-- Than Hub.Template.Button.Button.TextLabel
+Than_Hub["68"] = Instance.new("TextLabel", Than_Hub["63"]);
+Than_Hub["68"]["TextWrapped"] = true;
+Than_Hub["68"]["LineHeight"] = 1.1;
+Than_Hub["68"]["BorderSizePixel"] = 0;
+Than_Hub["68"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["68"]["TextSize"] = 14;
+Than_Hub["68"]["FontFace"] = Font.new([[rbxassetid://11702779517]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+Than_Hub["68"]["TextColor3"] = Color3.fromRGB(246, 246, 246);
+Than_Hub["68"]["BackgroundTransparency"] = 1;
+Than_Hub["68"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+Than_Hub["68"]["Size"] = UDim2.new(0, 131, 0, 13);
+Than_Hub["68"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["68"]["Text"] = [[Button]];
+Than_Hub["68"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+Than_Hub["68"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+
+-- Than Hub.Template.Button.Button.TextLabel.UIGradient
+Than_Hub["69"] = Instance.new("UIGradient", Than_Hub["68"]);
+Than_Hub["69"]["Rotation"] = -90;
+Than_Hub["69"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
+
+
+-- Than Hub.Template.Button.Button.UIGradientOn
+Than_Hub["6a"] = Instance.new("UIGradient", Than_Hub["63"]);
+Than_Hub["6a"]["Enabled"] = false;
+Than_Hub["6a"]["Name"] = [[UIGradientOn]];
+Than_Hub["6a"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
+
+
+-- Than Hub.Template.Button.Button.UIListLayout
+Than_Hub["6b"] = Instance.new("UIListLayout", Than_Hub["63"]);
+Than_Hub["6b"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+Than_Hub["6b"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
+Than_Hub["6b"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- Than Hub.Template.Button.Button.UIPadding
+Than_Hub["6c"] = Instance.new("UIPadding", Than_Hub["63"]);
+Than_Hub["6c"]["PaddingTop"] = UDim.new(0, 6);
+Than_Hub["6c"]["PaddingBottom"] = UDim.new(0, 6);
+
+
+-- Than Hub.Template.Button.UIListLayout
+Than_Hub["6d"] = Instance.new("UIListLayout", Than_Hub["62"]);
+Than_Hub["6d"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+Than_Hub["6d"]["Padding"] = UDim.new(0, 10);
+Than_Hub["6d"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
+Than_Hub["6d"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+Than_Hub["6d"]["FillDirection"] = Enum.FillDirection.Horizontal;
+
+
+-- Than Hub.Template.Button.UIPadding
+Than_Hub["6e"] = Instance.new("UIPadding", Than_Hub["62"]);
+Than_Hub["6e"]["PaddingRight"] = UDim.new(0, 6);
+Than_Hub["6e"]["PaddingLeft"] = UDim.new(0, 6);
+
+
+-- Than Hub.Template.Dropdown
+Than_Hub["6f"] = Instance.new("Frame", Than_Hub["29"]);
+Than_Hub["6f"]["Visible"] = false;
+Than_Hub["6f"]["BorderSizePixel"] = 0;
+Than_Hub["6f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["6f"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+Than_Hub["6f"]["Size"] = UDim2.new(0, 145, 0, 54);
+Than_Hub["6f"]["Position"] = UDim2.new(0, 0, 0.78629, 0);
+Than_Hub["6f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["6f"]["Name"] = [[Dropdown]];
+Than_Hub["6f"]["BackgroundTransparency"] = 1;
+
+
+-- Than Hub.Template.Dropdown.UIListLayout
+Than_Hub["70"] = Instance.new("UIListLayout", Than_Hub["6f"]);
+Than_Hub["70"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+Than_Hub["70"]["Padding"] = UDim.new(0, 5);
+Than_Hub["70"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
+Than_Hub["70"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- Than Hub.Template.Dropdown.UIPadding
+Than_Hub["71"] = Instance.new("UIPadding", Than_Hub["6f"]);
+Than_Hub["71"]["PaddingRight"] = UDim.new(0, 6);
+Than_Hub["71"]["PaddingLeft"] = UDim.new(0, 8);
+
+
+-- Than Hub.Template.Dropdown.UIGradient
+Than_Hub["72"] = Instance.new("UIGradient", Than_Hub["6f"]);
+Than_Hub["72"]["Rotation"] = -90;
+Than_Hub["72"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(14, 43, 140))};
+
+
+-- Than Hub.Template.Dropdown.OnChanged
+Than_Hub["73"] = Instance.new("BindableEvent", Than_Hub["6f"]);
+Than_Hub["73"]["Name"] = [[OnChanged]];
+
+
+-- Than Hub.Template.Dropdown.DropdownButton
+Than_Hub["74"] = Instance.new("Frame", Than_Hub["6f"]);
+Than_Hub["74"]["BorderSizePixel"] = 0;
+Than_Hub["74"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
+Than_Hub["74"]["Selectable"] = true;
+Than_Hub["74"]["ClipsDescendants"] = true;
+Than_Hub["74"]["Size"] = UDim2.new(0, 130, 0, 18);
+Than_Hub["74"]["Position"] = UDim2.new(-0.00763, 0, 0.14595, 0);
+Than_Hub["74"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["74"]["Name"] = [[DropdownButton]];
+Than_Hub["74"]["SelectionGroup"] = true;
+
+
+-- Than Hub.Template.Dropdown.DropdownButton.Button
+Than_Hub["75"] = Instance.new("TextButton", Than_Hub["74"]);
+Than_Hub["75"]["BorderSizePixel"] = 0;
+Than_Hub["75"]["AutoButtonColor"] = false;
+Than_Hub["75"]["TextSize"] = 14;
+Than_Hub["75"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["75"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
+Than_Hub["75"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+Than_Hub["75"]["Size"] = UDim2.new(0, 130, 0, 18);
+Than_Hub["75"]["Name"] = [[Button]];
+Than_Hub["75"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["75"]["Text"] = [[]];
+
+
+-- Than Hub.Template.Dropdown.DropdownButton.Button.UICorner
+Than_Hub["76"] = Instance.new("UICorner", Than_Hub["75"]);
+Than_Hub["76"]["CornerRadius"] = UDim.new(0, 4);
+
+
+-- Than Hub.Template.Dropdown.DropdownButton.Button.UIStroke
+Than_Hub["77"] = Instance.new("UIStroke", Than_Hub["75"]);
+Than_Hub["77"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+Than_Hub["77"]["Thickness"] = 1.5;
+Than_Hub["77"]["Color"] = Color3.fromRGB(56, 56, 56);
+
+
+-- Than Hub.Template.Dropdown.DropdownButton.Button.UIStroke.UIGradient
+Than_Hub["78"] = Instance.new("UIGradient", Than_Hub["77"]);
+Than_Hub["78"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 39, 255))};
+
+
+-- Than Hub.Template.Dropdown.DropdownButton.Button.TextLabel
+Than_Hub["79"] = Instance.new("TextLabel", Than_Hub["75"]);
+Than_Hub["79"]["TextTruncate"] = Enum.TextTruncate.AtEnd;
+Than_Hub["79"]["BorderSizePixel"] = 0;
+Than_Hub["79"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["79"]["TextSize"] = 14;
+Than_Hub["79"]["FontFace"] = Font.new([[rbxassetid://11702779517]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+Than_Hub["79"]["TextColor3"] = Color3.fromRGB(246, 246, 246);
+Than_Hub["79"]["BackgroundTransparency"] = 1;
+Than_Hub["79"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+Than_Hub["79"]["Size"] = UDim2.new(1, 0, 0.7, 0);
+Than_Hub["79"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["79"]["Text"] = [[Test]];
+Than_Hub["79"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+
+-- Than Hub.Template.Dropdown.DropdownButton.Button.TextLabel.UIGradient
+Than_Hub["7a"] = Instance.new("UIGradient", Than_Hub["79"]);
+Than_Hub["7a"]["Rotation"] = -90;
+Than_Hub["7a"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
+
+
+-- Than Hub.Template.Dropdown.DropdownButton.Button.UIGradientOff
+Than_Hub["7b"] = Instance.new("UIGradient", Than_Hub["75"]);
+Than_Hub["7b"]["Rotation"] = -90;
+Than_Hub["7b"]["Name"] = [[UIGradientOff]];
+Than_Hub["7b"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(14, 43, 140))};
+
+
+-- Than Hub.Template.Dropdown.DropdownButton.Button.UIGradientOn
+Than_Hub["7c"] = Instance.new("UIGradient", Than_Hub["75"]);
+Than_Hub["7c"]["Enabled"] = false;
+Than_Hub["7c"]["Name"] = [[UIGradientOn]];
+Than_Hub["7c"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
+
+
+-- Than Hub.Template.Dropdown.DropdownButton.UICorner
+Than_Hub["7d"] = Instance.new("UICorner", Than_Hub["74"]);
+Than_Hub["7d"]["CornerRadius"] = UDim.new(0, 4);
+
+
+-- Than Hub.Template.Dropdown.DropdownButton.UIStroke
+Than_Hub["7e"] = Instance.new("UIStroke", Than_Hub["74"]);
+Than_Hub["7e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+Than_Hub["7e"]["Color"] = Color3.fromRGB(45, 45, 45);
+
+
+-- Than Hub.Template.Dropdown.DropdownButton.UIStroke.UIGradient
+Than_Hub["7f"] = Instance.new("UIGradient", Than_Hub["7e"]);
+Than_Hub["7f"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 39, 255))};
+
+
+-- Than Hub.Template.Dropdown.DropdownButton.ScrollingFrame
+Than_Hub["80"] = Instance.new("ScrollingFrame", Than_Hub["74"]);
+Than_Hub["80"]["Active"] = true;
+Than_Hub["80"]["BorderSizePixel"] = 0;
+Than_Hub["80"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
+Than_Hub["80"]["ElasticBehavior"] = Enum.ElasticBehavior.Never;
+Than_Hub["80"]["TopImage"] = [[rbxasset://textures/ui/Scroll/scroll-middle.png]];
+Than_Hub["80"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["80"]["BottomImage"] = [[rbxasset://textures/ui/Scroll/scroll-middle.png]];
+Than_Hub["80"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y;
+Than_Hub["80"]["Size"] = UDim2.new(1, 0, 0.11377, 100);
+Than_Hub["80"]["Position"] = UDim2.new(0, 0, 0, 48);
+Than_Hub["80"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["80"]["ScrollBarThickness"] = 2;
+Than_Hub["80"]["BackgroundTransparency"] = 1;
+
+
+-- Than Hub.Template.Dropdown.DropdownButton.ScrollingFrame.UIListLayout
+Than_Hub["81"] = Instance.new("UIListLayout", Than_Hub["80"]);
+Than_Hub["81"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+Than_Hub["81"]["Padding"] = UDim.new(0, 5);
+Than_Hub["81"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- Than Hub.Template.Dropdown.DropdownButton.SeacrhBox
+Than_Hub["82"] = Instance.new("Frame", Than_Hub["74"]);
+Than_Hub["82"]["Active"] = true;
+Than_Hub["82"]["BorderSizePixel"] = 0;
+Than_Hub["82"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
+Than_Hub["82"]["Selectable"] = true;
+Than_Hub["82"]["AnchorPoint"] = Vector2.new(0.5, 0);
+Than_Hub["82"]["Size"] = UDim2.new(0, 117, 0, 17);
+Than_Hub["82"]["Position"] = UDim2.new(0.5, 0, 0, 25);
+Than_Hub["82"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["82"]["Name"] = [[SeacrhBox]];
+
+
+-- Than Hub.Template.Dropdown.DropdownButton.SeacrhBox.UIStroke
+Than_Hub["83"] = Instance.new("UIStroke", Than_Hub["82"]);
+Than_Hub["83"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+Than_Hub["83"]["Thickness"] = 1.5;
+Than_Hub["83"]["Color"] = Color3.fromRGB(56, 56, 56);
+
+
+-- Than Hub.Template.Dropdown.DropdownButton.SeacrhBox.UIStroke.UIGradient
+Than_Hub["84"] = Instance.new("UIGradient", Than_Hub["83"]);
+Than_Hub["84"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 39, 255))};
+
+
+-- Than Hub.Template.Dropdown.DropdownButton.SeacrhBox.UIGradient
+Than_Hub["85"] = Instance.new("UIGradient", Than_Hub["82"]);
+Than_Hub["85"]["Rotation"] = -90;
+Than_Hub["85"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(14, 43, 140))};
+
+
+-- Than Hub.Template.Dropdown.DropdownButton.SeacrhBox.TextBox
+Than_Hub["86"] = Instance.new("TextBox", Than_Hub["82"]);
+Than_Hub["86"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["86"]["PlaceholderColor3"] = Color3.fromRGB(179, 179, 179);
+Than_Hub["86"]["BorderSizePixel"] = 0;
+Than_Hub["86"]["TextWrapped"] = true;
+Than_Hub["86"]["TextTruncate"] = Enum.TextTruncate.AtEnd;
+Than_Hub["86"]["TextSize"] = 11;
+Than_Hub["86"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["86"]["FontFace"] = Font.new([[rbxassetid://11702779517]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+Than_Hub["86"]["PlaceholderText"] = [[Search Here]];
+Than_Hub["86"]["Size"] = UDim2.new(1, 0, 1, 0);
+Than_Hub["86"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["86"]["Text"] = [[]];
+Than_Hub["86"]["BackgroundTransparency"] = 1;
+
+
+-- Than Hub.Template.Dropdown.DropdownButton.SeacrhBox.UICorner
+Than_Hub["87"] = Instance.new("UICorner", Than_Hub["82"]);
+Than_Hub["87"]["CornerRadius"] = UDim.new(0, 4);
+
+
+-- Than Hub.Template.Dropdown.DropdownButton.ScrollingFrameSearch
+Than_Hub["88"] = Instance.new("ScrollingFrame", Than_Hub["74"]);
+Than_Hub["88"]["Visible"] = false;
+Than_Hub["88"]["Active"] = true;
+Than_Hub["88"]["BorderSizePixel"] = 0;
+Than_Hub["88"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
+Than_Hub["88"]["ElasticBehavior"] = Enum.ElasticBehavior.Never;
+Than_Hub["88"]["TopImage"] = [[rbxasset://textures/ui/Scroll/scroll-middle.png]];
+Than_Hub["88"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["88"]["Name"] = [[ScrollingFrameSearch]];
+Than_Hub["88"]["BottomImage"] = [[rbxasset://textures/ui/Scroll/scroll-middle.png]];
+Than_Hub["88"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y;
+Than_Hub["88"]["Size"] = UDim2.new(1, 0, 0.11377, 100);
+Than_Hub["88"]["Position"] = UDim2.new(0, 0, 0, 48);
+Than_Hub["88"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["88"]["ScrollBarThickness"] = 2;
+Than_Hub["88"]["BackgroundTransparency"] = 1;
+
+
+-- Than Hub.Template.Dropdown.DropdownButton.ScrollingFrameSearch.UIListLayout
+Than_Hub["89"] = Instance.new("UIListLayout", Than_Hub["88"]);
+Than_Hub["89"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+Than_Hub["89"]["Padding"] = UDim.new(0, 5);
+Than_Hub["89"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- Than Hub.Template.Dropdown.DropdownButton.UIGradient
+Than_Hub["8a"] = Instance.new("UIGradient", Than_Hub["74"]);
+Than_Hub["8a"]["Rotation"] = -90;
+Than_Hub["8a"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(14, 43, 140))};
+
+
+-- Than Hub.Template.Dropdown.TextLabel
+Than_Hub["8b"] = Instance.new("TextLabel", Than_Hub["6f"]);
+Than_Hub["8b"]["TextWrapped"] = true;
+Than_Hub["8b"]["LineHeight"] = 1.1;
+Than_Hub["8b"]["BorderSizePixel"] = 0;
+Than_Hub["8b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+Than_Hub["8b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["8b"]["TextSize"] = 14;
+Than_Hub["8b"]["FontFace"] = Font.new([[rbxassetid://11702779517]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+Than_Hub["8b"]["TextColor3"] = Color3.fromRGB(246, 246, 246);
+Than_Hub["8b"]["BackgroundTransparency"] = 1;
+Than_Hub["8b"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+Than_Hub["8b"]["Size"] = UDim2.new(0, 131, 0, 13);
+Than_Hub["8b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["8b"]["Text"] = [[Dropdown]];
+Than_Hub["8b"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+Than_Hub["8b"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+
+-- Than Hub.Template.Paragraph
+Than_Hub["8c"] = Instance.new("Frame", Than_Hub["29"]);
+Than_Hub["8c"]["Visible"] = false;
+Than_Hub["8c"]["BorderSizePixel"] = 0;
+Than_Hub["8c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["8c"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+Than_Hub["8c"]["Size"] = UDim2.new(0, 145, 0, 42);
+Than_Hub["8c"]["Position"] = UDim2.new(0, 0, 0.91602, 0);
+Than_Hub["8c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["8c"]["Name"] = [[Paragraph]];
+Than_Hub["8c"]["BackgroundTransparency"] = 1;
+
+
+-- Than Hub.Template.Paragraph.UIListLayout
+Than_Hub["8d"] = Instance.new("UIListLayout", Than_Hub["8c"]);
+Than_Hub["8d"]["Padding"] = UDim.new(0, 5);
+Than_Hub["8d"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
+Than_Hub["8d"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+Than_Hub["8d"]["FillDirection"] = Enum.FillDirection.Horizontal;
+
+
+-- Than Hub.Template.Paragraph.Paragraph
+Than_Hub["8e"] = Instance.new("Frame", Than_Hub["8c"]);
+Than_Hub["8e"]["BorderSizePixel"] = 0;
+Than_Hub["8e"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["8e"]["Selectable"] = true;
+Than_Hub["8e"]["ClipsDescendants"] = true;
+Than_Hub["8e"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+Than_Hub["8e"]["Size"] = UDim2.new(0, 130, 0, 28);
+Than_Hub["8e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["8e"]["Name"] = [[Paragraph]];
+Than_Hub["8e"]["BackgroundTransparency"] = 0.8;
+
+
+-- Than Hub.Template.Paragraph.Paragraph.UICorner
+Than_Hub["8f"] = Instance.new("UICorner", Than_Hub["8e"]);
+Than_Hub["8f"]["CornerRadius"] = UDim.new(0, 4);
+
+
+-- Than Hub.Template.Paragraph.Paragraph.UIStroke
+Than_Hub["90"] = Instance.new("UIStroke", Than_Hub["8e"]);
+Than_Hub["90"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+Than_Hub["90"]["Thickness"] = 1.5;
+Than_Hub["90"]["Color"] = Color3.fromRGB(56, 56, 56);
+
+
+-- Than Hub.Template.Paragraph.Paragraph.UIStroke.UIGradient
+Than_Hub["91"] = Instance.new("UIGradient", Than_Hub["90"]);
+Than_Hub["91"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 39, 255))};
+
+
+-- Than Hub.Template.Paragraph.Paragraph.Title
+Than_Hub["92"] = Instance.new("TextLabel", Than_Hub["8e"]);
+Than_Hub["92"]["TextWrapped"] = true;
+Than_Hub["92"]["BorderSizePixel"] = 0;
+Than_Hub["92"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+Than_Hub["92"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+Than_Hub["92"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["92"]["TextSize"] = 17;
+Than_Hub["92"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+Than_Hub["92"]["TextColor3"] = Color3.fromRGB(246, 246, 246);
+Than_Hub["92"]["BackgroundTransparency"] = 1;
+Than_Hub["92"]["RichText"] = true;
+Than_Hub["92"]["Size"] = UDim2.new(0, 130, 0, 15);
+Than_Hub["92"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["92"]["Text"] = [[Paragraph]];
+Than_Hub["92"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+Than_Hub["92"]["Name"] = [[Title]];
+Than_Hub["92"]["Position"] = UDim2.new(0, 0, 0, 27);
+
+
+-- Than Hub.Template.Paragraph.Paragraph.Title.UIPadding
+Than_Hub["93"] = Instance.new("UIPadding", Than_Hub["92"]);
+Than_Hub["93"]["PaddingRight"] = UDim.new(0, 6);
+Than_Hub["93"]["PaddingLeft"] = UDim.new(0, 6);
+
+
+-- Than Hub.Template.Paragraph.Paragraph.UIPadding
+Than_Hub["94"] = Instance.new("UIPadding", Than_Hub["8e"]);
+Than_Hub["94"]["PaddingTop"] = UDim.new(0, 5);
+Than_Hub["94"]["PaddingRight"] = UDim.new(0, 5);
+Than_Hub["94"]["PaddingLeft"] = UDim.new(0, 5);
+Than_Hub["94"]["PaddingBottom"] = UDim.new(0, 5);
+
+
+-- Than Hub.Template.Paragraph.Paragraph.UIListLayout
+Than_Hub["95"] = Instance.new("UIListLayout", Than_Hub["8e"]);
+Than_Hub["95"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+Than_Hub["95"]["Padding"] = UDim.new(0, 5);
+Than_Hub["95"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- Than Hub.Template.Paragraph.Paragraph.Content
+Than_Hub["96"] = Instance.new("TextLabel", Than_Hub["8e"]);
+Than_Hub["96"]["TextWrapped"] = true;
+Than_Hub["96"]["BorderSizePixel"] = 0;
+Than_Hub["96"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+Than_Hub["96"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+Than_Hub["96"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["96"]["TextSize"] = 13;
+Than_Hub["96"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+Than_Hub["96"]["TextColor3"] = Color3.fromRGB(246, 246, 246);
+Than_Hub["96"]["BackgroundTransparency"] = 1;
+Than_Hub["96"]["RichText"] = true;
+Than_Hub["96"]["Size"] = UDim2.new(0, 130, 0, 15);
+Than_Hub["96"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["96"]["Text"] = [[Content]];
+Than_Hub["96"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+Than_Hub["96"]["Name"] = [[Content]];
+Than_Hub["96"]["Position"] = UDim2.new(0, 0, 0, 27);
+
+
+-- Than Hub.Template.Paragraph.Paragraph.Content.UIPadding
+Than_Hub["97"] = Instance.new("UIPadding", Than_Hub["96"]);
+Than_Hub["97"]["PaddingRight"] = UDim.new(0, 6);
+Than_Hub["97"]["PaddingLeft"] = UDim.new(0, 6);
+
+
+-- Than Hub.Template.Paragraph.UIPadding
+Than_Hub["98"] = Instance.new("UIPadding", Than_Hub["8c"]);
+Than_Hub["98"]["PaddingRight"] = UDim.new(0, 8);
+Than_Hub["98"]["PaddingLeft"] = UDim.new(0, 8);
+
+
+-- Than Hub.Template.Slider
+Than_Hub["99"] = Instance.new("Frame", Than_Hub["29"]);
+Than_Hub["99"]["Visible"] = false;
+Than_Hub["99"]["BorderSizePixel"] = 0;
+Than_Hub["99"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["99"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+Than_Hub["99"]["Size"] = UDim2.new(0, 145, 0, 47);
+Than_Hub["99"]["Position"] = UDim2.new(0, 0, 0.63063, 0);
+Than_Hub["99"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["99"]["Name"] = [[Slider]];
+Than_Hub["99"]["BackgroundTransparency"] = 1;
+
+
+-- Than Hub.Template.Slider.UIListLayout
+Than_Hub["9a"] = Instance.new("UIListLayout", Than_Hub["99"]);
+Than_Hub["9a"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+Than_Hub["9a"]["Padding"] = UDim.new(0, 6);
+Than_Hub["9a"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
+Than_Hub["9a"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- Than Hub.Template.Slider.UIPadding
+Than_Hub["9b"] = Instance.new("UIPadding", Than_Hub["99"]);
+Than_Hub["9b"]["PaddingTop"] = UDim.new(0, 10);
+Than_Hub["9b"]["PaddingRight"] = UDim.new(0, 6);
+Than_Hub["9b"]["PaddingLeft"] = UDim.new(0, 8);
+Than_Hub["9b"]["PaddingBottom"] = UDim.new(0, 10);
+
+
+-- Than Hub.Template.Slider.Frame
+Than_Hub["9c"] = Instance.new("Frame", Than_Hub["99"]);
+Than_Hub["9c"]["BorderSizePixel"] = 0;
+Than_Hub["9c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["9c"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+Than_Hub["9c"]["Size"] = UDim2.new(0, 125, 0, 13);
+Than_Hub["9c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["9c"]["BackgroundTransparency"] = 1;
+
+
+-- Than Hub.Template.Slider.Frame.UIListLayout
+Than_Hub["9d"] = Instance.new("UIListLayout", Than_Hub["9c"]);
+Than_Hub["9d"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+Than_Hub["9d"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
+Than_Hub["9d"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+Than_Hub["9d"]["FillDirection"] = Enum.FillDirection.Horizontal;
+
+
+-- Than Hub.Template.Slider.Frame.Title
+Than_Hub["9e"] = Instance.new("TextLabel", Than_Hub["9c"]);
+Than_Hub["9e"]["TextWrapped"] = true;
+Than_Hub["9e"]["BorderSizePixel"] = 0;
+Than_Hub["9e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+Than_Hub["9e"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+Than_Hub["9e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["9e"]["TextSize"] = 13;
+Than_Hub["9e"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+Than_Hub["9e"]["TextColor3"] = Color3.fromRGB(246, 246, 246);
+Than_Hub["9e"]["BackgroundTransparency"] = 1;
+Than_Hub["9e"]["RichText"] = true;
+Than_Hub["9e"]["Size"] = UDim2.new(0.75, 0, 0, 13);
+Than_Hub["9e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["9e"]["Text"] = [[Slider]];
+Than_Hub["9e"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+Than_Hub["9e"]["Name"] = [[Title]];
+Than_Hub["9e"]["Position"] = UDim2.new(0, 0, 0, 27);
+
+
+-- Than Hub.Template.Slider.Frame.ValueText
+Than_Hub["9f"] = Instance.new("TextBox", Than_Hub["9c"]);
+Than_Hub["9f"]["Active"] = false;
+Than_Hub["9f"]["TextColor3"] = Color3.fromRGB(246, 246, 246);
+Than_Hub["9f"]["BorderSizePixel"] = 0;
+Than_Hub["9f"]["TextXAlignment"] = Enum.TextXAlignment.Right;
+Than_Hub["9f"]["TextWrapped"] = true;
+Than_Hub["9f"]["TextSize"] = 14;
+Than_Hub["9f"]["Name"] = [[ValueText]];
+Than_Hub["9f"]["TextScaled"] = true;
+Than_Hub["9f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["9f"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+Than_Hub["9f"]["Selectable"] = false;
+Than_Hub["9f"]["AnchorPoint"] = Vector2.new(0, 0.5);
+Than_Hub["9f"]["Size"] = UDim2.new(0.25, -1, 0, 13);
+Than_Hub["9f"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+Than_Hub["9f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["9f"]["Text"] = [[0]];
+Than_Hub["9f"]["BackgroundTransparency"] = 1;
+
+
+-- Than Hub.Template.Slider.Frame.ValueText.UIGradient
+Than_Hub["a0"] = Instance.new("UIGradient", Than_Hub["9f"]);
+Than_Hub["a0"]["Enabled"] = false;
+Than_Hub["a0"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 90, 255)),ColorSequenceKeypoint.new(0.247, Color3.fromRGB(63, 156, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 248))};
+
+
+-- Than Hub.Template.Slider.Trigger
+Than_Hub["a1"] = Instance.new("TextButton", Than_Hub["99"]);
+Than_Hub["a1"]["BorderSizePixel"] = 0;
+Than_Hub["a1"]["AutoButtonColor"] = false;
+Than_Hub["a1"]["TextSize"] = 14;
+Than_Hub["a1"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["a1"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["a1"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+Than_Hub["a1"]["Size"] = UDim2.new(0, 120, 0, 10);
+Than_Hub["a1"]["BackgroundTransparency"] = 1;
+Than_Hub["a1"]["Name"] = [[Trigger]];
+Than_Hub["a1"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["a1"]["Text"] = [[]];
+Than_Hub["a1"]["Position"] = UDim2.new(0.00763, 0, 0.59239, 0);
+
+
+-- Than Hub.Template.Slider.Trigger.Fill
+Than_Hub["a2"] = Instance.new("TextButton", Than_Hub["a1"]);
+Than_Hub["a2"]["Active"] = false;
+Than_Hub["a2"]["Interactable"] = false;
+Than_Hub["a2"]["BorderSizePixel"] = 0;
+Than_Hub["a2"]["AutoButtonColor"] = false;
+Than_Hub["a2"]["TextSize"] = 14;
+Than_Hub["a2"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["a2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["a2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+Than_Hub["a2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+Than_Hub["a2"]["Size"] = UDim2.new(0, 120, 0, 4);
+Than_Hub["a2"]["Name"] = [[Fill]];
+Than_Hub["a2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["a2"]["Text"] = [[]];
+Than_Hub["a2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+
+-- Than Hub.Template.Slider.Trigger.Fill.UIGradient
+Than_Hub["a3"] = Instance.new("UIGradient", Than_Hub["a2"]);
+Than_Hub["a3"]["Rotation"] = 180;
+Than_Hub["a3"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(14, 43, 140))};
+
+
+-- Than Hub.Template.Slider.Trigger.Fill.UICorner
+Than_Hub["a4"] = Instance.new("UICorner", Than_Hub["a2"]);
+Than_Hub["a4"]["CornerRadius"] = UDim.new(10, 10);
+
+
+-- Than Hub.Template.Slider.Trigger.Fill.Circle
+Than_Hub["a5"] = Instance.new("Frame", Than_Hub["a2"]);
+Than_Hub["a5"]["BorderSizePixel"] = 0;
+Than_Hub["a5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["a5"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+Than_Hub["a5"]["Size"] = UDim2.new(0, 10, 0, 10);
+Than_Hub["a5"]["Position"] = UDim2.new(0, 0, 0.5, 0);
+Than_Hub["a5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["a5"]["Name"] = [[Circle]];
+
+
+-- Than Hub.Template.Slider.Trigger.Fill.Circle.UICorner
+Than_Hub["a6"] = Instance.new("UICorner", Than_Hub["a5"]);
+Than_Hub["a6"]["CornerRadius"] = UDim.new(10, 10);
+
+
+-- Than Hub.Template.Slider.OnChanged
+Than_Hub["a7"] = Instance.new("BindableEvent", Than_Hub["99"]);
+Than_Hub["a7"]["Name"] = [[OnChanged]];
+
+
+-- Than Hub.Template.Textbox
+Than_Hub["a8"] = Instance.new("Frame", Than_Hub["29"]);
+Than_Hub["a8"]["Visible"] = false;
+Than_Hub["a8"]["BorderSizePixel"] = 0;
+Than_Hub["a8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["a8"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+Than_Hub["a8"]["Size"] = UDim2.new(0, 145, 0, 35);
+Than_Hub["a8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["a8"]["Name"] = [[Textbox]];
+Than_Hub["a8"]["BackgroundTransparency"] = 1;
+
+
+-- Than Hub.Template.Textbox.UIListLayout
+Than_Hub["a9"] = Instance.new("UIListLayout", Than_Hub["a8"]);
+Than_Hub["a9"]["Padding"] = UDim.new(0, 5);
+Than_Hub["a9"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
+Than_Hub["a9"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+Than_Hub["a9"]["FillDirection"] = Enum.FillDirection.Horizontal;
+
+
+-- Than Hub.Template.Textbox.UIPadding
+Than_Hub["aa"] = Instance.new("UIPadding", Than_Hub["a8"]);
+Than_Hub["aa"]["PaddingTop"] = UDim.new(0, 8);
+Than_Hub["aa"]["PaddingRight"] = UDim.new(0, 8);
+Than_Hub["aa"]["PaddingLeft"] = UDim.new(0, 8);
+Than_Hub["aa"]["PaddingBottom"] = UDim.new(0, 8);
+
+
+-- Than Hub.Template.Textbox.OnChanged
+Than_Hub["ab"] = Instance.new("BindableEvent", Than_Hub["a8"]);
+Than_Hub["ab"]["Name"] = [[OnChanged]];
+
+
+-- Than Hub.Template.Textbox.Title
+Than_Hub["ac"] = Instance.new("TextLabel", Than_Hub["a8"]);
+Than_Hub["ac"]["TextWrapped"] = true;
+Than_Hub["ac"]["BorderSizePixel"] = 0;
+Than_Hub["ac"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+Than_Hub["ac"]["TextTransparency"] = 0.7;
+Than_Hub["ac"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["ac"]["TextSize"] = 13;
+Than_Hub["ac"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+Than_Hub["ac"]["TextColor3"] = Color3.fromRGB(246, 246, 246);
+Than_Hub["ac"]["BackgroundTransparency"] = 1;
+Than_Hub["ac"]["Size"] = UDim2.new(0, 72, 0, 23);
+Than_Hub["ac"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["ac"]["Text"] = [[Textbox]];
+Than_Hub["ac"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+Than_Hub["ac"]["Name"] = [[Title]];
+
+
+-- Than Hub.Template.Textbox.Box
+Than_Hub["ad"] = Instance.new("TextButton", Than_Hub["a8"]);
+Than_Hub["ad"]["TextWrapped"] = true;
+Than_Hub["ad"]["BorderSizePixel"] = 0;
+Than_Hub["ad"]["AutoButtonColor"] = false;
+Than_Hub["ad"]["TextSize"] = 14;
+Than_Hub["ad"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["ad"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
+Than_Hub["ad"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+Than_Hub["ad"]["Size"] = UDim2.new(0, 49, 0, 22);
+Than_Hub["ad"]["Name"] = [[Box]];
+Than_Hub["ad"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["ad"]["Text"] = [[]];
+Than_Hub["ad"]["Position"] = UDim2.new(0.5969, 0, 0.02174, 0);
+
+
+-- Than Hub.Template.Textbox.Box.UICorner
+Than_Hub["ae"] = Instance.new("UICorner", Than_Hub["ad"]);
+Than_Hub["ae"]["CornerRadius"] = UDim.new(0, 4);
+
+
+-- Than Hub.Template.Textbox.Box.UIStroke
+Than_Hub["af"] = Instance.new("UIStroke", Than_Hub["ad"]);
+Than_Hub["af"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+Than_Hub["af"]["Thickness"] = 1.5;
+Than_Hub["af"]["Color"] = Color3.fromRGB(56, 56, 56);
+
+
+-- Than Hub.Template.Textbox.Box.UIStroke.UIGradient
+Than_Hub["b0"] = Instance.new("UIGradient", Than_Hub["af"]);
+Than_Hub["b0"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 39, 255))};
+
+
+-- Than Hub.Template.Textbox.Box.UIGradient
+Than_Hub["b1"] = Instance.new("UIGradient", Than_Hub["ad"]);
+Than_Hub["b1"]["Rotation"] = -90;
+Than_Hub["b1"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(14, 43, 140))};
+
+
+-- Than Hub.Template.Textbox.Box.Textbox
+Than_Hub["b2"] = Instance.new("TextBox", Than_Hub["ad"]);
+Than_Hub["b2"]["TextColor3"] = Color3.fromRGB(151, 151, 151);
+Than_Hub["b2"]["PlaceholderColor3"] = Color3.fromRGB(96, 96, 96);
+Than_Hub["b2"]["BorderSizePixel"] = 0;
+Than_Hub["b2"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+Than_Hub["b2"]["TextWrapped"] = true;
+Than_Hub["b2"]["TextTruncate"] = Enum.TextTruncate.AtEnd;
+Than_Hub["b2"]["TextSize"] = 12;
+Than_Hub["b2"]["Name"] = [[Textbox]];
+Than_Hub["b2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["b2"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+Than_Hub["b2"]["Selectable"] = false;
+Than_Hub["b2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+Than_Hub["b2"]["ClearTextOnFocus"] = false;
+Than_Hub["b2"]["Size"] = UDim2.new(1, 0, 1, 0);
+Than_Hub["b2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+Than_Hub["b2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["b2"]["Text"] = [[]];
+Than_Hub["b2"]["BackgroundTransparency"] = 1;
+
+
+-- Than Hub.Template.Textbox.Box.Textbox.UIGradient
+Than_Hub["b3"] = Instance.new("UIGradient", Than_Hub["b2"]);
+Than_Hub["b3"]["Enabled"] = false;
+Than_Hub["b3"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 90, 255)),ColorSequenceKeypoint.new(0.247, Color3.fromRGB(63, 156, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 248))};
+
+
+-- Than Hub.Template.Textbox.Box.Textbox.UIPadding
+Than_Hub["b4"] = Instance.new("UIPadding", Than_Hub["b2"]);
+Than_Hub["b4"]["PaddingTop"] = UDim.new(0, 5);
+Than_Hub["b4"]["PaddingLeft"] = UDim.new(0, 5);
+Than_Hub["b4"]["PaddingBottom"] = UDim.new(0, 5);
+
+
+-- Than Hub.Template.Toggle
+Than_Hub["b5"] = Instance.new("Frame", Than_Hub["29"]);
+Than_Hub["b5"]["Visible"] = false;
+Than_Hub["b5"]["BorderSizePixel"] = 0;
+Than_Hub["b5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["b5"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+Than_Hub["b5"]["Size"] = UDim2.new(0, 145, 0, 35);
+Than_Hub["b5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["b5"]["Name"] = [[Toggle]];
+Than_Hub["b5"]["BackgroundTransparency"] = 1;
+
+
+-- Than Hub.Template.Toggle.UIListLayout
+Than_Hub["b6"] = Instance.new("UIListLayout", Than_Hub["b5"]);
+Than_Hub["b6"]["Padding"] = UDim.new(0, 5);
+Than_Hub["b6"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
+Than_Hub["b6"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+Than_Hub["b6"]["FillDirection"] = Enum.FillDirection.Horizontal;
+
+
+-- Than Hub.Template.Toggle.UIPadding
+Than_Hub["b7"] = Instance.new("UIPadding", Than_Hub["b5"]);
+Than_Hub["b7"]["PaddingTop"] = UDim.new(0, 5);
+Than_Hub["b7"]["PaddingRight"] = UDim.new(0, 9);
+Than_Hub["b7"]["PaddingLeft"] = UDim.new(0, 9);
+Than_Hub["b7"]["PaddingBottom"] = UDim.new(0, 5);
+
+
+-- Than Hub.Template.Toggle.State
+Than_Hub["b8"] = Instance.new("BoolValue", Than_Hub["b5"]);
+Than_Hub["b8"]["Name"] = [[State]];
+Than_Hub["b8"]["Value"] = true;
+
+
+-- Than Hub.Template.Toggle.OnChanged
+Than_Hub["b9"] = Instance.new("BindableEvent", Than_Hub["b5"]);
+Than_Hub["b9"]["Name"] = [[OnChanged]];
+
+
+-- Than Hub.Template.Toggle.Title
+Than_Hub["ba"] = Instance.new("TextLabel", Than_Hub["b5"]);
+Than_Hub["ba"]["TextWrapped"] = true;
+Than_Hub["ba"]["BorderSizePixel"] = 0;
+Than_Hub["ba"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+Than_Hub["ba"]["TextTransparency"] = 0.7;
+Than_Hub["ba"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+Than_Hub["ba"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["ba"]["TextSize"] = 13;
+Than_Hub["ba"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+Than_Hub["ba"]["TextColor3"] = Color3.fromRGB(246, 246, 246);
+Than_Hub["ba"]["BackgroundTransparency"] = 1;
+Than_Hub["ba"]["Size"] = UDim2.new(0, 98, 0, 13);
+Than_Hub["ba"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["ba"]["Text"] = [[Toggle]];
+Than_Hub["ba"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+Than_Hub["ba"]["Name"] = [[Title]];
+Than_Hub["ba"]["Position"] = UDim2.new(0, 0, 0, 27);
+
+
+-- Than Hub.Template.Toggle.Toggle
+Than_Hub["bb"] = Instance.new("TextButton", Than_Hub["b5"]);
+Than_Hub["bb"]["BorderSizePixel"] = 0;
+Than_Hub["bb"]["AutoButtonColor"] = false;
+Than_Hub["bb"]["TextSize"] = 14;
+Than_Hub["bb"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["bb"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
+Than_Hub["bb"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+Than_Hub["bb"]["Size"] = UDim2.new(0, 22, 0, 22);
+Than_Hub["bb"]["Name"] = [[Toggle]];
+Than_Hub["bb"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["bb"]["Text"] = [[]];
+Than_Hub["bb"]["Position"] = UDim2.new(0.05517, 0, 0.13333, 0);
+
+
+-- Than Hub.Template.Toggle.Toggle.UICorner
+Than_Hub["bc"] = Instance.new("UICorner", Than_Hub["bb"]);
+Than_Hub["bc"]["CornerRadius"] = UDim.new(0, 4);
+
+
+-- Than Hub.Template.Toggle.Toggle.UIStroke
+Than_Hub["bd"] = Instance.new("UIStroke", Than_Hub["bb"]);
+Than_Hub["bd"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+Than_Hub["bd"]["Thickness"] = 1.5;
+Than_Hub["bd"]["Color"] = Color3.fromRGB(56, 56, 56);
+
+
+-- Than Hub.Template.Toggle.Toggle.UIStroke.UIGradient
+Than_Hub["be"] = Instance.new("UIGradient", Than_Hub["bd"]);
+Than_Hub["be"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 39, 255))};
+
+
+-- Than Hub.Template.Toggle.Toggle.UIGradient
+Than_Hub["bf"] = Instance.new("UIGradient", Than_Hub["bb"]);
+Than_Hub["bf"]["Rotation"] = -90;
+Than_Hub["bf"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 180, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(14, 43, 140))};
 
 
 -- Than Hub.Floating
-ThanHub["c3"] = Instance.new("Frame", ThanHub["1"]);
-ThanHub["c3"]["BorderSizePixel"] = 0;
-ThanHub["c3"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
-ThanHub["c3"]["Size"] = UDim2.new(0, 158, 0, 42);
-ThanHub["c3"]["Position"] = UDim2.new(0.02, 0, 0.1, 0);
-ThanHub["c3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["c3"]["Name"] = [[Floating]];
+Than_Hub["c0"] = Instance.new("Frame", Than_Hub["1"]);
+Than_Hub["c0"]["BorderSizePixel"] = 0;
+Than_Hub["c0"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
+Than_Hub["c0"]["Size"] = UDim2.new(0, 158, 0, 42);
+Than_Hub["c0"]["Position"] = UDim2.new(0.02, 0, 0.1, 0);
+Than_Hub["c0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["c0"]["Name"] = [[Floating]];
 
 
 -- Than Hub.Floating.UICorner
-ThanHub["c4"] = Instance.new("UICorner", ThanHub["c3"]);
-ThanHub["c4"]["CornerRadius"] = UDim.new(0, 10);
+Than_Hub["c1"] = Instance.new("UICorner", Than_Hub["c0"]);
+Than_Hub["c1"]["CornerRadius"] = UDim.new(0, 10);
 
 
 -- Than Hub.Floating.LightBlue
-ThanHub["c5"] = Instance.new("Frame", ThanHub["c3"]);
-ThanHub["c5"]["BorderSizePixel"] = 0;
-ThanHub["c5"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
-ThanHub["c5"]["Size"] = UDim2.new(1, 0, 1, 0);
-ThanHub["c5"]["Position"] = UDim2.new(-0.00013, 0, -0.00077, 0);
-ThanHub["c5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["c5"]["Name"] = [[LightBlue]];
-ThanHub["c5"]["BackgroundTransparency"] = 0.8;
+Than_Hub["c2"] = Instance.new("Frame", Than_Hub["c0"]);
+Than_Hub["c2"]["BorderSizePixel"] = 0;
+Than_Hub["c2"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
+Than_Hub["c2"]["Size"] = UDim2.new(1, 0, 1, 0);
+Than_Hub["c2"]["Position"] = UDim2.new(-0.00013, 0, -0.00077, 0);
+Than_Hub["c2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["c2"]["Name"] = [[LightBlue]];
+Than_Hub["c2"]["BackgroundTransparency"] = 0.8;
 
 
 -- Than Hub.Floating.LightBlue.UIGradient
-ThanHub["c6"] = Instance.new("UIGradient", ThanHub["c5"]);
-ThanHub["c6"]["Rotation"] = 50;
-ThanHub["c6"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(16, 16, 16)),ColorSequenceKeypoint.new(0.461, Color3.fromRGB(0, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(16, 16, 16))};
+Than_Hub["c3"] = Instance.new("UIGradient", Than_Hub["c2"]);
+Than_Hub["c3"]["Rotation"] = 50;
+Than_Hub["c3"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(16, 16, 16)),ColorSequenceKeypoint.new(0.461, Color3.fromRGB(0, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(16, 16, 16))};
 
 
 -- Than Hub.Floating.LightBlue.UICorner
-ThanHub["c7"] = Instance.new("UICorner", ThanHub["c5"]);
-ThanHub["c7"]["CornerRadius"] = UDim.new(0, 10);
+Than_Hub["c4"] = Instance.new("UICorner", Than_Hub["c2"]);
+Than_Hub["c4"]["CornerRadius"] = UDim.new(0, 10);
 
 
 -- Than Hub.Floating.Blue
-ThanHub["c8"] = Instance.new("Frame", ThanHub["c3"]);
-ThanHub["c8"]["BorderSizePixel"] = 0;
-ThanHub["c8"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
-ThanHub["c8"]["Size"] = UDim2.new(1, 0, 1, 0);
-ThanHub["c8"]["Position"] = UDim2.new(-0.00013, 0, -0.00077, 0);
-ThanHub["c8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["c8"]["Name"] = [[Blue]];
-ThanHub["c8"]["BackgroundTransparency"] = 0.6;
+Than_Hub["c5"] = Instance.new("Frame", Than_Hub["c0"]);
+Than_Hub["c5"]["BorderSizePixel"] = 0;
+Than_Hub["c5"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
+Than_Hub["c5"]["Size"] = UDim2.new(1, 0, 1, 0);
+Than_Hub["c5"]["Position"] = UDim2.new(-0.00013, 0, -0.00077, 0);
+Than_Hub["c5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["c5"]["Name"] = [[Blue]];
+Than_Hub["c5"]["BackgroundTransparency"] = 0.6;
 
 
 -- Than Hub.Floating.Blue.UIGradient
-ThanHub["c9"] = Instance.new("UIGradient", ThanHub["c8"]);
-ThanHub["c9"]["Rotation"] = -72;
-ThanHub["c9"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(16, 16, 16)),ColorSequenceKeypoint.new(0.491, Color3.fromRGB(0, 50, 123)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(16, 16, 16))};
+Than_Hub["c6"] = Instance.new("UIGradient", Than_Hub["c5"]);
+Than_Hub["c6"]["Rotation"] = -72;
+Than_Hub["c6"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(16, 16, 16)),ColorSequenceKeypoint.new(0.491, Color3.fromRGB(0, 50, 123)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(16, 16, 16))};
 
 
 -- Than Hub.Floating.Blue.UICorner
-ThanHub["ca"] = Instance.new("UICorner", ThanHub["c8"]);
-ThanHub["ca"]["CornerRadius"] = UDim.new(0, 10);
+Than_Hub["c7"] = Instance.new("UICorner", Than_Hub["c5"]);
+Than_Hub["c7"]["CornerRadius"] = UDim.new(0, 10);
 
 
 -- Than Hub.Floating.Cyan
-ThanHub["cb"] = Instance.new("CanvasGroup", ThanHub["c3"]);
-ThanHub["cb"]["BorderSizePixel"] = 0;
-ThanHub["cb"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
-ThanHub["cb"]["Size"] = UDim2.new(1, 0, 1, 0);
-ThanHub["cb"]["Position"] = UDim2.new(-0.00013, 0, -0.00077, 0);
-ThanHub["cb"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["cb"]["Name"] = [[Cyan]];
-ThanHub["cb"]["BackgroundTransparency"] = 0.8;
+Than_Hub["c8"] = Instance.new("CanvasGroup", Than_Hub["c0"]);
+Than_Hub["c8"]["BorderSizePixel"] = 0;
+Than_Hub["c8"]["BackgroundColor3"] = Color3.fromRGB(107, 107, 107);
+Than_Hub["c8"]["Size"] = UDim2.new(1, 0, 1, 0);
+Than_Hub["c8"]["Position"] = UDim2.new(-0.00013, 0, -0.00077, 0);
+Than_Hub["c8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["c8"]["Name"] = [[Cyan]];
+Than_Hub["c8"]["BackgroundTransparency"] = 0.8;
 
 
 -- Than Hub.Floating.Cyan.UIGradient
-ThanHub["cc"] = Instance.new("UIGradient", ThanHub["cb"]);
-ThanHub["cc"]["Rotation"] = -26;
-ThanHub["cc"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(16, 16, 16)),ColorSequenceKeypoint.new(0.500, Color3.fromRGB(0, 35, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(16, 16, 16))};
+Than_Hub["c9"] = Instance.new("UIGradient", Than_Hub["c8"]);
+Than_Hub["c9"]["Rotation"] = -26;
+Than_Hub["c9"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(16, 16, 16)),ColorSequenceKeypoint.new(0.500, Color3.fromRGB(0, 35, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(16, 16, 16))};
 
 
 -- Than Hub.Floating.Cyan.UICorner
-ThanHub["cd"] = Instance.new("UICorner", ThanHub["cb"]);
-ThanHub["cd"]["CornerRadius"] = UDim.new(0, 10);
+Than_Hub["ca"] = Instance.new("UICorner", Than_Hub["c8"]);
+Than_Hub["ca"]["CornerRadius"] = UDim.new(0, 10);
 
 
 -- Than Hub.Floating.Cyan.AbstractBg
-ThanHub["ce"] = Instance.new("ImageLabel", ThanHub["cb"]);
-ThanHub["ce"]["BorderSizePixel"] = 0;
-ThanHub["ce"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["ce"]["ImageColor3"] = Color3.fromRGB(0, 183, 22);
-ThanHub["ce"]["Image"] = [[rbxassetid://88984077541230]];
-ThanHub["ce"]["Size"] = UDim2.new(0, 549, 0, 364);
-ThanHub["ce"]["Visible"] = false;
-ThanHub["ce"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["ce"]["BackgroundTransparency"] = 1;
-ThanHub["ce"]["Rotation"] = 40;
-ThanHub["ce"]["Name"] = [[AbstractBg]];
-ThanHub["ce"]["Position"] = UDim2.new(0.41197, 0, 0.48528, 0);
+Than_Hub["cb"] = Instance.new("ImageLabel", Than_Hub["c8"]);
+Than_Hub["cb"]["BorderSizePixel"] = 0;
+Than_Hub["cb"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["cb"]["ImageColor3"] = Color3.fromRGB(0, 183, 22);
+Than_Hub["cb"]["Image"] = [[rbxassetid://88984077541230]];
+Than_Hub["cb"]["Size"] = UDim2.new(0, 549, 0, 364);
+Than_Hub["cb"]["Visible"] = false;
+Than_Hub["cb"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["cb"]["BackgroundTransparency"] = 1;
+Than_Hub["cb"]["Rotation"] = 40;
+Than_Hub["cb"]["Name"] = [[AbstractBg]];
+Than_Hub["cb"]["Position"] = UDim2.new(0.41197, 0, 0.48528, 0);
 
 
 -- Than Hub.Floating.DropShadowHolder
-ThanHub["cf"] = Instance.new("Frame", ThanHub["c3"]);
-ThanHub["cf"]["ZIndex"] = 0;
-ThanHub["cf"]["BorderSizePixel"] = 0;
-ThanHub["cf"]["Size"] = UDim2.new(1, 0, 1, 0);
-ThanHub["cf"]["Name"] = [[DropShadowHolder]];
-ThanHub["cf"]["BackgroundTransparency"] = 1;
+Than_Hub["cc"] = Instance.new("Frame", Than_Hub["c0"]);
+Than_Hub["cc"]["ZIndex"] = 0;
+Than_Hub["cc"]["BorderSizePixel"] = 0;
+Than_Hub["cc"]["Size"] = UDim2.new(1, 0, 1, 0);
+Than_Hub["cc"]["Name"] = [[DropShadowHolder]];
+Than_Hub["cc"]["BackgroundTransparency"] = 1;
 
 
 -- Than Hub.Floating.DropShadowHolder.DropShadow
-ThanHub["d0"] = Instance.new("ImageLabel", ThanHub["cf"]);
-ThanHub["d0"]["ZIndex"] = 0;
-ThanHub["d0"]["BorderSizePixel"] = 0;
-ThanHub["d0"]["SliceCenter"] = Rect.new(49, 49, 450, 450);
-ThanHub["d0"]["ScaleType"] = Enum.ScaleType.Slice;
-ThanHub["d0"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["d0"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-ThanHub["d0"]["Image"] = [[rbxassetid://6014261993]];
-ThanHub["d0"]["Size"] = UDim2.new(1, 35, 1, 35);
-ThanHub["d0"]["BackgroundTransparency"] = 1;
-ThanHub["d0"]["Name"] = [[DropShadow]];
-ThanHub["d0"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+Than_Hub["cd"] = Instance.new("ImageLabel", Than_Hub["cc"]);
+Than_Hub["cd"]["ZIndex"] = 0;
+Than_Hub["cd"]["BorderSizePixel"] = 0;
+Than_Hub["cd"]["SliceCenter"] = Rect.new(49, 49, 450, 450);
+Than_Hub["cd"]["ScaleType"] = Enum.ScaleType.Slice;
+Than_Hub["cd"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["cd"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+Than_Hub["cd"]["Image"] = [[rbxassetid://6014261993]];
+Than_Hub["cd"]["Size"] = UDim2.new(1, 35, 1, 35);
+Than_Hub["cd"]["BackgroundTransparency"] = 1;
+Than_Hub["cd"]["Name"] = [[DropShadow]];
+Than_Hub["cd"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
 -- Than Hub.Floating.Folder
-ThanHub["d1"] = Instance.new("Folder", ThanHub["c3"]);
+Than_Hub["ce"] = Instance.new("Folder", Than_Hub["c0"]);
 
 
 
 -- Than Hub.Floating.Folder.Logo
-ThanHub["d2"] = Instance.new("ImageLabel", ThanHub["d1"]);
-ThanHub["d2"]["BorderSizePixel"] = 0;
-ThanHub["d2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["d2"]["Image"] = [[rbxassetid://114982618404413]];
-ThanHub["d2"]["Size"] = UDim2.new(0, 24, 0, 25);
-ThanHub["d2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["d2"]["BackgroundTransparency"] = 1;
-ThanHub["d2"]["Name"] = [[Logo]];
-ThanHub["d2"]["Position"] = UDim2.new(0, 8, 0, 8);
+Than_Hub["cf"] = Instance.new("ImageLabel", Than_Hub["ce"]);
+Than_Hub["cf"]["BorderSizePixel"] = 0;
+Than_Hub["cf"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["cf"]["Image"] = [[rbxassetid://114982618404413]];
+Than_Hub["cf"]["Size"] = UDim2.new(0, 24, 0, 25);
+Than_Hub["cf"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["cf"]["BackgroundTransparency"] = 1;
+Than_Hub["cf"]["Name"] = [[Logo]];
+Than_Hub["cf"]["Position"] = UDim2.new(0, 8, 0, 8);
 
 
 -- Than Hub.Floating.Folder.Logo.UIAspectRatioConstraint
-ThanHub["d3"] = Instance.new("UIAspectRatioConstraint", ThanHub["d2"]);
+Than_Hub["d0"] = Instance.new("UIAspectRatioConstraint", Than_Hub["cf"]);
 
 
 
 -- Than Hub.Floating.Folder.Logo.UICorner
-ThanHub["d4"] = Instance.new("UICorner", ThanHub["d2"]);
+Than_Hub["d1"] = Instance.new("UICorner", Than_Hub["cf"]);
 
 
 
 -- Than Hub.Floating.Folder.Frame
-ThanHub["d5"] = Instance.new("Frame", ThanHub["d1"]);
-ThanHub["d5"]["BorderSizePixel"] = 0;
-ThanHub["d5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["d5"]["AnchorPoint"] = Vector2.new(0, 0.5);
-ThanHub["d5"]["Size"] = UDim2.new(0, 2, 0, 27);
-ThanHub["d5"]["Position"] = UDim2.new(0, 40, 0.5, 0);
-ThanHub["d5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["d2"] = Instance.new("Frame", Than_Hub["ce"]);
+Than_Hub["d2"]["BorderSizePixel"] = 0;
+Than_Hub["d2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["d2"]["AnchorPoint"] = Vector2.new(0, 0.5);
+Than_Hub["d2"]["Size"] = UDim2.new(0, 2, 0, 27);
+Than_Hub["d2"]["Position"] = UDim2.new(0, 40, 0.5, 0);
+Than_Hub["d2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 
 
 -- Than Hub.Floating.Folder.Frame.UIGradient
-ThanHub["d6"] = Instance.new("UIGradient", ThanHub["d5"]);
-ThanHub["d6"]["Rotation"] = -90;
-ThanHub["d6"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
+Than_Hub["d3"] = Instance.new("UIGradient", Than_Hub["d2"]);
+Than_Hub["d3"]["Rotation"] = -90;
+Than_Hub["d3"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
 
 
 -- Than Hub.Floating.Folder.Frame.UICorner
-ThanHub["d7"] = Instance.new("UICorner", ThanHub["d5"]);
-ThanHub["d7"]["CornerRadius"] = UDim.new(100, 100);
+Than_Hub["d4"] = Instance.new("UICorner", Than_Hub["d2"]);
+Than_Hub["d4"]["CornerRadius"] = UDim.new(100, 100);
 
 
 -- Than Hub.Floating.Folder.Title
-ThanHub["d8"] = Instance.new("TextLabel", ThanHub["d1"]);
-ThanHub["d8"]["TextWrapped"] = true;
-ThanHub["d8"]["BorderSizePixel"] = 0;
-ThanHub["d8"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-ThanHub["d8"]["TextScaled"] = true;
-ThanHub["d8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["d8"]["TextSize"] = 14;
-ThanHub["d8"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-ThanHub["d8"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["d8"]["BackgroundTransparency"] = 1;
-ThanHub["d8"]["AnchorPoint"] = Vector2.new(0, 0.5);
-ThanHub["d8"]["Size"] = UDim2.new(0, 70, 0, 15);
-ThanHub["d8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["d8"]["Text"] = [[Than Hub]];
-ThanHub["d8"]["Name"] = [[Title]];
-ThanHub["d8"]["Position"] = UDim2.new(0, 53, 0, 21);
+Than_Hub["d5"] = Instance.new("TextLabel", Than_Hub["ce"]);
+Than_Hub["d5"]["TextWrapped"] = true;
+Than_Hub["d5"]["BorderSizePixel"] = 0;
+Than_Hub["d5"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+Than_Hub["d5"]["TextScaled"] = true;
+Than_Hub["d5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["d5"]["TextSize"] = 14;
+Than_Hub["d5"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+Than_Hub["d5"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["d5"]["BackgroundTransparency"] = 1;
+Than_Hub["d5"]["AnchorPoint"] = Vector2.new(0, 0.5);
+Than_Hub["d5"]["Size"] = UDim2.new(0, 70, 0, 15);
+Than_Hub["d5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["d5"]["Text"] = [[Than Hub]];
+Than_Hub["d5"]["Name"] = [[Title]];
+Than_Hub["d5"]["Position"] = UDim2.new(0, 53, 0, 21);
 
 
 -- Than Hub.Floating.Folder.Title.UIGradient
-ThanHub["d9"] = Instance.new("UIGradient", ThanHub["d8"]);
-ThanHub["d9"]["Rotation"] = -90;
-ThanHub["d9"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
+Than_Hub["d6"] = Instance.new("UIGradient", Than_Hub["d5"]);
+Than_Hub["d6"]["Rotation"] = -90;
+Than_Hub["d6"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
 
 
 -- Than Hub.Floating.Folder.Status
-ThanHub["da"] = Instance.new("ImageButton", ThanHub["d1"]);
-ThanHub["da"]["Active"] = false;
-ThanHub["da"]["BorderSizePixel"] = 0;
-ThanHub["da"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["da"]["Selectable"] = false;
-ThanHub["da"]["AnchorPoint"] = Vector2.new(0, 0.5);
-ThanHub["da"]["Image"] = [[rbxassetid://10734895698]];
-ThanHub["da"]["Size"] = UDim2.new(0, 19, 0, 20);
-ThanHub["da"]["BackgroundTransparency"] = 1;
-ThanHub["da"]["Name"] = [[Status]];
-ThanHub["da"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["da"]["Position"] = UDim2.new(0, 128, 0.5, 0);
+Than_Hub["d7"] = Instance.new("ImageButton", Than_Hub["ce"]);
+Than_Hub["d7"]["Active"] = false;
+Than_Hub["d7"]["BorderSizePixel"] = 0;
+Than_Hub["d7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["d7"]["Selectable"] = false;
+Than_Hub["d7"]["AnchorPoint"] = Vector2.new(0, 0.5);
+Than_Hub["d7"]["Image"] = [[rbxassetid://10734895698]];
+Than_Hub["d7"]["Size"] = UDim2.new(0, 19, 0, 20);
+Than_Hub["d7"]["BackgroundTransparency"] = 1;
+Than_Hub["d7"]["Name"] = [[Status]];
+Than_Hub["d7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["d7"]["Position"] = UDim2.new(0, 128, 0.5, 0);
 
 
 -- Than Hub.Floating.Folder.Status.UIAspectRatioConstraint
-ThanHub["db"] = Instance.new("UIAspectRatioConstraint", ThanHub["da"]);
+Than_Hub["d8"] = Instance.new("UIAspectRatioConstraint", Than_Hub["d7"]);
 
 
 
 -- Than Hub.Floating.Folder.Status.UICorner
-ThanHub["dc"] = Instance.new("UICorner", ThanHub["da"]);
+Than_Hub["d9"] = Instance.new("UICorner", Than_Hub["d7"]);
 
 
 
 -- Than Hub.Floating.Folder.Status.UIGradient
-ThanHub["dd"] = Instance.new("UIGradient", ThanHub["da"]);
-ThanHub["dd"]["Rotation"] = -90;
-ThanHub["dd"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
+Than_Hub["da"] = Instance.new("UIGradient", Than_Hub["d7"]);
+Than_Hub["da"]["Rotation"] = -90;
+Than_Hub["da"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(3, 100, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 255, 226))};
 
 
 -- Than Hub.Floating.Folder.DraggablePart
-ThanHub["de"] = Instance.new("Frame", ThanHub["d1"]);
-ThanHub["de"]["BorderSizePixel"] = 0;
-ThanHub["de"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-ThanHub["de"]["Size"] = UDim2.new(0, 40, 0, 42);
-ThanHub["de"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-ThanHub["de"]["Name"] = [[DraggablePart]];
-ThanHub["de"]["BackgroundTransparency"] = 1;
+Than_Hub["db"] = Instance.new("Frame", Than_Hub["ce"]);
+Than_Hub["db"]["BorderSizePixel"] = 0;
+Than_Hub["db"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+Than_Hub["db"]["Size"] = UDim2.new(0, 40, 0, 42);
+Than_Hub["db"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+Than_Hub["db"]["Name"] = [[DraggablePart]];
+Than_Hub["db"]["BackgroundTransparency"] = 1;
 
 
--- Require ThanHub wrapper
-local ThanHub_REQUIRE = require;
-local ThanHub_MODULES = {};
+-- Require Than_Hub wrapper
+local Than_Hub_REQUIRE = require;
+local Than_Hub_MODULES = {};
 local function require(Module:ModuleScript)
-	local ModuleState = ThanHub_MODULES[Module];
+	local ModuleState = Than_Hub_MODULES[Module];
 	if ModuleState then
 		if not ModuleState.Required then
 			ModuleState.Required = true;
@@ -1998,13 +2000,12 @@ local function require(Module:ModuleScript)
 		end
 		return ModuleState.Value;
 	end;
-	return ThanHub_REQUIRE(Module);
+	return Than_Hub_REQUIRE(Module);
 end
 
-ThanHub_MODULES[ThanHub["27"]] = {
+Than_Hub_MODULES[Than_Hub["27"]] = {
 	Closure = function()
-		local script = ThanHub["27"];
-		local LIB = {}
+		local script = Than_Hub["27"];local LIB = {}
 		local TABLIST = {}
 
 		LIB.Options = {}
@@ -2414,7 +2415,7 @@ ThanHub_MODULES[ThanHub["27"]] = {
 
 					function self:AddButton(tbl)
 						local self = {}
-						
+
 						local Title = tbl.Title
 						local Callback = tbl.Callback
 
@@ -2446,7 +2447,7 @@ ThanHub_MODULES[ThanHub["27"]] = {
 							newButton.Button.UIGradientOn.Enabled = false
 							Tween(newButton.Button, {BackgroundColor3 = Color3.fromRGB(40,40,40)})
 						end)
-						
+
 						newButton.Button.MouseButton1Click:Connect(Callback)
 
 						function self:SetTitle(newTitle)
@@ -2973,7 +2974,7 @@ ThanHub_MODULES[ThanHub["27"]] = {
 											v.UIGradient.Enabled = false
 										end
 									end
-									
+
 									newDropdown.DropdownButton.Button.TextLabel.Text = "--"
 									LIB.Options[OptionName].Value = selected
 									newDropdown.OnChanged:Fire(selected)
@@ -3001,7 +3002,7 @@ ThanHub_MODULES[ThanHub["27"]] = {
 									self.Value = selected
 								end
 							end
-							
+
 							local function SetValues(newValues)
 								Values = newValues
 								for _,v in pairs(newDropdown.DropdownButton.ScrollingFrame:GetChildren()) do
@@ -3014,7 +3015,7 @@ ThanHub_MODULES[ThanHub["27"]] = {
 										v:Destroy()
 									end
 								end
-								
+
 								for _,Items in pairs(Values) do
 									local newDropdownButton = Template.DropdownButton:Clone()
 									newDropdownButton.Name = Items
@@ -3094,7 +3095,7 @@ ThanHub_MODULES[ThanHub["27"]] = {
 							self.SetValue = function(_, item)
 								SetValue(item)
 							end
-							
+
 							self.SetValues = function(_, newValues)
 								SetValues(newValues)
 							end
@@ -3102,12 +3103,12 @@ ThanHub_MODULES[ThanHub["27"]] = {
 							LIB.Options[OptionName].SetValue = function(_, item)
 								SetValue(item)
 							end
-							
+
 							LIB.Options[OptionName].SetValues = function(_, newValues)
 								SetValues(newValues)
 							end
 
-							
+
 							LIB.Options[OptionName].Values = selected
 
 							-- TODO: KERJAIN Search abistu Multi dropdown
@@ -3349,7 +3350,7 @@ ThanHub_MODULES[ThanHub["27"]] = {
 												newDropdown.DropdownButton.Button.TextLabel.Text = "--"
 											end
 											-----------------
-											
+
 											self.Value = selected
 											LIB.Options[OptionName].Value = selected
 											newDropdown.OnChanged:Fire(selected)
@@ -3373,7 +3374,7 @@ ThanHub_MODULES[ThanHub["27"]] = {
 											v.UIGradient.Enabled = false
 										end
 									end
-									
+
 									newDropdown.DropdownButton.Button.TextLabel.Text = "--"
 									self.Value = selected
 									LIB.Options[OptionName].Value = selected
@@ -3382,21 +3383,21 @@ ThanHub_MODULES[ThanHub["27"]] = {
 								end
 
 							end
-							
+
 							local function SetValues(newValues)
 								Values = newValues
-								
+
 								for i,v in pairs(newDropdown.DropdownButton.ScrollingFrame:GetChildren()) do
 									if v:IsA("TextButton") then
 										v:Destroy()
-										end
+									end
 								end
 								for i,v in pairs(newDropdown.DropdownButton.ScrollingFrameSearch:GetChildren()) do
 									if v:IsA("TextButton") then
 										v:Destroy()
 									end
 								end
-								
+
 								for _,Items in pairs(Values) do
 									local newDropdownButton = Template.DropdownButton:Clone()
 									newDropdownButton.Name = Items
@@ -3542,7 +3543,7 @@ ThanHub_MODULES[ThanHub["27"]] = {
 
 								end
 							end
-							
+
 							self.SetValue = function(_, item)
 								SetValue(item)
 							end
@@ -3550,7 +3551,7 @@ ThanHub_MODULES[ThanHub["27"]] = {
 							LIB.Options[OptionName].SetValues = function(_, item)
 								SetValue(item)
 							end
-							
+
 							self.SetValues = function(_, item)
 								SetValues(item)
 							end
@@ -3558,7 +3559,7 @@ ThanHub_MODULES[ThanHub["27"]] = {
 							LIB.Options[OptionName].SetValues = function(_, item)
 								SetValue(item)
 							end
-							
+
 							LIB.Options[OptionName].Values = selected
 
 							return self
@@ -3683,12 +3684,11 @@ ThanHub_MODULES[ThanHub["27"]] = {
 		end
 
 		return LIB
-
 	end;
 };
-ThanHub_MODULES[ThanHub["28"]] = {
+Than_Hub_MODULES[Than_Hub["28"]] = {
 	Closure = function()
-		local script = ThanHub["28"];return {
+		local script = Than_Hub["28"];return {
 			assets = {
 				["accessibility"] = "rbxassetid://10709751939",
 				["activity"] = "rbxassetid://10709752035",
@@ -4513,4 +4513,4 @@ ThanHub_MODULES[ThanHub["28"]] = {
 	end;
 };
 
-return require(ThanHub["27"])
+return require(Than_Hub["27"])
