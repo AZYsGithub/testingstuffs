@@ -672,7 +672,7 @@ Than_Hub["49"]["CornerRadius"] = UDim.new(0, 10);
 
 -- Than Hub.Template.Notification.LightBlue.UISizeConstraint
 Than_Hub["4a"] = Instance.new("UISizeConstraint", Than_Hub["47"]);
-Than_Hub["4a"]["MaxSize"] = Vector2.new(265, inf);
+Than_Hub["4a"]["MaxSize"] = Vector2.new(265, math.huge);
 
 
 -- Than Hub.Template.Notification.Blue
@@ -701,7 +701,7 @@ Than_Hub["4d"]["CornerRadius"] = UDim.new(0, 10);
 
 -- Than Hub.Template.Notification.Blue.UISizeConstraint
 Than_Hub["4e"] = Instance.new("UISizeConstraint", Than_Hub["4b"]);
-Than_Hub["4e"]["MaxSize"] = Vector2.new(265, inf);
+Than_Hub["4e"]["MaxSize"] = Vector2.new(265, math.huge);
 
 
 -- Than Hub.Template.Notification.Cyan
@@ -731,7 +731,7 @@ Than_Hub["51"]["CornerRadius"] = UDim.new(0, 10);
 
 -- Than Hub.Template.Notification.Cyan.UISizeConstraint
 Than_Hub["52"] = Instance.new("UISizeConstraint", Than_Hub["4f"]);
-Than_Hub["52"]["MaxSize"] = Vector2.new(265, inf);
+Than_Hub["52"]["MaxSize"] = Vector2.new(265, math.huge);
 
 
 -- Than Hub.Template.Notification.Items
