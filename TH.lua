@@ -17,8 +17,16 @@
 local Than_Hub = {};
 
 -- Than Hub
-Than_Hub["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+Than_Hub["1"] = Instance.new("ScreenGui");
+
+if game:GetService("RunService"):IsStudio() then
+	Than_Hub["1"].Parent =  game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
+else
+	Than_Hub["1"].Parent =  game.CoreGui
+end
+
 Than_Hub["1"]["IgnoreGuiInset"] = true;
+Than_Hub["1"]["Enabled"] = false;
 Than_Hub["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
 Than_Hub["1"]["Name"] = [[Than Hub]];
 Than_Hub["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
@@ -664,7 +672,7 @@ Than_Hub["49"]["CornerRadius"] = UDim.new(0, 10);
 
 -- Than Hub.Template.Notification.LightBlue.UISizeConstraint
 Than_Hub["4a"] = Instance.new("UISizeConstraint", Than_Hub["47"]);
-Than_Hub["4a"]["MaxSize"] = Vector2.new(265, math.huge);
+Than_Hub["4a"]["MaxSize"] = Vector2.new(265, inf);
 
 
 -- Than Hub.Template.Notification.Blue
@@ -693,7 +701,7 @@ Than_Hub["4d"]["CornerRadius"] = UDim.new(0, 10);
 
 -- Than Hub.Template.Notification.Blue.UISizeConstraint
 Than_Hub["4e"] = Instance.new("UISizeConstraint", Than_Hub["4b"]);
-Than_Hub["4e"]["MaxSize"] = Vector2.new(265, math.huge);
+Than_Hub["4e"]["MaxSize"] = Vector2.new(265, inf);
 
 
 -- Than Hub.Template.Notification.Cyan
@@ -723,7 +731,7 @@ Than_Hub["51"]["CornerRadius"] = UDim.new(0, 10);
 
 -- Than Hub.Template.Notification.Cyan.UISizeConstraint
 Than_Hub["52"] = Instance.new("UISizeConstraint", Than_Hub["4f"]);
-Than_Hub["52"]["MaxSize"] = Vector2.new(265, math.huge);
+Than_Hub["52"]["MaxSize"] = Vector2.new(265, inf);
 
 
 -- Than Hub.Template.Notification.Items
@@ -1040,6 +1048,7 @@ Than_Hub["74"]["Size"] = UDim2.new(0, 130, 0, 18);
 Than_Hub["74"]["Position"] = UDim2.new(-0.00763, 0, 0.14595, 0);
 Than_Hub["74"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 Than_Hub["74"]["Name"] = [[DropdownButton]];
+Than_Hub["74"]["LayoutOrder"] = 1;
 Than_Hub["74"]["SelectionGroup"] = true;
 
 
@@ -1286,7 +1295,7 @@ Than_Hub["8e"]["AutomaticSize"] = Enum.AutomaticSize.Y;
 Than_Hub["8e"]["Size"] = UDim2.new(0, 130, 0, 28);
 Than_Hub["8e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 Than_Hub["8e"]["Name"] = [[Paragraph]];
-Than_Hub["8e"]["BackgroundTransparency"] = 0.8;
+Than_Hub["8e"]["BackgroundTransparency"] = 1;
 
 
 -- Than Hub.Template.Paragraph.Paragraph.UICorner
@@ -2015,9 +2024,174 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 		local script = Than_Hub["27"];local LIB = {}
 		local TABLIST = {}
 
+		if game:GetService("RunService"):IsStudio() then
+			-- UF4RS
+			-- Environment Setup
+			-- You also can use existing path to implement the fs inside the folder
+			ROOTFS_NAME = "workspace" -- Default name is "workspace", due to UNC root folder on most executors name is "workspace".
+			ROOTFS_PARENT = game.ReplicatedStorage -- You can put the parent anywhere, but i'd prefer ReplicatedStorage lmao.
+
+			SILENCE_WARN = true 
+
+
+			-- Don't modify it if you don't know what are you doing, or it will break lol.
+			local ROOTFS_FOLDER
+			if ROOTFS_PARENT:FindFirstChild(ROOTFS_NAME) then
+				ROOTFS_FOLDER = ROOTFS_PARENT[ROOTFS_NAME]
+			else
+				if not SILENCE_WARN then
+					warn("Rootfs folder not found, creating one...")
+				end
+
+				ROOTFS_FOLDER = Instance.new("Folder", ROOTFS_PARENT)
+				ROOTFS_FOLDER.Name = ROOTFS_NAME
+			end
+
+
+			function getInstanceFromPath(path)
+				if path == "" then
+					return ROOTFS_FOLDER
+				end
+
+				local parts = string.split(path, "/")
+				local current = ROOTFS_FOLDER
+
+				for i = 1, #parts do
+					current = current:FindFirstChild(parts[i])
+					if not current then
+						return nil
+					end
+				end
+
+				return current
+			end
+
+			function makefolder(path)
+				local parts = string.split(path, "/")
+				local current = ROOTFS_FOLDER
+
+				for i = 1, #parts do
+					local folder = current:FindFirstChild(parts[i])
+					if not folder then
+						folder = Instance.new("Folder")
+						folder.Name = parts[i]
+						folder.Parent = current
+					elseif not folder:IsA("Folder") then
+						error("Path exists but is not a folder.")
+					end
+					current = folder
+				end
+			end
+
+			function writefile(path, content)
+				local parentFolderPath = path:match("(.+)/[^/]+$") or ""
+				local fileName = path:match("[^/]+$")
+
+				local folder = getInstanceFromPath(parentFolderPath)
+
+				if folder then
+					local file = folder:FindFirstChild(fileName) or Instance.new("StringValue")
+					file.Name = fileName
+					file.Value = content
+					file.Parent = folder
+				else
+					error("Invalid path.")
+				end
+			end
+
+			function readfile(path)
+				local file = getInstanceFromPath(path)
+				if file and file:IsA("StringValue") then
+					return file.Value
+				else
+					error("File not found.")
+				end
+			end
+
+			function loadfile(path)
+				local file = getInstanceFromPath(path)
+				if file and file:IsA("StringValue") then
+					return loadstring(file.Value)
+				else
+					error("File not found.")
+				end
+			end
+
+			function dofile(path)
+				local file = getInstanceFromPath(path)
+				if file and file:IsA("StringValue") then
+					return loadstring(file.Value)()
+				else
+					error("File not found.")
+				end
+			end
+
+			function appendfile(path, content)
+				local existingContent = ""
+				local file = getInstanceFromPath(path)
+
+				if file and file:IsA("StringValue") then
+					existingContent = file.Value
+				else
+					makefolder(path:match("(.+)/[^/]+$") or "")
+					writefile(path, content)
+					return
+				end
+
+				local newContent = existingContent .. content
+				writefile(path, newContent)
+			end
+
+			function listfiles(folder)
+				local folderInstance = getInstanceFromPath(folder)
+				if folderInstance and folderInstance:IsA("Folder") then
+					local files = {}
+					for _, child in pairs(folderInstance:GetChildren()) do
+						table.insert(files, folder.."/"..child.Name)
+					end
+					return files
+				else
+					error("Folder not found.")
+				end
+			end
+
+			function isfolder(path)
+				local folder = getInstanceFromPath(path)
+				return folder and folder:IsA("Folder") or false
+			end
+
+			function isfile(path)
+				local file = getInstanceFromPath(path)
+				return file and file:IsA("StringValue") or false
+			end
+
+			function delfile(path)
+				local file = getInstanceFromPath(path)
+				if file and file:IsA("StringValue") then
+					file:Destroy()
+				else
+					error("File not found.")
+				end
+			end
+
+			function delfolder(path)
+				local folder = getInstanceFromPath(path)
+				if folder and folder:IsA("Folder") then
+					folder:Destroy()
+				else
+					error("Folder not found.")
+				end
+			end
+
+
+		end
+
 		LIB.Options = {}
+		LIB.__items = {} -- to check duplicates
+		LIB.AllowSaveConfigurations = true
 
 		local UserInputService = game:GetService("UserInputService")
+		local HS = game:GetService("HttpService")
 
 		local TweenTime = 0.5
 		local TweenStyle = Enum.EasingStyle.Quart
@@ -2048,6 +2222,86 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 			return Tween
 		end
 
+		local function hasDuplicatesKey(key, tbl)
+			if LIB.__items[key] then
+				error("Duplicate options detected ("..key.."), do not use same KEY.")
+			end
+		end
+
+		
+		local function SaveConfig(name)
+			if writefile then
+				if LIB.AllowSaveConfigurations then
+					writefile(name.."/SaveMode", "true")
+
+					if not name then
+						error('Missing args to save.')
+					end
+
+					local filteredtable = {}
+
+					for index, value in pairs(LIB.Options) do
+						filteredtable[index] = {}
+						for indexelement, elementvalue in pairs(value) do
+							if indexelement == "Value" then
+								filteredtable[index].Value = elementvalue
+							elseif indexelement == "Values" then
+								filteredtable[index].Values = elementvalue
+							end
+						end
+					end
+
+					local EncodedJSON = HS:JSONEncode(filteredtable)
+					if not isfolder(name) then
+						makefolder(name)
+					end
+
+					writefile(name.."/Config.json", EncodedJSON)
+				else
+					writefile(name.."/SaveMode", "false")
+					if isfile(name.."/Config.json") then
+						delfile(name.."/Config.json")
+					end
+				end
+
+			end
+		end
+		local function LoadConfig(name)
+			if readfile then
+
+				if isfolder(name) then
+					if isfile(name.."/SaveMode") then
+						local savemodefile = readfile(name.."/SaveMode")
+						if savemodefile == "true" then
+							LIB.AllowSaveConfigurations = true
+						elseif savemodefile == "false" then
+							LIB.AllowSaveConfigurations = false
+							return false
+						end
+					end
+
+					if isfile(name.."/Config.json") then
+						local DecodedJSON = HS:JSONDecode(readfile(name.."/Config.json"))
+
+						for index, value in pairs(DecodedJSON) do
+							LIB.Options[index] = value
+						end	
+						return DecodedJSON
+					else
+						warn("No save config found ("..name.."), starting over.")
+
+						return false
+					end
+
+
+				else
+					warn'No save folder lol'
+					return false
+				end
+			else
+				warn("Your executor doesn't support filesystem, aborted.")
+			end
+		end
 
 		local MAKEDRAGGABLE = function(topbarobject, object)
 			local tsv = game:GetService("TweenService")
@@ -2262,9 +2516,16 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 		function LIB:CreateWindow(tbl)
 			local self = {}
 
+
+
 			local Title = tbl.Title
+
+			local GuiName = Title
+
 			local MinimizeKey = tbl.MinimizeKey -- TODO Later
-			
+
+			LoadConfig(Title)
+
 			if game:GetService("RunService"):IsStudio() then
 				if game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild(Title) then
 					game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild(Title):Destroy()
@@ -2274,7 +2535,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 					game:GetService("CoreGui"):FindFirstChild(Title):Destroy()
 				end
 			end
-			
+
 			local newGui = GUI:Clone()
 			local Template = newGui.Template
 			local Tabs = newGui.BackgroundFrame.Main.Tabs
@@ -2400,7 +2661,13 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 				function self:AddSection(tbl)
 					local self = {}
 
-					Title = tbl.Title
+					local Title
+
+					if type(tbl) == "table" then
+						Title = tbl.Title
+					elseif type(tbl) == "string" then
+						Title = tbl
+					end
 
 					local newSection = Template.Section:Clone()
 
@@ -2481,6 +2748,13 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 						local Title = tbl.Title
 						local Default = tbl.Default
 						local Callback = tbl.Callback
+						
+						
+						
+						if LIB.Options[OptionName] then
+							Default = LIB.Options[OptionName].Value
+						end
+
 
 						if not Callback then
 							Callback = function() end
@@ -2490,9 +2764,10 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 
 						self.Value = state
 						LIB.Options[OptionName] = {}
-						table.insert(LIB.Options[OptionName], OptionName)
 						LIB.Options[OptionName].Value = state
-
+						hasDuplicatesKey(OptionName, LIB.Options)
+						LIB.__items[OptionName] = true
+						
 						local newToggle = Template.Toggle:Clone()
 
 						newToggle.Name = Title
@@ -2531,6 +2806,8 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 								LIB.Options[OptionName].Value = state
 								newToggle.OnChanged:Fire(state)
 								Callback(state)
+								SaveConfig(GuiName, LIB.Options)
+
 								Tween(newToggle.Title, {TextTransparency = 0})
 								Tween(newToggle.Toggle, {BackgroundColor3 = Color3.fromRGB(255,255,255)})
 							elseif state == true then
@@ -2540,6 +2817,8 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 								LIB.Options[OptionName].Value = state
 								newToggle.OnChanged:Fire(state)
 								Callback(state)
+								SaveConfig(GuiName, LIB.Options)
+
 								Tween(newToggle.Title, {TextTransparency = 0.7})
 								Tween(newToggle.Toggle, {BackgroundColor3 = Color3.fromRGB(40,40,40)})
 							end
@@ -2564,6 +2843,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 							LIB.Options[OptionName].Value = state
 							newToggle.OnChanged:Fire(state)
 							Callback(state)
+							SaveConfig(GuiName, LIB.Options)
 						end
 
 						LIB.Options[OptionName].SetValue = function(_, value)
@@ -2583,9 +2863,13 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 						local default = tbl.Default or min
 						local max = tbl.Max
 
+						if LIB.Options[OptionName] then
+							default = LIB.Options[OptionName].Value
+						end
+
 						self.Value = default
 						LIB.Options[OptionName] = {}
-						table.insert(LIB.Options[OptionName], OptionName)
+
 						LIB.Options[OptionName].Value = default
 
 						local Rounding = tbl.Rounding
@@ -2597,8 +2881,11 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 						local newSlider = Template.Slider:Clone()
 
 						LIB.Options[OptionName] = {}
-						table.insert(LIB.Options[OptionName], OptionName)
+
 						LIB.Options[OptionName].Value = default
+						
+						hasDuplicatesKey(OptionName, LIB.Options)
+						LIB.__items[OptionName] = true
 
 						newSlider.Parent = newSection.SectionItems
 						newSlider.Name = Title
@@ -2656,14 +2943,17 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 									Label.Text = string.format("%."..inc.."f", perc) -- decimal format
 								end
 
-								self.Value = perc
-								newSlider.OnChanged:Fire(perc)
-								LIB.Options[OptionName].Value = perc
-								Tween(Fill, { Position = UDim2.fromScale(Percent, 0.5) })
-								task.spawn(function()
-									Callback(perc, newSlider)
-								end)
+
 							until MouseDown == false
+
+							self.Value = perc
+							newSlider.OnChanged:Fire(perc)
+							LIB.Options[OptionName].Value = perc
+							SaveConfig(GuiName, LIB.Options)
+							Tween(Fill, { Position = UDim2.fromScale(Percent, 0.5) })
+							task.spawn(function()
+								Callback(perc, newSlider)
+							end)
 						end
 
 
@@ -2692,6 +2982,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 							self.Value = perc
 							newSlider.OnChanged:Fire(perc)
 							LIB.Options[OptionName].Value = perc
+							SaveConfig(GuiName, LIB.Options)
 							task.spawn(function()
 								Callback(value, newSlider)
 							end)
@@ -2744,13 +3035,17 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 					function self:AddDropdown(OptionName, tbl)
 						local self = {}
 
-
-
 						local Title = tbl.Title
 						local Values = tbl.Values
 						local Multi = tbl.Multi -- allow multi selection or not
 						local Default = tbl.Default  -- could be a int as index or string for its content (FOR non Multi)
 						local Callback = tbl.Callback
+						
+						if LIB.Options[OptionName] then
+							Default = LIB.Options[OptionName].Value
+						else
+							Default = tbl.Default
+						end
 
 						if not Callback then
 							Callback = function() end
@@ -2759,25 +3054,26 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 						local selected
 						local selectedIndex
 						local ValueState = {} -- Only on Multi
-
+						
 						local open = false
 
 						if Multi then
 							selected = {}
 						end
 
-						self.Value = Default
 						LIB.Options[OptionName] = {}
-						table.insert(LIB.Options[OptionName], OptionName)
-						LIB.Options[OptionName].Values = Default
-
+						LIB.Options[OptionName].Values = Values
+						
+						hasDuplicatesKey(OptionName, LIB.Options)
+						LIB.__items[OptionName] = true
+						
 						local newDropdown = Template.Dropdown:Clone()
 
 						newDropdown.Name = Title
 						newDropdown.Title.Text = Title
 						newDropdown.Parent = newSection.SectionItems
 						newDropdown.Visible = true
-
+						
 						newDropdown.DropdownButton.Button.MouseButton1Down:Connect(function()
 							newDropdown.DropdownButton.Button.TextLabel.UIGradient.Enabled = false
 							newDropdown.DropdownButton.Button.UIGradientOff.Enabled = false
@@ -2841,7 +3137,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 						-- End Search Handler
 
 						--newDropdown
-
+						
 						if not Multi then
 							if Default then
 								selected = Default
@@ -2856,15 +3152,19 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 							elseif type(Default) == "string" then
 								if table.find(Values, Default) then
 									newDropdown.DropdownButton.Button.TextLabel.Text = Default
+
 								else
 									newDropdown.DropdownButton.Button.TextLabel.Text = "--"
 								end
 							else
 								newDropdown.DropdownButton.Button.TextLabel.Text = "--"
 							end
+							
+							
 
 							newDropdown.OnChanged:Fire(selected)
 							Callback(selected)
+
 
 							for _,Items in pairs(Values) do
 								local newDropdownButton = Template.DropdownButton:Clone()
@@ -2876,6 +3176,8 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 								if selected == Items then
 									newDropdownButton.UIGradient.Enabled = true
 								end
+
+
 
 								newDropdownButton.MouseButton1Click:Connect(function()
 									selected = Items
@@ -2900,6 +3202,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 									newDropdown.OnChanged:Fire(selected)
 									Callback(selected)
 									self.Value = selected
+									SaveConfig(GuiName, LIB.Options)
 									-- Hide SearchScroll
 									newDropdown.DropdownButton.ScrollingFrameSearch.Visible = false
 									newDropdown.DropdownButton.ScrollingFrame.Visible = true
@@ -2932,6 +3235,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 									newDropdown.OnChanged:Fire(selected)
 									Callback(selected)
 									self.Value = selected
+									SaveConfig(GuiName, LIB.Options)
 
 									-- Hide SearchScroll
 									newDropdown.DropdownButton.ScrollingFrameSearch.Visible = false
@@ -2977,6 +3281,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 									newDropdown.OnChanged:Fire(selected)
 									Callback(selected)
 									self.Value = selected
+									SaveConfig(GuiName, LIB.Options)
 								elseif item == nil then
 									selected = nil
 									selectedIndex = nil
@@ -2997,6 +3302,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 									newDropdown.OnChanged:Fire(selected)
 									Callback(selected)
 									self.Value = selected
+									SaveConfig(GuiName, LIB.Options)
 								else
 									selected = nil
 									selectedIndex = nil
@@ -3017,11 +3323,15 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 									newDropdown.OnChanged:Fire(selected)
 									Callback(selected)
 									self.Value = selected
+									SaveConfig(GuiName, LIB.Options)
 								end
 							end
 
 							local function SetValues(newValues)
 								Values = newValues
+								self.Values = Values
+								LIB.Options.Values = Values
+
 								for _,v in pairs(newDropdown.DropdownButton.ScrollingFrame:GetChildren()) do
 									if v:IsA("TextButton") then
 										v:Destroy()
@@ -3063,7 +3373,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 										end
 
 										newDropdown.DropdownButton.Button.TextLabel.Text = Items
-										LIB.Options[OptionName].Values = selected
+										LIB.Options[OptionName].Value = selected
 										newDropdown.OnChanged:Fire(selected)
 										Callback(selected)
 										self.Value = selected
@@ -3095,7 +3405,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 										end
 
 										newDropdown.DropdownButton.Button.TextLabel.Text = Items
-										LIB.Options[OptionName].Values = selected
+										LIB.Options[OptionName].Value = selected
 										newDropdown.OnChanged:Fire(selected)
 										Callback(selected)
 										self.Value = selected
@@ -3126,7 +3436,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 							end
 
 
-							LIB.Options[OptionName].Values = selected
+							LIB.Options[OptionName].Value = selected
 
 							-- TODO: KERJAIN Search abistu Multi dropdown
 
@@ -3138,9 +3448,13 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 								selected = Default
 							end
 							local newselected = {}
+							
 							for k,v in pairs(selected) do
-
-								newselected[v] = true
+								if v == true then
+									newselected[k] = true
+								else
+									newselected[v] = true
+								end
 							end
 
 							selected = newselected
@@ -3159,9 +3473,12 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 
 									-- GANTI TEXT --
 									local selectednames = {}
+
 									for k,v in pairs(selected) do
 										table.insert(selectednames, k)
 									end
+
+
 
 									newDropdown.DropdownButton.Button.TextLabel.Text = table.concat(selectednames,", ")
 									-----------------
@@ -3221,6 +3538,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 										LIB.Options[OptionName].Value = selected
 										newDropdown.OnChanged:Fire(selected)
 										Callback(selected)
+										SaveConfig(GuiName, LIB.Options)
 
 										-- Hide SearchScroll
 										newDropdown.DropdownButton.ScrollingFrameSearch.Visible = false
@@ -3250,6 +3568,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 										LIB.Options[OptionName].Value = selected
 										newDropdown.OnChanged:Fire(selected)
 										Callback(selected)
+										SaveConfig(GuiName, LIB.Options)
 
 										-- Hide SearchScroll
 										newDropdown.DropdownButton.ScrollingFrameSearch.Visible = false
@@ -3285,6 +3604,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 										LIB.Options[OptionName].Value = selected
 										newDropdown.OnChanged:Fire(selected)
 										Callback(selected)
+										SaveConfig(GuiName, LIB.Options)
 
 										-- Hide SearchScroll
 										newDropdown.DropdownButton.ScrollingFrameSearch.Visible = false
@@ -3313,6 +3633,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 										LIB.Options[OptionName].Value = selected
 										newDropdown.OnChanged:Fire(selected)
 										Callback(selected)
+										SaveConfig(GuiName, LIB.Options)
 
 										-- Hide SearchScroll
 										newDropdown.DropdownButton.ScrollingFrameSearch.Visible = false
@@ -3335,7 +3656,9 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 							end
 
 							local function SetValue(NewValue)
-								if type(NewValue) == "table" and #NewValue > 0 then
+								selected = {}
+
+								if type(NewValue) == "table" then
 									for _, v in pairs(newDropdown.DropdownButton.ScrollingFrame:GetChildren()) do
 										if v:IsA("TextButton") then
 											v.UIGradient.Enabled = false
@@ -3372,6 +3695,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 											LIB.Options[OptionName].Value = selected
 											newDropdown.OnChanged:Fire(selected)
 											Callback(selected)
+											SaveConfig(GuiName, LIB.Options)
 										else
 											task.spawn(function()
 												error("No '"..k.."'".." Found in dropdown table.")
@@ -3397,12 +3721,16 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 									LIB.Options[OptionName].Value = selected
 									newDropdown.OnChanged:Fire(selected)
 									Callback(selected)
+									SaveConfig(GuiName, LIB.Options)
 								end
 
 							end
 
 							local function SetValues(newValues)
+
 								Values = newValues
+								self.Values = Values
+								LIB.Options.Values = Values
 
 								for i,v in pairs(newDropdown.DropdownButton.ScrollingFrame:GetChildren()) do
 									if v:IsA("TextButton") then
@@ -3458,6 +3786,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 											LIB.Options[OptionName].Value = selected
 											newDropdown.OnChanged:Fire(selected)
 											Callback(selected)
+											SaveConfig(GuiName, LIB.Options)
 
 											-- Hide SearchScroll
 											newDropdown.DropdownButton.ScrollingFrameSearch.Visible = false
@@ -3466,7 +3795,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 										elseif selected[Items] then
 											-- Selected > Unselected
 
-											selected[Items] = nil
+											selected[Items] = {}
 
 											newDropdownButton.UIGradient.Enabled = false
 											newDropdown.DropdownButton.ScrollingFrameSearch[newDropdownButton.Name].UIGradient.Enabled = false
@@ -3487,6 +3816,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 											LIB.Options[OptionName].Value = selected
 											newDropdown.OnChanged:Fire(selected)
 											Callback(selected)
+											SaveConfig(GuiName, LIB.Options)
 
 											-- Hide SearchScroll
 											newDropdown.DropdownButton.ScrollingFrameSearch.Visible = false
@@ -3522,6 +3852,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 											LIB.Options[OptionName].Value = selected
 											newDropdown.OnChanged:Fire(selected)
 											Callback(selected)
+											SaveConfig(GuiName, LIB.Options)
 
 											-- Hide SearchScroll
 											newDropdown.DropdownButton.ScrollingFrameSearch.Visible = false
@@ -3550,6 +3881,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 											LIB.Options[OptionName].Value = selected
 											newDropdown.OnChanged:Fire(selected)
 											Callback(selected)
+											SaveConfig(GuiName, LIB.Options)
 
 											-- Hide SearchScroll
 											newDropdown.DropdownButton.ScrollingFrameSearch.Visible = false
@@ -3565,7 +3897,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 								SetValue(item)
 							end
 
-							LIB.Options[OptionName].SetValues = function(_, item)
+							LIB.Options[OptionName].SetValue = function(_, item)
 								SetValue(item)
 							end
 
@@ -3574,10 +3906,10 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 							end
 
 							LIB.Options[OptionName].SetValues = function(_, item)
-								SetValue(item)
+								SetValues(item)
 							end
 
-							LIB.Options[OptionName].Values = selected
+							LIB.Options[OptionName].Value = selected
 
 							return self
 						end 
@@ -3586,13 +3918,20 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 
 					function self:AddInput(OptionName, tbl)
 						local self = {}
-
+						
 						local Title = tbl.Title
 						local Default = tbl.Default
 						local Placeholder = tbl.Placeholder
 						local Numeric = tbl.Numeric
 						local Finished = tbl.Finished -- True = calls callback when focuslost, False = Every text update will call callback
 						local Callback = tbl.Callback
+						
+						
+
+						if LIB.Options[OptionName] then
+							Default = LIB.Options[OptionName].Value
+						end
+
 
 						if not Callback then
 							Callback = function() end
@@ -3600,9 +3939,12 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 
 						self.Value = Default
 						LIB.Options[OptionName] = {}
-						table.insert(LIB.Options[OptionName], OptionName)
+
 						LIB.Options[OptionName].Value = Default
 
+						hasDuplicatesKey(OptionName, LIB.Options)
+						LIB.__items[OptionName] = true
+						
 						local newInput = Template.Textbox:Clone()
 						newInput.Title.Text = Title
 						newInput.Name = Title
@@ -3630,6 +3972,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 								Callback(newInput.Box.Textbox.Text)
 								LIB.Options[OptionName].Value = newInput.Box.Textbox.Text
 								newInput.OnChanged:Fire(newInput.Box.Textbox.Text)
+								SaveConfig(GuiName, LIB.Options)
 							end
 
 
@@ -3648,6 +3991,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 								Callback(newInput.Box.Textbox.Text)
 								LIB.Options[OptionName].Value = newInput.Box.Textbox.Text
 								newInput.OnChanged:Fire(newInput.Box.Textbox.Text)
+								SaveConfig(GuiName, LIB.Options)
 							end
 						end)
 
@@ -3672,6 +4016,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 							Callback(newInput.Box.Textbox.Text)
 							LIB.Options[OptionName].Value = newInput.Box.Textbox.Text
 							newInput.OnChanged:Fire(newInput.Box.Textbox.Text)
+							SaveConfig(GuiName, LIB.Options)
 						end
 
 						LIB.Options[OptionName].SetValue = function(_, newText)
@@ -3685,6 +4030,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 							Callback(newInput.Box.Textbox.Text)
 							LIB.Options[OptionName].Value = newInput.Box.Textbox.Text
 							newInput.OnChanged:Fire(newInput.Box.Textbox.Text)
+							SaveConfig(GuiName, LIB.Options)
 						end
 
 						return self -- Input
