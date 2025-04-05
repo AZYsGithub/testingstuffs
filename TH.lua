@@ -2232,6 +2232,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 		local function SaveConfig(name)
 			if writefile then
 				if LIB.AllowSaveConfigurations then
+					warn'Saving'
 					writefile(name.."/SaveMode", "true")
 
 					if not name then
@@ -2257,6 +2258,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 					end
 
 					writefile(name.."/Config.json", EncodedJSON)
+					warn'Saved.'
 				else
 					writefile(name.."/SaveMode", "false")
 					if isfile(name.."/Config.json") then
@@ -2270,6 +2272,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 			if readfile then
 
 				if isfolder(name) then
+					warn'Attempting to load saved config...'
 					if isfile(name.."/SaveMode") then
 						local savemodefile = readfile(name.."/SaveMode")
 						if savemodefile == "true" then
@@ -2286,6 +2289,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 						for index, value in pairs(DecodedJSON) do
 							LIB.Options[index] = value
 						end	
+						warn'Loaded saved config.'
 						return DecodedJSON
 					else
 						warn("No save config found ("..name.."), starting over.")
@@ -2295,12 +2299,16 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 
 
 				else
+					makefolder(name)
 					warn'No save folder lol'
 					return false
 				end
 			else
 				warn("Your executor doesn't support filesystem, aborted.")
 			end
+		end
+		if not writefile then
+			warn("Stupid executor cant even have writefile lmao")
 		end
 
 		local MAKEDRAGGABLE = function(topbarobject, object)
