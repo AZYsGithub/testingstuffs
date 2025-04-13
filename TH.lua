@@ -10,21 +10,14 @@
     Made by Chillz
     Discord: .chill.z.
     
-    Thanks to Than Hub for using my service :3
+    Made for Than Hub Developers.
 ]]
 
 -- Instances: 219 | Scripts: 0 | Modules: 2 | Tags: 0
 local Than_Hub = {};
 
 -- Than Hub
-Than_Hub["1"] = Instance.new("ScreenGui");
-
-if game:GetService("RunService"):IsStudio() then
-	Than_Hub["1"].Parent =  game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
-else
-	Than_Hub["1"].Parent =  game.CoreGui
-end
-
+Than_Hub["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 Than_Hub["1"]["IgnoreGuiInset"] = true;
 Than_Hub["1"]["Enabled"] = false;
 Than_Hub["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
@@ -2186,9 +2179,10 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 
 		end
 
+		LIB.Name = nil
 		LIB.Options = {}
-		LIB.__items = {} -- to check duplicates
-		LIB.AllowSaveConfigurations = true
+		LIB._items = {} -- to check duplicates
+		LIB.AutoSaveConfigurations = false
 
 		local UserInputService = game:GetService("UserInputService")
 		local HS = game:GetService("HttpService")
@@ -2223,15 +2217,15 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 		end
 
 		local function hasDuplicatesKey(key, tbl)
-			if LIB.__items[key] then
+			if LIB._items[key] then
 				error("Duplicate options detected ("..key.."), do not use same KEY.")
 			end
 		end
 
-		
+
 		local function SaveConfig(name)
 			if writefile then
-				if LIB.AllowSaveConfigurations then
+				if LIB.AutoSaveConfigurations then
 					warn'Saving'
 					writefile(name.."/SaveMode", "true")
 
@@ -2268,6 +2262,38 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 
 			end
 		end
+		LIB.SaveConfig = function(name)
+			if writefile then
+				warn'Saving'
+				writefile(name.."/SaveMode", "true")
+
+				if not name then
+					error('Missing args to save.')
+				end
+
+				local filteredtable = {}
+
+				for index, value in pairs(LIB.Options) do
+					filteredtable[index] = {}
+					for indexelement, elementvalue in pairs(value) do
+						if indexelement == "Value" then
+							filteredtable[index].Value = elementvalue
+						elseif indexelement == "Values" then
+							filteredtable[index].Values = elementvalue
+						end
+					end
+				end
+
+				local EncodedJSON = HS:JSONEncode(filteredtable)
+				if not isfolder(name) then
+					makefolder(name)
+				end
+
+				writefile(name.."/Config.json", EncodedJSON)
+				warn'Saved.'
+			end
+		end
+
 		local function LoadConfig(name)
 			if readfile then
 
@@ -2279,7 +2305,6 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 							LIB.AllowSaveConfigurations = true
 						elseif savemodefile == "false" then
 							LIB.AllowSaveConfigurations = false
-							return false
 						end
 					end
 
@@ -2532,6 +2557,8 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 
 			local MinimizeKey = tbl.MinimizeKey -- TODO Later
 
+			LIB.Name = Title
+
 			LoadConfig(Title)
 
 			if game:GetService("RunService"):IsStudio() then
@@ -2756,9 +2783,9 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 						local Title = tbl.Title
 						local Default = tbl.Default
 						local Callback = tbl.Callback
-						
-						
-						
+
+
+
 						if LIB.Options[OptionName] then
 							Default = LIB.Options[OptionName].Value
 						end
@@ -2774,8 +2801,8 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 						LIB.Options[OptionName] = {}
 						LIB.Options[OptionName].Value = state
 						hasDuplicatesKey(OptionName, LIB.Options)
-						LIB.__items[OptionName] = true
-						
+						LIB._items[OptionName] = true
+
 						local newToggle = Template.Toggle:Clone()
 
 						newToggle.Name = Title
@@ -2891,9 +2918,9 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 						LIB.Options[OptionName] = {}
 
 						LIB.Options[OptionName].Value = default
-						
+
 						hasDuplicatesKey(OptionName, LIB.Options)
-						LIB.__items[OptionName] = true
+						LIB._items[OptionName] = true
 
 						newSlider.Parent = newSection.SectionItems
 						newSlider.Name = Title
@@ -3048,7 +3075,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 						local Multi = tbl.Multi -- allow multi selection or not
 						local Default = tbl.Default  -- could be a int as index or string for its content (FOR non Multi)
 						local Callback = tbl.Callback
-						
+
 						if LIB.Options[OptionName] then
 							Default = LIB.Options[OptionName].Value
 						else
@@ -3062,7 +3089,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 						local selected
 						local selectedIndex
 						local ValueState = {} -- Only on Multi
-						
+
 						local open = false
 
 						if Multi then
@@ -3071,17 +3098,17 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 
 						LIB.Options[OptionName] = {}
 						LIB.Options[OptionName].Values = Values
-						
+
 						hasDuplicatesKey(OptionName, LIB.Options)
-						LIB.__items[OptionName] = true
-						
+						LIB._items[OptionName] = true
+
 						local newDropdown = Template.Dropdown:Clone()
 
 						newDropdown.Name = Title
 						newDropdown.Title.Text = Title
 						newDropdown.Parent = newSection.SectionItems
 						newDropdown.Visible = true
-						
+
 						newDropdown.DropdownButton.Button.MouseButton1Down:Connect(function()
 							newDropdown.DropdownButton.Button.TextLabel.UIGradient.Enabled = false
 							newDropdown.DropdownButton.Button.UIGradientOff.Enabled = false
@@ -3145,7 +3172,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 						-- End Search Handler
 
 						--newDropdown
-						
+
 						if not Multi then
 							if Default then
 								selected = Default
@@ -3167,8 +3194,8 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 							else
 								newDropdown.DropdownButton.Button.TextLabel.Text = "--"
 							end
-							
-							
+
+
 
 							newDropdown.OnChanged:Fire(selected)
 							Callback(selected)
@@ -3456,7 +3483,7 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 								selected = Default
 							end
 							local newselected = {}
-							
+
 							for k,v in pairs(selected) do
 								if v == true then
 									newselected[k] = true
@@ -3926,15 +3953,15 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 
 					function self:AddInput(OptionName, tbl)
 						local self = {}
-						
+
 						local Title = tbl.Title
 						local Default = tbl.Default
 						local Placeholder = tbl.Placeholder
 						local Numeric = tbl.Numeric
 						local Finished = tbl.Finished -- True = calls callback when focuslost, False = Every text update will call callback
 						local Callback = tbl.Callback
-						
-						
+
+
 
 						if LIB.Options[OptionName] then
 							Default = LIB.Options[OptionName].Value
@@ -3951,8 +3978,8 @@ Than_Hub_MODULES[Than_Hub["27"]] = {
 						LIB.Options[OptionName].Value = Default
 
 						hasDuplicatesKey(OptionName, LIB.Options)
-						LIB.__items[OptionName] = true
-						
+						LIB._items[OptionName] = true
+
 						local newInput = Template.Textbox:Clone()
 						newInput.Title.Text = Title
 						newInput.Name = Title
