@@ -26,7 +26,7 @@ Than_Hub["1"]["Enabled"] = false;
 Than_Hub["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
 Than_Hub["1"]["Name"] = [[Than Hub]];
 Than_Hub["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
-ProtectGui()
+ProtectGui(Than_Hub["1"])
 
 -- Than Hub.BackgroundFrame
 Than_Hub["2"] = Instance.new("Frame", Than_Hub["1"]);
