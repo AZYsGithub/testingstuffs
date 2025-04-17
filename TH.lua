@@ -13,6 +13,9 @@
     Made for Than Hub Developers.
 ]]
 
+-- Variables
+local ProtectGui = protectgui or (syn and syn.protect_gui) or function() warn("Executor (".. identifyexecutor() ..") does not support protectgui().") end
+
 -- Instances: 219 | Scripts: 0 | Modules: 2 | Tags: 0
 local Than_Hub = {};
 
@@ -23,7 +26,7 @@ Than_Hub["1"]["Enabled"] = false;
 Than_Hub["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
 Than_Hub["1"]["Name"] = [[Than Hub]];
 Than_Hub["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
-
+ProtectGui()
 
 -- Than Hub.BackgroundFrame
 Than_Hub["2"] = Instance.new("Frame", Than_Hub["1"]);
